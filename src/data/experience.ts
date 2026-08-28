@@ -9,8 +9,8 @@ export const experiences: Experience[] = [
     date: 'Jul 2025 – Present',
     location: 'Remote',
     description:
-      "My first real production role. I'm working on a MERN stack platform that has actual users, not a demo, not a sandbox. I built most of the React frontend from scratch, wired up SMTP-based email notifications, and built the admin panel for event management. Equity-based, which means I joined because I believed in what we were building.",
-    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'TypeScript'],
+      "My first real production role, and it actually has users. Not a demo, not a sandbox. I built most of the React frontend from scratch, wired up SMTP-based email notifications, and put together the admin panel for event management. I also handled the full deployment myself: both frontend and backend, a live domain, SQL database on cPanel. It is equity-based, which means I did not join for a paycheck. I joined because I believed in what we were building.",
+    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'JavaScript'],
   },
   {
     id: 'personal-projects',
@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     company: 'Self-directed Projects',
     date: '2023 – 2025',
     description:
-      "Two years of building things myself, on my own time, with no one telling me what to do or how to do it. I covered every layer: UI, API, database, deployment. The projects I'm most proud of came from this period: Namo Patro, Nova DVR, Signal Job Portal. All written by me, all live on GitHub.",
+      "Two years of building things on my own time, with no one telling me what to do or how to do it. I covered every layer: UI, API, database, deployment. The projects I am most proud of came from this period: Namo Patro, Nova DVR, Signal Job Portal. All written by me, all live on GitHub.",
     tech: ['React', 'TypeScript', 'Flask', 'Node.js', 'PostgreSQL', 'Python'],
   },
   {

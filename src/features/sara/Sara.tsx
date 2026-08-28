@@ -707,7 +707,7 @@ export function Sara() {
 
       {/* Quick-ask chips */}
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', maxWidth: '720px', margin: '1rem auto 0' }}>
-        <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--color-subtle)', alignSelf: 'center' }}>quick ask:</span>
+        <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--color-muted)', alignSelf: 'center' }}>quick ask:</span>
         {quickAsk.map((topic) => (
           <button
             key={topic}

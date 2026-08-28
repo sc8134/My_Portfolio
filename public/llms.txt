@@ -1,0 +1,27 @@
+# Sagar Roka Chhetri
+
+> Full Stack Engineer from Kathmandu, Nepal. I build fast, scalable web applications using React, TypeScript, Node.js, Python, and Flask. Open to full-time roles and internships.
+
+## About
+
+Sagar Roka Chhetri is a final-year Computer Engineering student at Cosmos College of Management & Technology (Pokhara University), graduating 2026. He has two years of independent project experience and currently works as a Full Stack Developer at CodeRunners Technologies on a live MERN stack platform.
+
+## Skills
+
+- Frontend: React, TypeScript, JavaScript, HTML, CSS, Tailwind CSS
+- Backend: Node.js, Express, Flask, Python
+- Databases: PostgreSQL, MongoDB, MySQL
+- Tools: Git, GitHub, Docker, cPanel, Vite
+
+## Projects
+
+- [Namo Patro](https://github.com/sc8134) - Nepali calendar and patro application
+- [Nova DVR](https://github.com/sc8134) - Digital video recording management system
+- [Signal Job Portal](https://github.com/sc8134) - Full stack job portal
+
+## Contact
+
+- Email: sc8134s@gmail.com
+- GitHub: https://github.com/sc8134
+- LinkedIn: https://www.linkedin.com/in/sagar-rc
+- Portfolio: https://sagarrc.com.np

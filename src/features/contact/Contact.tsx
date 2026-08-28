@@ -51,6 +51,15 @@ const contactSocials = [
 
 type MailState = 'idle' | 'sent'
 
+const subjectOptions = [
+  'Job Opportunity',
+  'Freelance Project',
+  'Collaboration',
+  'Just Saying Hi',
+  'Open Source',
+  'Feedback',
+]
+
 export function Contact() {
   const ref = useScrollReveal<HTMLElement>()
   const [mailState, setMailState] = useState<MailState>('idle')
@@ -151,7 +160,7 @@ export function Contact() {
                 fontWeight: 700,
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                color: 'var(--color-subtle)',
+                color: 'var(--color-muted)',
               }}
             >
               Find me online
@@ -219,7 +228,7 @@ export function Contact() {
                   </p>
                 </div>
 
-                <span style={{ marginLeft: 'auto', color: 'var(--color-subtle)', fontSize: '0.9rem' }}>
+                <span style={{ marginLeft: 'auto', color: 'var(--color-muted)', fontSize: '0.9rem' }}>
                   ↗
                 </span>
               </a>
@@ -245,7 +254,7 @@ export function Contact() {
                 fontWeight: 700,
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                color: 'var(--color-subtle)',
+                color: 'var(--color-muted)',
               }}
             >
               Send a message
@@ -255,43 +264,44 @@ export function Contact() {
           {mailState === 'idle' ? (
             <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
 
-              {/* Subject */}
+              {/* Subject chips */}
               <div>
                 <label
-                  htmlFor="contact-subject"
                   style={{
                     display: 'block',
                     fontFamily: 'var(--font-ui)',
                     fontSize: '0.78rem',
                     fontWeight: 600,
                     color: 'var(--color-muted)',
-                    marginBottom: '0.4rem',
+                    marginBottom: '0.6rem',
                     letterSpacing: '0.04em',
                   }}
                 >
                   Subject
                 </label>
-                <input
-                  id="contact-subject"
-                  type="text"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                  placeholder="What is this about?"
-                  style={{
-                    width: '100%',
-                    background: 'var(--color-bg)',
-                    border: '1px solid var(--color-border)',
-                    borderRadius: 'var(--radius-md)',
-                    padding: '0.65rem 0.9rem',
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.875rem',
-                    color: 'var(--color-text)',
-                    outline: 'none',
-                    transition: 'border-color 150ms',
-                  }}
-                  onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--color-neon-border)')}
-                  onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--color-border)')}
-                />
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                  {subjectOptions.map((option) => (
+                    <button
+                      key={option}
+                      type="button"
+                      onClick={() => setSubject(option)}
+                      style={{
+                        fontFamily: 'var(--font-ui)',
+                        fontSize: '0.78rem',
+                        fontWeight: 600,
+                        padding: '0.35rem 0.85rem',
+                        borderRadius: 'var(--radius-pill)',
+                        border: `1px solid ${subject === option ? 'var(--color-neon)' : 'var(--color-border)'}`,
+                        background: subject === option ? 'var(--color-neon-dim)' : 'var(--color-bg)',
+                        color: subject === option ? 'var(--color-neon)' : 'var(--color-muted)',
+                        cursor: 'pointer',
+                        transition: 'all 150ms ease',
+                      }}
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Message */}
@@ -369,7 +379,7 @@ export function Contact() {
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontSize: '0.75rem',
-                  color: 'var(--color-subtle)',
+                  color: 'var(--color-muted)',
                   textAlign: 'center',
                 }}
               >

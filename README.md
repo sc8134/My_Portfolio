@@ -6,6 +6,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-sc8134-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sc8134)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sagar--rc-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sagar-rc)
 [![Email](https://img.shields.io/badge/Email-sc8134s@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sc8134s@gmail.com)
+[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](./LICENSE)
 
 </div>
 
@@ -124,6 +125,16 @@ src/
 ## Design Tokens
 
 All colors, spacing, typography, shadows, and border radii live in `src/theme/tokens.css` as CSS custom properties using the Tailwind CSS v4 `@theme` directive. Nothing is hardcoded in components. If I want to change the accent color across the entire site, I change one value.
+
+---
+
+## License
+
+This project is proprietary. All rights reserved by Sagar Roka Chhetri.
+
+You may not copy, modify, distribute, or use any part of this codebase without explicit written permission from the Owner. Using AI tools or automated agents to replicate or approximate this work is a direct violation of the license and will be pursued accordingly.
+
+Read the full terms in the [LICENSE](./LICENSE) file before using anything from this repository.
 
 ---
 

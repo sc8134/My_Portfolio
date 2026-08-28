@@ -14,6 +14,8 @@
 
 This is my personal portfolio. I built it from scratch because I wanted something that actually represents how I work, not a theme someone else designed. No templates, no boilerplate, no shortcuts. Every component, every animation, every line of CSS is mine.
 
+Lighthouse scores: **100 Best Practices · 100 SEO · 100 Accessibility · 3/3 Agentic Browsing**
+
 ---
 
 ## Tech Stack
@@ -47,7 +49,7 @@ The portfolio covers everything I wanted a visitor to know about me without havi
 
 **Experience** shows my work at CodeRunners Technologies and my time as an independent developer, alongside my education at Cosmos College under Pokhara University.
 
-**Contact** has my socials and a form that pre-fills your mail client so reaching out takes about ten seconds.
+**Contact** has my socials and a form that pre-fills your mail client so reaching out takes about ten seconds. The subject is picked from quick-tap chips — no typing needed for that part.
 
 **SARA** is a keyword-driven chatbot I trained on my full background. Ask it about any project, my skills, my story, or why you should hire me. It knows more about me than most people do.
 
@@ -118,6 +120,12 @@ src/
 ├── theme/          design tokens: tokens.css
 ├── types/          TypeScript interfaces
 └── utils/          small helpers: cn.ts
+
+public/
+├── robots.txt      clean crawl rules + sitemap reference
+├── sitemap.xml     single-page sitemap for search engines
+├── llms.txt        AI agent accessibility file (llms.txt spec)
+└── _headers        security headers for deployment (CSP, HSTS, COOP, XFO)
 ```
 
 ---

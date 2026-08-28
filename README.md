@@ -1,24 +1,38 @@
-# Sagar Roka Chhetri — Portfolio
+<div align="center">
 
-Live at [sagarrc.com.np](https://sagarrc.com.np)
+![banner](https://capsule-render.vercel.app/api?type=waving&color=0:1e3a5f,100:c0392b&height=220&section=header&text=Sagar%20Roka%20Chhetri&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Engineer%20%7C%20React%20%7C%20TypeScript%20%7C%20Python&descSize=18&descAlignY=58&descColor=cccccc)
+
+[![Portfolio](https://img.shields.io/badge/Live%20Portfolio-sagarrc.com.np-c0392b?style=for-the-badge&logo=vercel&logoColor=white)](https://sagarrc.com.np)
+[![GitHub](https://img.shields.io/badge/GitHub-sc8134-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sc8134)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-sagar--rc-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sagar-rc)
+[![Email](https://img.shields.io/badge/Email-sc8134s@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sc8134s@gmail.com)
+
+</div>
+
+---
 
 This is my personal portfolio. I built it from scratch because I wanted something that actually represents how I work, not a theme someone else designed. No templates, no boilerplate, no shortcuts. Every component, every animation, every line of CSS is mine.
 
 ---
 
-## What it's built with
+## Tech Stack
 
-| Layer | Tools |
-|---|---|
-| Framework | React 19 + TypeScript |
-| Build tool | Vite 8 |
-| Styling | Tailwind CSS v4 + custom CSS design tokens |
-| Animations | CSS keyframes + custom scroll reveal hook |
-| Deployment | Vercel |
+<div align="center">
+
+![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+</div>
 
 ---
 
-## What's inside
+## What's Inside
 
 The portfolio covers everything I wanted a visitor to know about me without having to dig.
 
@@ -28,7 +42,7 @@ The portfolio covers everything I wanted a visitor to know about me without havi
 
 **Skills** lists my actual stack, the tools I reach for day to day and why.
 
-**Projects** showcases all 7 projects I've built, each with a real summary, the tech used, a live link where available, and a repo link. No filler projects, no "todo app" padding.
+**Projects** showcases all 7 projects I have built, each with a real summary, the tech used, a live link where available, and a repo link. No filler projects, no "todo app" padding.
 
 **Experience** shows my work at CodeRunners Technologies and my time as an independent developer, alongside my education at Cosmos College under Pokhara University.
 
@@ -36,13 +50,11 @@ The portfolio covers everything I wanted a visitor to know about me without havi
 
 **SARA** is a keyword-driven chatbot I trained on my full background. Ask it about any project, my skills, my story, or why you should hire me. It knows more about me than most people do.
 
-Other things worth mentioning: fully responsive layout, scroll-reveal animations, sticky navbar with active section tracking, SEO meta tags, Open Graph, and Twitter Card in the HTML head.
-
 ---
 
 ## Projects
 
-| Project | Stack | Link |
+| Project | Stack | Live |
 |---|---|---|
 | Nova DVR | React, TypeScript, Python, Flask | [nova-dvr.vercel.app](https://nova-dvr.vercel.app) |
 | Velora | React, TypeScript, AI APIs | [velora-six-gules.vercel.app](https://velora-six-gules.vercel.app) |
@@ -54,7 +66,19 @@ Other things worth mentioning: fully responsive layout, scroll-reveal animations
 
 ---
 
-## Running it locally
+## GitHub Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=sc8134&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&icon_color=61DAFB&text_color=ffffff)
+&nbsp;&nbsp;
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sc8134&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&text_color=ffffff)
+
+</div>
+
+---
+
+## Running Locally
 
 ```bash
 # Install dependencies
@@ -75,7 +99,7 @@ npm run preview
 
 ---
 
-## Folder structure
+## Folder Structure
 
 ```
 src/
@@ -91,21 +115,16 @@ src/
 
 ---
 
-## Design tokens
+## Design Tokens
 
 All colors, spacing, typography, shadows, and border radii live in `src/theme/tokens.css` as CSS custom properties using the Tailwind CSS v4 `@theme` directive. Nothing is hardcoded in components. If I want to change the accent color across the entire site, I change one value.
 
 ---
 
-## Get in touch
+<div align="center">
 
-If you want to talk about a role, a project, or just have a question, any of these work.
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:c0392b,100:1e3a5f&height=120&section=footer)
 
-- Email: sc8134s@gmail.com
-- GitHub: [github.com/sc8134](https://github.com/sc8134)
-- LinkedIn: [linkedin.com/in/sagar-rc](https://www.linkedin.com/in/sagar-rc)
-- Twitter/X: [@Sagarch05339168](https://x.com/Sagarch05339168)
+**Built with care from Kathmandu, Nepal**
 
----
-
-© 2025 Sagar Roka Chhetri. All rights reserved.
+</div>

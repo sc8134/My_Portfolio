@@ -70,9 +70,15 @@ The portfolio covers everything I wanted a visitor to know about me without havi
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=sc8134&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&icon_color=61DAFB&text_color=ffffff)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=sc8134&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&icon_color=61DAFB&text_color=ffffff&cache_seconds=600)
 &nbsp;&nbsp;
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sc8134&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&text_color=ffffff)
+![Top Languages](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=sc8134&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&text_color=ffffff&cache_seconds=600)
+
+</div>
+
+<div align="center">
+
+![GitHub Streak](https://streak-stats.demolab.com?user=sc8134&theme=tokyonight-duo&hide_border=true&background=0d1117&stroke=c0392b&ring=c0392b&fire=ff6b6b&currStreakLabel=ffffff&sideLabels=ffffff&dates=888888)
 
 </div>
 

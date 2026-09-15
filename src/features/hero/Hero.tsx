@@ -66,10 +66,12 @@ export function Hero() {
       {/* Open to work badge */}
       {about.openToWork && (
         <div className="animate-fade-up">
-          <span className="hero-badge">
-            <span className="hero-badge-dot" aria-hidden="true" />
-            Next Adventure Awaits
-          </span>
+          <a href="#contact" style={{ textDecoration: 'none' }}>
+            <span className="hero-badge">
+              <span className="hero-badge-dot" aria-hidden="true" />
+              {about.openToWorkText ?? 'Next Adventure Awaits'}
+            </span>
+          </a>
         </div>
       )}
 

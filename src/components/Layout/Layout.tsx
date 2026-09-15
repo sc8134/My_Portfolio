@@ -5,6 +5,9 @@ import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 interface LayoutProps {
   children: ReactNode
+  isBlogPage?: boolean
+  onBlogClick: () => void
+  onHomeClick: () => void
 }
 
 const navLinks = [
@@ -63,11 +66,11 @@ const footerSocials = [
   { id: 'email',    icon: <EmailIcon />,    url: 'mailto:sc8134s@gmail.com',             label: 'Email'     },
 ]
 
-export function Layout({ children }: LayoutProps) {
+export function Layout({ children, isBlogPage = false, onBlogClick, onHomeClick }: LayoutProps) {
   const [scrolled, setScrolled]       = useState(false)
   const [menuOpen, setMenuOpen]       = useState(false)
   const [showBackTop, setShowBackTop] = useState(false)
-  const activeSection                 = useActiveSection(sectionIds)
+  const activeSection                 = useActiveSection(isBlogPage ? [] : sectionIds)
   const footerRef                     = useScrollReveal<HTMLDivElement>(0.08)
 
   useEffect(() => {
@@ -98,7 +101,12 @@ export function Layout({ children }: LayoutProps) {
         <header className={`cmd-bar${scrolled ? ' cmd-bar--scrolled' : ''}`} role="banner">
 
           {/* Left: brand tagline */}
-          <a className="cmd-brand" href="#hero" aria-label="Back to top">
+          <a
+            className="cmd-brand"
+            href="#hero"
+            aria-label="Back to top"
+            onClick={(e) => { if (isBlogPage) { e.preventDefault(); onHomeClick() } }}
+          >
             <span className="cmd-brand-namaste">Namaste</span>
             <span className="cmd-brand-sep" aria-hidden="true"> | </span>
             <span className="cmd-brand-tagline">Build. Code. Deploy.</span>
@@ -107,19 +115,56 @@ export function Layout({ children }: LayoutProps) {
           {/* Center: floating nav capsule */}
           <nav className="cmd-nav" aria-label="Primary navigation">
             <ul className="cmd-nav-list">
-              {navLinks.map((link) => (
-                <li key={link.id}>
-                  <a
-                    className={`cmd-nav-link${activeSection === link.id ? ' cmd-nav-link--active' : ''}`}
-                    href={`#${link.id}`}
-                  >
-                    {activeSection === link.id && (
+              {isBlogPage ? (
+                /* Blog page nav: Home + Blog (active) */
+                <>
+                  <li>
+                    <button
+                      className="cmd-nav-link"
+                      style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                      onClick={onHomeClick}
+                    >
+                      Home
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="cmd-nav-link cmd-nav-link--active"
+                      style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                      onClick={onBlogClick}
+                    >
                       <span className="cmd-nav-dot" aria-hidden="true" />
-                    )}
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+                      Blog
+                    </button>
+                  </li>
+                </>
+              ) : (
+                /* Portfolio page nav */
+                <>
+                  {navLinks.map((link) => (
+                    <li key={link.id}>
+                      <a
+                        className={`cmd-nav-link${activeSection === link.id ? ' cmd-nav-link--active' : ''}`}
+                        href={`#${link.id}`}
+                      >
+                        {activeSection === link.id && (
+                          <span className="cmd-nav-dot" aria-hidden="true" />
+                        )}
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                  <li>
+                    <button
+                      className="cmd-nav-link"
+                      style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                      onClick={onBlogClick}
+                    >
+                      Blog
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
 
@@ -145,17 +190,51 @@ export function Layout({ children }: LayoutProps) {
         >
           <nav aria-label="Mobile navigation">
             <ul className="mobile-nav-list">
-              {navLinks.map((link) => (
-                <li key={link.id}>
-                  <a
-                    className={`mobile-nav-link${activeSection === link.id ? ' mobile-nav-link-active' : ''}`}
-                    href={`#${link.id}`}
-                    onClick={handleNavClick}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+              {isBlogPage ? (
+                <>
+                  <li>
+                    <button
+                      className="mobile-nav-link"
+                      style={{ background: 'none', border: 'none', cursor: 'pointer', width: '100%', textAlign: 'left' }}
+                      onClick={() => { onHomeClick(); handleNavClick() }}
+                    >
+                      Home
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="mobile-nav-link mobile-nav-link-active"
+                      style={{ background: 'none', border: 'none', cursor: 'pointer', width: '100%', textAlign: 'left' }}
+                      onClick={() => { onBlogClick(); handleNavClick() }}
+                    >
+                      Blog
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  {navLinks.map((link) => (
+                    <li key={link.id}>
+                      <a
+                        className={`mobile-nav-link${activeSection === link.id ? ' mobile-nav-link-active' : ''}`}
+                        href={`#${link.id}`}
+                        onClick={handleNavClick}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                  <li>
+                    <button
+                      className="mobile-nav-link"
+                      style={{ background: 'none', border: 'none', cursor: 'pointer', width: '100%', textAlign: 'left' }}
+                      onClick={() => { onBlogClick(); handleNavClick() }}
+                    >
+                      Blog
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
         </div>

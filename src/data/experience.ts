@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     date: 'Jul 2025 – Present',
     location: 'Remote',
     description:
-      "My first real production role, and it actually has users. Not a demo, not a sandbox. I built most of the React frontend from scratch, wired up SMTP-based email notifications, and put together the admin panel for event management. I also handled the full deployment myself: both frontend and backend, a live domain, SQL database on cPanel. It is equity-based, which means I did not join for a paycheck. I joined because I believed in what we were building.",
+      "The friction: a growing platform with real users, no dedicated frontend person, and a UI that wasn't keeping up with the product. I came in and built most of the React frontend from scratch: the admin panel, SMTP email notifications, event management flows. Then handled the full deployment myself: frontend, backend, live domain, SQL database on cPanel. It's equity-based. I didn't join for a paycheck. I joined because I believed in what we were building and wanted to own the outcome.",
     tech: ['MongoDB', 'Express', 'React', 'Node.js', 'JavaScript'],
   },
   {
@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     company: 'Self-directed Projects',
     date: '2023 – 2025',
     description:
-      "Two years of building things on my own time, with no one telling me what to do or how to do it. I covered every layer: UI, API, database, deployment. The projects I am most proud of came from this period: Namo Patro, Nova DVR, Signal Job Portal. All written by me, all live on GitHub.",
+      "The friction: no job, no structure, no one setting priorities. I had to decide what to build, how to build it, and when to ship. Two years of covering every layer myself: UI, API, database, deployment, with no one to ask and no one to blame. The projects I'm most proud of came from this period: Namo Patro, Nova DVR, Signal Job Portal. All written by me. All live on GitHub. Signal got me the job at CodeRunners.",
     tech: ['React', 'TypeScript', 'Flask', 'Node.js', 'PostgreSQL', 'Python'],
   },
   {
@@ -30,7 +30,7 @@ export const experiences: Experience[] = [
     university: 'Pokhara University',
     date: '2022 – 2026',
     description:
-      "Final year, awaiting graduation. The degree gave me the theory: algorithms, networking, data structures, distributed systems. But I never treated university as the only place I was learning. Every semester I was also building real projects outside class, and those taught me more than any assignment did.",
+      "Final year, awaiting graduation. The degree gave me the theory: algorithms, networking, data structures, distributed systems. But I never treated it as the only place I was learning. Every semester I was also building real projects outside class. The assignments taught me the vocabulary. The projects taught me the judgment.",
   },
   {
     id: 'plus2',
@@ -39,6 +39,6 @@ export const experiences: Experience[] = [
     company: 'Milestone International College',
     date: '2019 – 2021',
     description:
-      "Finished with a 3.78 GPA, top 10% in Nepal. Physics taught me how to think through problems systematically before reaching for tools. That habit stuck. I still spend more time thinking about a problem than I do writing code for it.",
+      "Finished with a 3.78 GPA, top 10% in Nepal. Physics didn't teach me how to code. It taught me how to sit with a problem before reaching for a solution. That habit carried over. I still spend more time thinking about a problem than I do writing code for it.",
   },
 ]

@@ -95,8 +95,8 @@ export function Contact() {
             color: 'var(--color-muted)',
           }}
         >
-          Open to full-time roles, internships, and interesting projects.
-          I reply to every message.
+          If you have an interesting problem, I want to hear about it.
+          I also reply to messages that aren&apos;t job offers.
         </p>
         {about.openToWork && (
           <div style={{ marginTop: '0.75rem' }}>
@@ -126,7 +126,7 @@ export function Contact() {
                   animation: 'pulse-dot 2s infinite',
                 }}
               />
-              Available to start soon
+              {about.openToWorkText ?? 'Available to start soon'}
             </span>
           </div>
         )}

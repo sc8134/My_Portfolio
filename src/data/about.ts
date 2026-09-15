@@ -5,10 +5,11 @@ export const about: AboutData = {
   role: 'Full Stack Engineer',
 
   roles: [
-    'Python Enthusiast',
-    'React + Angular Engineer',
-    'Open Source Builder',
     'Full Stack Engineer',
+    'Ships the boring parts too',
+    'Open-source first',
+    'Builds for real users',
+    'Full-stack by necessity',
   ],
 
   tagline: 'I write the code. Every line, every commit, every bug fix. All me.',
@@ -50,13 +51,14 @@ export const about: AboutData = {
   ],
 
   stats: [
-    { value: '7',   label: 'Projects Built'  },
+    { value: '8',   label: 'Projects Built'  },
     { value: '2+',  label: 'Years Coding'    },
     { value: '3',   label: 'Open Source'     },
   ],
 
   resumeUrl: '/Resume/Sagar_Roka_Chhetri_Resume_ATS.pdf',
   openToWork: true,
+  openToWorkText: 'Currently open to interesting problems',
 
   facts: [
     '📍 Nepal',

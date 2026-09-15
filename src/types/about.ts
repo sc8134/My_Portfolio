@@ -21,5 +21,6 @@ export interface AboutData {
   stats: StatItem[]
   resumeUrl: string
   openToWork: boolean
+  openToWorkText?: string   // displayed in the hero badge and contact section
   facts: string[]
 }

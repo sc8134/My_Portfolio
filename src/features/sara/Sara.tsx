@@ -18,37 +18,38 @@ const knowledge: Record<string, string> = {
   // ── HELP ──────────────────────────────────────────────────
   help: `Sure! Here is everything I can tell you about Sagar. Just type any of these topics and I will give you the full story:
 
-  who / sagar / about    — Who he is and his background
-  story / journey        — How he got into coding
-  skills / stack         — His full technical skill set
-  frontend               — Frontend skills specifically
-  backend                — Backend and server-side skills
-  projects               — All 7 projects he has built
-  nova / nova dvr        — Nova DVR deep dive
-  velora                 — Velora Media Hub deep dive
-  signal / job portal    — Signal Job Portal deep dive
-  jobhunt / agent        — JobHunt Agent deep dive
-  namo / patro           — Namo Patro deep dive
-  phishing               — Phishing Simulation Tool deep dive
-  ai reel / reel         — AI Reel Generator deep dive
-  experience / work      — Work experience at CodeRunners
-  education / degree     — His BCE degree and academic record
-  personality            — What he is like as a person
-  philosophy / values    — How he thinks about code and work
-  goals / ambition       — What he is working toward
-  hire / recruit         — Why you should hire him
-  availability           — When he can start
-  location / remote      — Where he is and if he works remotely
-  contact / reach        — How to get in touch
-  fun-facts              — Interesting things about him
-  surprise               — Something unexpected`,
+  who / sagar / about    - Who he is and his background
+  story / journey        - How he got into coding
+  skills / stack         - His full technical skill set
+  frontend               - Frontend skills specifically
+  backend                - Backend and server-side skills
+  projects               - All 8 projects he has built
+  bolts / bolts army     - Janakpur Bolts Army deep dive
+  nova / nova dvr        - Nova DVR deep dive
+  velora                 - Velora Media Hub deep dive
+  signal / job portal    - Signal Job Portal deep dive
+  jobhunt / agent        - JobHunt Agent deep dive
+  namo / patro           - Namo Patro deep dive
+  phishing               - Phishing Simulation Tool deep dive
+  ai reel / reel         - AI Reel Generator deep dive
+  experience / work      - Work experience at CodeRunners
+  education / degree     - His BCE degree and academic record
+  personality            - What he is like as a person
+  philosophy / values    - How he thinks about code and work
+  goals / ambition       - What he is working toward
+  hire / recruit         - Why you should hire him
+  availability           - When he can start
+  location / remote      - Where he is and if he works remotely
+  contact / reach        - How to get in touch
+  fun-facts              - Interesting things about him
+  surprise               - Something unexpected`,
 
   // ── WHO IS SAGAR ──────────────────────────────────────────
   who: `Sagar Roka Chhetri is a 22 year old full-stack engineer from Nepal, currently in his final year of a BCE in Computer Engineering at Cosmos College of Management and Technology under Pokhara University.
 
 He did not get into coding through a bootcamp or a YouTube tutorial. He got into it because things bothered him. He kept running into small annoying problems and instead of accepting them, he wrote Python scripts to fix them. That habit of building solutions to real problems is still exactly what drives him today.
 
-Over the past two plus years he has gone from writing automation scripts to shipping full production applications. His work covers everything from frontend React interfaces to Python and Node.js backends, databases, and deployment. He has built 7 projects, 3 of which are open source, and he is currently working as a Full Stack Engineer at CodeRunners Technologies on a production MERN stack platform.
+Over the past two plus years he has gone from writing automation scripts to shipping full production applications. His work covers everything from frontend React interfaces to Python and Node.js backends, databases, and deployment. He has built 8 projects, 3 of which are open source, and he is currently working as a Full Stack Engineer at CodeRunners Technologies on a production MERN stack platform.
 
 He is based in Nepal, fully remote-ready, and actively looking for his next full-time role or internship.`,
 
@@ -56,7 +57,7 @@ He is based in Nepal, fully remote-ready, and actively looking for his next full
 
 He did not get into coding through a bootcamp or a YouTube tutorial. He got into it because things bothered him. He kept running into small annoying problems and instead of accepting them, he wrote Python scripts to fix them. That habit of building solutions to real problems is still exactly what drives him today.
 
-Over the past two plus years he has gone from writing automation scripts to shipping full production applications. His work covers everything from frontend React interfaces to Python and Node.js backends, databases, and deployment. He has built 7 projects, 3 of which are open source, and he is currently working as a Full Stack Engineer at CodeRunners Technologies on a production MERN stack platform.
+Over the past two plus years he has gone from writing automation scripts to shipping full production applications. His work covers everything from frontend React interfaces to Python and Node.js backends, databases, and deployment. He has built 8 projects, 3 of which are open source, and he is currently working as a Full Stack Engineer at CodeRunners Technologies on a production MERN stack platform.
 
 He is based in Nepal, fully remote-ready, and actively looking for his next full-time role or internship.`,
 
@@ -64,7 +65,7 @@ He is based in Nepal, fully remote-ready, and actively looking for his next full
 
 He did not get into coding through a bootcamp or a YouTube tutorial. He got into it because things bothered him. He kept running into small annoying problems and instead of accepting them, he wrote Python scripts to fix them. That habit of building solutions to real problems is still exactly what drives him today.
 
-Over the past two plus years he has gone from writing automation scripts to shipping full production applications. His work covers everything from frontend React interfaces to Python and Node.js backends, databases, and deployment. He has built 7 projects, 3 of which are open source, and he is currently working as a Full Stack Engineer at CodeRunners Technologies on a production MERN stack platform.
+Over the past two plus years he has gone from writing automation scripts to shipping full production applications. His work covers everything from frontend React interfaces to Python and Node.js backends, databases, and deployment. He has built 8 projects, 3 of which are open source, and he is currently working as a Full Stack Engineer at CodeRunners Technologies on a production MERN stack platform.
 
 He is based in Nepal, fully remote-ready, and actively looking for his next full-time role or internship.`,
 
@@ -143,30 +144,54 @@ He has built REST APIs, handled authentication flows including dual-role auth in
 His backend work at CodeRunners Technologies involves a production MERN stack platform handling real users, which is his most significant professional backend experience to date.`,
 
   // ── ALL PROJECTS ──────────────────────────────────────────
-  projects: `Sagar has built 7 projects, all public on GitHub. Here is the full list:
+  projects: `Sagar has built 8 projects, all public on GitHub. Here is the full list:
 
-1. Nova DVR (live at nova-dvr.vercel.app)
+1. Janakpur Bolts Army (live at boltsarmy.com)
+   Official cricket fanpage built through a partnership between Janakpur Bolts Army and CodeRunners Technologies. Sagar owned the entire delivery: UI/UX design, React frontend, backend, and cPanel deployment. Live in production.
+
+2. Nova DVR (live at nova-dvr.vercel.app)
    AI-powered media organizer and downloader. Multi-platform downloads, batch scheduling, cloud sync, AI metadata tagging. React frontend, Python/Flask backend.
 
-2. Velora (live at velora-six-gules.vercel.app)
+3. Velora (live at velora-six-gules.vercel.app)
    Next-generation media hub combining video downloading, AI content recognition, and smart discovery. Built with TypeScript and React, deployed on Vercel.
 
-3. Signal Job Portal (github.com/sc8134/signal-job-portal)
+4. Signal Job Portal (github.com/sc8134/signal-job-portal)
    Full-stack job board with dual-role authentication for employers and job seekers. Smart filtering and matching system. TypeScript, React, Node.js.
 
-4. JobHunt Agent (github.com/sc8134/JobHunt-Agent)
+5. JobHunt Agent (github.com/sc8134/JobHunt-Agent)
    AI job search agent built with LangGraph, spaCy, and sentence-transformers. Paste your resume and it finds, ranks, and writes cover letters for the best matches. No LLM API key required.
 
-5. AI Reel Generator (github.com/sc8134/ai-reel-generator)
+6. AI Reel Generator (github.com/sc8134/ai-reel-generator)
    End-to-end Python pipeline that turns text prompts into short-form video reels with captions, background music, and customizable templates.
 
-6. Namo Patro (github.com/sc8134/Namo-Patro)
+7. Namo Patro (github.com/sc8134/Namo-Patro)
    Nepali digital calendar and lifestyle platform. BS to AD calendar conversion, festival listings, astrology, finance tools, live radio. GPL-3.0 open source.
 
-7. Phishing Simulation Tool (github.com/sc8134/phishing-simulation-tool)
+8. Phishing Simulation Tool (github.com/sc8134/phishing-simulation-tool)
    Security awareness training platform for organizations. Run controlled phishing simulations, track click-through rates, measure employee vulnerability. React and Flask.
 
 Type any project name for a detailed breakdown!`,
+
+  // ── JANAKPUR BOLTS ARMY ───────────────────────────────────
+  bolts: `Janakpur Bolts Army is a cricket fanpage built through a partnership between the club and CodeRunners Technologies.
+
+It was a three-person team. Sagar led the project as the primary engineer, contributing around 50% of the total build. The features he owned: membership system, events page, gallery, Fan Frame (a fan identity feature), and the admin panel. He also handled the UI/UX design and the complete cPanel deployment at boltsarmy.com.
+
+Two other developers each contributed around 25%.
+
+He is honest about this. He did not build it alone but he was the lead, and the deployment and maintenance are entirely his.
+
+The cPanel deployment is worth noting. Getting a full-stack app running cleanly on shared hosting requires a different kind of problem solving than a Vercel one-click deploy. He owns that infrastructure. The site is live at boltsarmy.com.`,
+
+  'bolts army': `Janakpur Bolts Army is a cricket fanpage built through a partnership between the club and CodeRunners Technologies.
+
+It was a three-person team. Sagar led the project as the primary engineer, contributing around 50% of the total build. The features he owned: membership system, events page, gallery, Fan Frame (a fan identity feature), and the admin panel. He also handled the UI/UX design and the complete cPanel deployment at boltsarmy.com.
+
+Two other developers each contributed around 25%.
+
+He is honest about this. He did not build it alone but he was the lead, and the deployment and maintenance are entirely his.
+
+The cPanel deployment is worth noting. Getting a full-stack app running cleanly on shared hosting requires a different kind of problem solving than a Vercel one-click deploy. He owns that infrastructure. The site is live at boltsarmy.com.`,
 
   // ── NOVA DVR ──────────────────────────────────────────────
   nova: `Nova DVR is probably Sagar's most polished project and the one he is most proud of technically.

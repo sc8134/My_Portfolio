@@ -20,7 +20,7 @@
 
 ## What This Is
 
-My personal portfolio — built from scratch, no templates, no shortcuts. Every component, every animation, every design token was designed and written by me because I wanted something that actually represents how I work.
+My personal portfolio - built from scratch, no templates, no shortcuts. Every component, every animation, every design token was designed and written by me because I wanted something that actually represents how I work.
 
 **Live at [sagarrc.com.np](https://sagarrc.com.np)**
 
@@ -67,7 +67,7 @@ My personal portfolio — built from scratch, no templates, no shortcuts. Every 
 Typewriter effect cycling through my roles. Short honest bio. Direct links to resume, projects, and socials.
 
 ### 👤 About
-My story, philosophy cards, and quick stats. Written in my own words — no corporate speak.
+My story, philosophy cards, and quick stats. Written in my own words - no corporate speak.
 
 ### ⚙️ Skills — Bento grid with proficiency bars
 4 category cards (Frontend · Backend · Database · Tools & DevOps) with animated fill bars showing proficiency level. Click any skill to see exactly where it shipped in production.
@@ -82,10 +82,10 @@ Timeline layout with icon bubbles. Work entries use coral accent, education uses
 Timeline cards matching the Experience section style. CodeAlpha Certificate of Completion and Letter of Recommendation — both with PDF download links, verified badge, and credential ID.
 
 ### 🤖 SARA — AI Assistant
-A keyword-driven chatbot trained on my complete background. Handles questions about projects, skills, experience, philosophy, and hiring. No API key required — runs entirely on pattern matching.
+A keyword-driven chatbot trained on my complete background. Handles questions about projects, skills, experience, philosophy, and hiring. No API key required - runs entirely on pattern matching.
 
 ### 📬 Contact
-Two-panel layout. Left: social links, live Kathmandu clock, and real-time availability status. Right: Web3Forms submission — no mail client popup, messages go directly to inbox.
+Two-panel layout. Left: social links, live Kathmandu clock, and real-time availability status. Right: Web3Forms submission - no mail client popup, messages go directly to inbox.
 
 ---
 

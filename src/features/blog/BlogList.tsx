@@ -53,7 +53,7 @@ function FeaturedCard({ post, onSelect }: { post: BlogPost; onSelect: () => void
       aria-label={`Read ${post.title}`}
       onKeyDown={(e) => e.key === 'Enter' && onSelect()}
       style={{
-        background: 'var(--color-surface)',
+        background: 'var(--color-bg-alt)',
         border: `1px solid ${hovered ? 'var(--color-neon-border)' : 'var(--color-border)'}`,
         borderRadius: 'var(--radius-lg)', overflow: 'hidden', cursor: 'pointer',
         transition: 'box-shadow 220ms ease, border-color 220ms ease',
@@ -116,7 +116,7 @@ function BlogCard({ post, onSelect }: { post: BlogPost; onSelect: () => void }) 
       aria-label={`Read ${post.title}`}
       onKeyDown={(e) => e.key === 'Enter' && onSelect()}
       style={{
-        background: 'var(--color-surface)',
+        background: 'var(--color-bg-alt)',
         border: `1px solid ${hovered ? 'var(--color-neon-border)' : 'var(--color-border)'}`,
         borderRadius: 'var(--radius-lg)', overflow: 'hidden', cursor: 'pointer',
         transition: 'transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease',
@@ -228,7 +228,7 @@ export function BlogList({ onSelectPost, onBack }: BlogListProps) {
             A running log of what I am building, thinking, and learning -
             written for myself, shared with whoever finds it useful.
           </p>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.25rem', fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-muted)', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-pill)', padding: '0.3rem 0.85rem' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.25rem', fontFamily: 'var(--font-ui)', fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-muted)', background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-pill)', padding: '0.3rem 0.85rem' }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--color-neon)', display: 'block', flexShrink: 0 }} />
             {blogPosts.length} entries · growing
           </div>

@@ -2,6 +2,17 @@ import type { Experience } from '../types/experience'
 
 export const experiences: Experience[] = [
   {
+    id: 'codealpha',
+    type: 'work',
+    role: 'Full Stack Development Intern',
+    company: 'CodeAlpha',
+    date: 'Aug 2026 – Sep 2026',
+    location: 'Remote',
+    description:
+      'Virtual internship in Full Stack Development. Completed the one-month program, received a Letter of Recommendation and Certificate of Completion. Demonstrated strong analytical skills and quick adaptation to emerging technologies across the program.',
+    tech: ['Full Stack', 'React', 'Node.js', 'JavaScript'],
+  },
+  {
     id: 'coderunners',
     type: 'work',
     role: 'Full Stack Developer',

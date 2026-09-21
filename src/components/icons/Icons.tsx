@@ -238,3 +238,67 @@ export const philosophyIconMap: Record<string, React.ReactNode> = {
   'I read the docs':      <ReadDocsIcon />,
   'Ship, then improve':   <ShipIcon />,
 }
+
+// ── Cookie banner icon ─────────────────────────────────────
+
+/** Cookie: round biscuit with chocolate chips */
+export function CookieIcon({ size = 24, coral = C, navy = N }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      {/* Cookie body */}
+      <circle cx="12" cy="12" r="9" stroke={coral} strokeWidth="2" fill={coral} fillOpacity="0.10" />
+      {/* Bite taken out — top right arc masked */}
+      <path d="M17.5 6.5 A4 4 0 0 1 20.5 10" stroke={coral} strokeWidth="2" strokeLinecap="round" />
+      {/* Chip 1 — top left */}
+      <circle cx="9" cy="8.5" r="1.4" fill={navy} opacity="0.75" />
+      {/* Chip 2 — right */}
+      <circle cx="15" cy="11" r="1.2" fill={navy} opacity="0.70" />
+      {/* Chip 3 — bottom center */}
+      <circle cx="11" cy="15" r="1.4" fill={navy} opacity="0.75" />
+      {/* Chip 4 — small accent */}
+      <circle cx="8" cy="13" r="0.9" fill={coral} opacity="0.6" />
+      {/* Surface texture crack lines */}
+      <path d="M12 9 Q13.5 11 12 13" stroke={coral} strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+      <path d="M9.5 11 Q11 12.5 10 14" stroke={navy} strokeWidth="0.9" strokeLinecap="round" opacity="0.35" />
+    </svg>
+  )
+}
+
+// ── Contact footer icons ───────────────────────────────────
+
+/** Lightning bolt — "quick reply" */
+export function LightningIcon({ size = 14, coral = C, navy = N }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z"
+        stroke={coral} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+        fill={coral} fillOpacity="0.15"
+      />
+      <path
+        d="M13 2L11 10.5H19.5"
+        stroke={navy} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"
+        opacity="0.35"
+      />
+    </svg>
+  )
+}
+
+/** Shield with checkmark — "no spam" */
+export function ShieldCheckIcon({ size = 14, coral = C, navy = N }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      {/* Shield body */}
+      <path
+        d="M12 2L4 6V12C4 16.4 7.4 20.5 12 22C16.6 20.5 20 16.4 20 12V6L12 2Z"
+        stroke={navy} strokeWidth="2" strokeLinejoin="round"
+        fill={navy} fillOpacity="0.07"
+      />
+      {/* Check */}
+      <path
+        d="M8.5 12L11 14.5L15.5 9.5"
+        stroke={coral} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+      />
+    </svg>
+  )
+}

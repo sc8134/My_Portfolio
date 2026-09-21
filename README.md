@@ -1,20 +1,44 @@
 <div align="center">
 
-![banner](https://capsule-render.vercel.app/api?type=waving&color=0:1e3a5f,100:c0392b&height=220&section=header&text=Sagar%20Roka%20Chhetri&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Engineer%20%7C%20React%20%7C%20TypeScript%20%7C%20Python&descSize=18&descAlignY=58&descColor=cccccc)
+![banner](https://capsule-render.vercel.app/api?type=waving&color=0:1e3a5f,100:e8532a&height=240&section=header&text=Sagar%20Roka%20Chhetri&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Engineer%20%7C%20React%20%C2%B7%20TypeScript%20%C2%B7%20Python%20%C2%B7%20Node.js&descSize=18&descAlignY=58&descColor=f0ebe0)
 
-[![Portfolio](https://img.shields.io/badge/Live%20Portfolio-sagarrc.com.np-c0392b?style=for-the-badge&logo=vercel&logoColor=white)](https://sagarrc.com.np)
+<br/>
+
+[![Portfolio](https://img.shields.io/badge/🌐%20Live%20Portfolio-sagarrc.com.np-e8532a?style=for-the-badge&logoColor=white)](https://sagarrc.com.np)
 [![GitHub](https://img.shields.io/badge/GitHub-sc8134-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sc8134)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sagar--rc-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sagar-rc)
 [![Email](https://img.shields.io/badge/Email-sc8134s@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sc8134s@gmail.com)
-[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](./LICENSE)
+[![License](https://img.shields.io/badge/License-Proprietary-1e2d4d?style=for-the-badge)](./LICENSE)
+
+<br/>
+
+> *"I write the code. Every line, every commit, every bug fix. All me."*
 
 </div>
 
 ---
 
-This is my personal portfolio. I built it from scratch because I wanted something that actually represents how I work, not a theme someone else designed. No templates, no boilerplate, no shortcuts. Every component, every animation, every line of CSS is mine.
+## What This Is
 
-Lighthouse scores: **100 Best Practices · 100 SEO · 100 Accessibility · 3/3 Agentic Browsing**
+My personal portfolio — built from scratch, no templates, no shortcuts. Every component, every animation, every design token was designed and written by me because I wanted something that actually represents how I work.
+
+**Live at [sagarrc.com.np](https://sagarrc.com.np)**
+
+---
+
+## Highlights
+
+| | |
+|---|---|
+| 🏗 **Built from scratch** | Zero templates, zero boilerplate — every line authored manually |
+| ⚡ **Production-grade stack** | React 19 · TypeScript · Vite 8 · Tailwind CSS v4 |
+| 🎨 **Custom design system** | Full token-based theming in `tokens.css` — one file to rule all colors |
+| 🤖 **SARA — AI chatbot** | Keyword-trained on my full background — ask it anything about me |
+| 🍪 **Cookie consent** | GDPR-compliant banner with `localStorage` persistence |
+| 📬 **Real contact form** | Web3Forms integration — no mail client required |
+| 🔒 **Security headers** | CSP · HSTS · COOP · X-Frame-Options via `_headers` |
+| 🌐 **SEO ready** | `robots.txt` · `sitemap.xml` · `llms.txt` for AI crawlers |
+| 📱 **Fully responsive** | Mobile-first, tested down to 360px |
 
 ---
 
@@ -22,50 +46,153 @@ Lighthouse scores: **100 Best Practices · 100 SEO · 100 Accessibility · 3/3 A
 
 <div align="center">
 
-![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![React](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Web3Forms](https://img.shields.io/badge/Web3Forms-FF6B35?style=flat-square&logoColor=white)
 
 </div>
 
 ---
 
-## What's Inside
+## Sections
 
-The portfolio covers everything I wanted a visitor to know about me without having to dig.
+### 🦸 Hero
+Typewriter effect cycling through my roles. Short honest bio. Direct links to resume, projects, and socials.
 
-**Hero** greets you with a typewriter effect cycling through my roles, and a short honest bio about how I approach building things.
+### 👤 About
+My story, philosophy cards, and quick stats. Written in my own words — no corporate speak.
 
-**About** goes deeper into my story, the philosophy behind how I write code, and a few quick stats.
+### ⚙️ Skills — Bento grid with proficiency bars
+4 category cards (Frontend · Backend · Database · Tools & DevOps) with animated fill bars showing proficiency level. Click any skill to see exactly where it shipped in production.
 
-**Skills** lists my actual stack, the tools I reach for day to day and why.
+### 🗂 Projects — App icon showcase
+All 8 projects rendered as app icons with real cover screenshots. Click any icon and a bottom-sheet drawer slides up with the full project detail — cover image, why I built it, what I shipped, tech stack, and CTAs.
 
-**Projects** showcases all 7 projects I have built, each with a real summary, the tech used, a live link where available, and a repo link. No filler projects, no "todo app" padding.
+### 💼 Experience & Education
+Timeline layout with icon bubbles. Work entries use coral accent, education uses navy. CodeAlpha internship, CodeRunners Technologies, Cosmos College, Milestone International College.
 
-**Experience** shows my work at CodeRunners Technologies and my time as an independent developer, alongside my education at Cosmos College under Pokhara University.
+### 🏆 Certifications & Recognition
+Timeline cards matching the Experience section style. CodeAlpha Certificate of Completion and Letter of Recommendation — both with PDF download links, verified badge, and credential ID.
 
-**Contact** has my socials and a form that pre-fills your mail client so reaching out takes about ten seconds. The subject is picked from quick-tap chips — no typing needed for that part.
+### 🤖 SARA — AI Assistant
+A keyword-driven chatbot trained on my complete background. Handles questions about projects, skills, experience, philosophy, and hiring. No API key required — runs entirely on pattern matching.
 
-**SARA** is a keyword-driven chatbot I trained on my full background. Ask it about any project, my skills, my story, or why you should hire me. It knows more about me than most people do.
+### 📬 Contact
+Two-panel layout. Left: social links, live Kathmandu clock, and real-time availability status. Right: Web3Forms submission — no mail client popup, messages go directly to inbox.
 
 ---
 
 ## Projects
 
-| Project | Stack | Live |
-|---|---|---|
-| Nova DVR | React, TypeScript, Python, Flask | [nova-dvr.vercel.app](https://nova-dvr.vercel.app) |
-| Velora | React, TypeScript, AI APIs | [velora-six-gules.vercel.app](https://velora-six-gules.vercel.app) |
-| Signal Job Portal | React, Node.js, PostgreSQL | [github.com/sc8134/signal-job-portal](https://github.com/sc8134/signal-job-portal) |
-| JobHunt Agent | Python, LangGraph, spaCy | [github.com/sc8134/JobHunt-Agent](https://github.com/sc8134/JobHunt-Agent) |
-| AI Reel Generator | Python, FFmpeg, OpenAI API | [github.com/sc8134/ai-reel-generator](https://github.com/sc8134/ai-reel-generator) |
-| Namo Patro | React, Node.js, PostgreSQL | [github.com/sc8134/Namo-Patro](https://github.com/sc8134/Namo-Patro) |
-| Phishing Simulation Tool | React, Flask, Python | [github.com/sc8134/phishing-simulation-tool](https://github.com/sc8134/phishing-simulation-tool) |
+| # | Project | Stack | Status |
+|---|---|---|---|
+| 01 | [Janakpur Bolts Army](https://boltsarmy.com) | React · TypeScript · Node.js · Tailwind · cPanel | 🟢 Live |
+| 02 | [Nova DVR](https://nova-dvr.vercel.app) | React · TypeScript · Python · Flask · Vercel | 🟢 Live |
+| 03 | [Velora](https://github.com/sc8134/Velora) | React · TypeScript · Tailwind · AI APIs | ⚫ GitHub |
+| 04 | [Signal Job Portal](https://github.com/sc8134/signal-job-portal) | React · Node.js · PostgreSQL · TypeScript | ⚫ GitHub |
+| 05 | [JobHunt Agent](https://github.com/sc8134/JobHunt-Agent) | Python · LangGraph · spaCy · sentence-transformers | ⚫ GitHub |
+| 06 | [AI Reel Generator](https://github.com/sc8134/ai-reel-generator) | Python · FFmpeg · OpenAI API | ⚫ GitHub |
+| 07 | [Namo Patro](https://github.com/sc8134/Namo-Patro) | React · Node.js · PostgreSQL · TypeScript | ⚫ GitHub |
+| 08 | [Phishing Simulation Tool](https://github.com/sc8134/phishing-simulation-tool) | React · Flask · Python · TypeScript | ⚫ GitHub |
+
+---
+
+## Folder Structure
+
+```
+My_Portfolio/
+├── public/
+│   ├── background/          navbar.webp · professional.webp
+│   ├── certificate/         codealpha-certificate.pdf · codealpha-lor.pdf
+│   ├── projects/            cover images for all 8 projects
+│   ├── resume/              Sagar_Roka_Chhetri_Resume_ATS.pdf
+│   ├── favicon.svg
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── llms.txt
+│   └── _headers             security headers
+│
+└── src/
+    ├── components/
+    │   ├── Button/
+    │   ├── Card/
+    │   ├── CookieBanner/    GDPR cookie consent
+    │   ├── icons/           custom SVG icon set (two-color: coral + navy)
+    │   └── Layout/          sticky nav, mobile drawer, closing footer
+    │
+    ├── data/                static content — about, projects, experience, skills, socials, blog
+    ├── features/
+    │   ├── about/
+    │   ├── blog/            BlogList + BlogPost
+    │   ├── contact/         Web3Forms + live clock + availability
+    │   ├── experience/
+    │   ├── hero/
+    │   ├── projects/        app icon grid + bottom-sheet drawer
+    │   ├── recognitions/    certifications + LOR timeline
+    │   ├── sara/            AI chatbot
+    │   └── skills/          bento grid with animated proficiency bars
+    │
+    ├── hooks/               useActiveSection · useScrollReveal · useTypewriter · useMounted · useGitHubStats
+    ├── styles/              base.css · index.css
+    ├── theme/               tokens.css — all design tokens via @theme
+    ├── types/               TypeScript interfaces for all data models
+    └── utils/               cn.ts
+```
+
+---
+
+## Design System
+
+All design decisions live in `src/theme/tokens.css` as CSS custom properties via Tailwind v4's `@theme` directive.
+
+```css
+/* Palette */
+--color-bg:       #f0ebe0   /* warm parchment */
+--color-neon:     #e8532a   /* coral red — primary accent */
+--color-navy:     #1e2d4d   /* deep navy — headings */
+--color-green:    #22c55e   /* status green */
+
+/* Typography */
+--font-display:   Cormorant Garamond   /* editorial serif — italic accents */
+--font-body:      Inter                /* clean readable sans */
+--font-ui:        Poppins              /* bold geometric — buttons, labels */
+```
+
+One token change = sitewide update. Nothing hardcoded in components.
+
+---
+
+## Running Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/sc8134/My_Portfolio.git
+cd My_Portfolio
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Type check
+npx tsc --noEmit
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+**Node.js 18+** required.
 
 ---
 
@@ -73,83 +200,51 @@ The portfolio covers everything I wanted a visitor to know about me without havi
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=sc8134&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&icon_color=61DAFB&text_color=ffffff&cache_seconds=600)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=sc8134&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=e8532a&icon_color=61DAFB&text_color=ffffff&cache_seconds=600)
 &nbsp;&nbsp;
-![Top Languages](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=sc8134&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=c0392b&text_color=ffffff&cache_seconds=600)
+![Top Languages](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=sc8134&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=e8532a&text_color=ffffff&cache_seconds=600)
 
 </div>
 
 <div align="center">
 
-![GitHub Streak](https://streak-stats.demolab.com?user=sc8134&theme=tokyonight-duo&hide_border=true&background=0d1117&stroke=c0392b&ring=c0392b&fire=ff6b6b&currStreakLabel=ffffff&sideLabels=ffffff&dates=888888)
+![GitHub Streak](https://streak-stats.demolab.com?user=sc8134&theme=tokyonight-duo&hide_border=true&background=0d1117&stroke=e8532a&ring=e8532a&fire=ff6b6b&currStreakLabel=ffffff&sideLabels=ffffff&dates=888888)
 
 </div>
 
 ---
 
-## Running Locally
+## Credentials
 
-```bash
-# Install dependencies
-npm install
+<div align="center">
 
-# Start the dev server
-npm run dev
+| Credential | Issuer | Date | ID |
+|---|---|---|---|
+| Certificate of Completion — Full Stack Dev | CodeAlpha | Sep 20, 2026 | CA/DF1/252458 |
+| Letter of Recommendation — Full Stack Dev | CodeAlpha (Founder & CEO) | Sep 20, 2026 | CA/DF1/252458 |
 
-# Type check without building
-npx tsc --noEmit
+*Recognized by Ministry of Corporate Affairs, Government of India*
 
-# Build for production
-npm run build
-
-# Preview the production build
-npm run preview
-```
-
----
-
-## Folder Structure
-
-```
-src/
-├── components/     shared UI: Button, Card, Layout, Icons
-├── data/           static content: about, projects, experience, skills, socials
-├── features/       page sections: Hero, About, Skills, Projects, Experience, Contact, Sara
-├── hooks/          custom hooks: useActiveSection, useScrollReveal, useTypewriter, and more
-├── styles/         global CSS: base.css, index.css
-├── theme/          design tokens: tokens.css
-├── types/          TypeScript interfaces
-└── utils/          small helpers: cn.ts
-
-public/
-├── robots.txt      clean crawl rules + sitemap reference
-├── sitemap.xml     single-page sitemap for search engines
-├── llms.txt        AI agent accessibility file (llms.txt spec)
-└── _headers        security headers for deployment (CSP, HSTS, COOP, XFO)
-```
-
----
-
-## Design Tokens
-
-All colors, spacing, typography, shadows, and border radii live in `src/theme/tokens.css` as CSS custom properties using the Tailwind CSS v4 `@theme` directive. Nothing is hardcoded in components. If I want to change the accent color across the entire site, I change one value.
+</div>
 
 ---
 
 ## License
 
-This project is proprietary. All rights reserved by Sagar Roka Chhetri.
+This project is **proprietary**. All rights reserved by Sagar Roka Chhetri.
 
-You may not copy, modify, distribute, or use any part of this codebase without explicit written permission from the Owner. Using AI tools or automated agents to replicate or approximate this work is a direct violation of the license and will be pursued accordingly.
+You may **not** copy, modify, distribute, or use any part of this codebase without explicit written permission from the owner. Using AI tools or automated agents to replicate or approximate this work is a direct violation of the license.
 
-Read the full terms in the [LICENSE](./LICENSE) file before using anything from this repository.
+See the full terms in [`LICENSE`](./LICENSE).
 
 ---
 
 <div align="center">
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:c0392b,100:1e3a5f&height=120&section=footer)
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:e8532a,100:1e2d4d&height=140&section=footer)
 
-**Built with care from Kathmandu, Nepal**
+**Built with care from Kathmandu, Nepal 🇳🇵**
+
+*© 2026 Sagar Roka Chhetri · [sagarrc.com.np](https://sagarrc.com.np)*
 
 </div>

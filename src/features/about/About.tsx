@@ -25,7 +25,7 @@ export function About() {
                 width: '100%',
                 aspectRatio: '4/5',
                 borderRadius: 'var(--radius-lg)',
-                background: 'var(--color-surface)',
+                background: 'var(--color-bg-alt)',
                 border: '1px solid var(--color-border)',
                 overflow: 'hidden',
                 display: 'flex',
@@ -34,7 +34,7 @@ export function About() {
               }}
             >
               <img
-                src="/professional.webp"
+                src="/background/professional.webp"
                 alt="Sagar Roka Chhetri"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 onError={(e) => {
@@ -54,7 +54,7 @@ export function About() {
             <div
               style={{
                 position: 'absolute', bottom: '-1rem', right: '-1rem',
-                background: 'var(--color-surface)',
+                background: 'var(--color-bg-alt)',
                 border: '1px solid var(--color-border)',
                 borderRadius: 'var(--radius-md)',
                 padding: '0.6rem 1rem',
@@ -95,7 +95,7 @@ export function About() {
           <div
             key={card.title}
             style={{
-              background: 'var(--color-surface)',
+              background: 'var(--color-bg-alt)',
               border: '1px solid var(--color-border)',
               borderRadius: 'var(--radius-lg)',
               padding: '1.4rem',

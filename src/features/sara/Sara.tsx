@@ -742,7 +742,7 @@ export function Sara() {
               fontSize: '0.78rem',
               fontWeight: 500,
               color: 'var(--color-muted)',
-              background: 'var(--color-surface)',
+              background: 'var(--color-bg-alt)',
               border: '1px solid var(--color-border)',
               borderRadius: 'var(--radius-pill)',
               padding: '0.25rem 0.7rem',

@@ -74,7 +74,7 @@ function ReadProgressBar() {
 function TableOfContents({ headings, activeId }: { headings: string[]; activeId: string }) {
   if (headings.length === 0) return null
   return (
-    <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-lg)', padding: '1.25rem' }}>
+    <div style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-lg)', padding: '1.25rem' }}>
       <p style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontFamily: 'var(--font-ui)', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-subtle)', marginBottom: '0.85rem' }}>
         <ListIcon /> Contents
       </p>
@@ -260,7 +260,7 @@ export function BlogPost({ slug, onBack, onSelectPost }: BlogPostProps) {
         </button>
 
         {/* Post header card */}
-        <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', marginBottom: '2.5rem', background: 'var(--color-surface)' }}>
+        <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', marginBottom: '2.5rem', background: 'var(--color-bg-alt)' }}>
           <div style={{ height: '4px', background: mood.color }} aria-hidden="true" />
           <div style={{ padding: 'clamp(1.25rem, 4vw, 2.5rem)' }}>
 
@@ -327,7 +327,7 @@ export function BlogPost({ slug, onBack, onSelectPost }: BlogPostProps) {
                 {prevPost && (
                   <button
                     onClick={() => onSelectPost(prevPost.slug)}
-                    style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: 'clamp(0.85rem, 2vw, 1.1rem) clamp(0.85rem, 2vw, 1.25rem)', cursor: 'pointer', textAlign: 'left', transition: 'border-color 150ms, box-shadow 150ms', width: '100%' }}
+                    style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: 'clamp(0.85rem, 2vw, 1.1rem) clamp(0.85rem, 2vw, 1.25rem)', cursor: 'pointer', textAlign: 'left', transition: 'border-color 150ms, box-shadow 150ms', width: '100%' }}
                     onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--color-neon-border)'; e.currentTarget.style.boxShadow = 'var(--shadow-card)' }}
                     onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--color-border)'; e.currentTarget.style.boxShadow = 'none' }}
                   >
@@ -338,7 +338,7 @@ export function BlogPost({ slug, onBack, onSelectPost }: BlogPostProps) {
                 {nextPost && (
                   <button
                     onClick={() => onSelectPost(nextPost.slug)}
-                    style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: 'clamp(0.85rem, 2vw, 1.1rem) clamp(0.85rem, 2vw, 1.25rem)', cursor: 'pointer', textAlign: 'right', width: '100%', transition: 'border-color 150ms, box-shadow 150ms' }}
+                    style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: 'clamp(0.85rem, 2vw, 1.1rem) clamp(0.85rem, 2vw, 1.25rem)', cursor: 'pointer', textAlign: 'right', width: '100%', transition: 'border-color 150ms, box-shadow 150ms' }}
                     onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--color-neon-border)'; e.currentTarget.style.boxShadow = 'var(--shadow-card)' }}
                     onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--color-border)'; e.currentTarget.style.boxShadow = 'none' }}
                   >
@@ -354,7 +354,7 @@ export function BlogPost({ slug, onBack, onSelectPost }: BlogPostProps) {
           <aside className="bp-sidebar">
             <TableOfContents headings={tocHeadings} activeId={activeHeading} />
 
-            <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-lg)', padding: '1.25rem' }}>
+            <div style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-lg)', padding: '1.25rem' }}>
               <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-subtle)', marginBottom: '0.75rem' }}>Written by</p>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontStyle: 'italic', fontWeight: 700, color: 'var(--color-neon)', marginBottom: '0.45rem' }}>Sagar Roka Chhetri</p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', lineHeight: 1.65, color: 'var(--color-muted)' }}>
@@ -363,7 +363,7 @@ export function BlogPost({ slug, onBack, onSelectPost }: BlogPostProps) {
             </div>
 
             {blogPosts.filter((p) => p.slug !== slug).length > 0 && (
-              <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-lg)', padding: '1.25rem' }}>
+              <div style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-lg)', padding: '1.25rem' }}>
                 <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-subtle)', marginBottom: '0.85rem' }}>Other Entries</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
                   {blogPosts.filter((p) => p.slug !== slug).map((p) => (

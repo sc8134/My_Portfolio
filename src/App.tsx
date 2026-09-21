@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Layout }     from './components/Layout/Layout'
+import { CookieBanner } from './components/CookieBanner/CookieBanner'
 import { Hero }       from './features/hero/Hero'
 import { About }      from './features/about/About'
 import { Skills }     from './features/skills/Skills'
 import { Projects }   from './features/projects/Projects'
 import { Experience } from './features/experience/Experience'
+import { Recognitions } from './features/recognitions/Recognitions'
 import { Sara }       from './features/sara/Sara'
 import { Contact }    from './features/contact/Contact'
 import { BlogList }   from './features/blog/BlogList'
@@ -36,6 +38,7 @@ function App() {
     return (
       <Layout isBlogPage onBlogClick={goToBlogList} onHomeClick={goHome}>
         <BlogList onSelectPost={goToPost} onBack={goHome} />
+        <CookieBanner />
       </Layout>
     )
   }
@@ -44,6 +47,7 @@ function App() {
     return (
       <Layout isBlogPage onBlogClick={goToBlogList} onHomeClick={goHome}>
         <BlogPost slug={selectedSlug} onBack={goToBlogList} onSelectPost={goToPost} />
+        <CookieBanner />
       </Layout>
     )
   }
@@ -55,8 +59,10 @@ function App() {
       <Skills />
       <Projects />
       <Experience />
+      <Recognitions />
       <Sara />
       <Contact />
+      <CookieBanner />
     </Layout>
   )
 }

@@ -1,6 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { about } from '../../data/about'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { LightningIcon, ShieldCheckIcon } from '../../components/icons/Icons'
+
+// ── Types ────────────────────────────────────────────────────────────────────
+
+type FormState = 'idle' | 'sending' | 'success' | 'error'
+
+// ── Constants ────────────────────────────────────────────────────────────────
+
+const WEB3FORMS_ACCESS_KEY = '2e3bcb3a-3736-411b-a862-1883194e2423'
 
 const contactSocials = [
   {
@@ -49,8 +58,6 @@ const contactSocials = [
   },
 ]
 
-type MailState = 'idle' | 'sent'
-
 const subjectOptions = [
   'Job Opportunity',
   'Freelance Project',
@@ -60,47 +67,166 @@ const subjectOptions = [
   'Feedback',
 ]
 
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function getNepaliTime() {
+  return new Date().toLocaleTimeString('en-US', {
+    timeZone: 'Asia/Kathmandu',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  })
+}
+
+function getNepaliHour(): number {
+  const str = new Date().toLocaleString('en-US', {
+    timeZone: 'Asia/Kathmandu',
+    hour: 'numeric',
+    hour12: false,
+  })
+  return parseInt(str, 10)
+}
+
+function getAvailability(hour: number) {
+  if (hour >= 9 && hour < 13) {
+    // Morning — actively working
+    return {
+      label: 'Online — morning',
+      color: 'var(--color-success)',
+      dot: 'var(--color-green)',
+      bg: 'var(--color-green-dim)',
+      border: 'var(--color-green-border)',
+      pulse: true,
+    }
+  }
+  if (hour >= 13 && hour < 18) {
+    // Afternoon — likely working
+    return {
+      label: 'Likely online',
+      color: 'var(--color-success)',
+      dot: 'var(--color-green)',
+      bg: 'var(--color-green-dim)',
+      border: 'var(--color-green-border)',
+      pulse: true,
+    }
+  }
+  if (hour >= 18 && hour < 23) {
+    // Evening — maybe around
+    return {
+      label: 'Maybe online',
+      color: '#b45309',
+      dot: '#f59e0b',
+      bg: 'rgba(245,158,11,0.10)',
+      border: 'rgba(245,158,11,0.30)',
+      pulse: true,
+    }
+  }
+  // Late night / early morning — asleep
+  return {
+    label: 'Probably asleep',
+    color: 'var(--color-subtle)',
+    dot: '#94a3b8',
+    bg: 'rgba(148,163,184,0.1)',
+    border: 'rgba(148,163,184,0.22)',
+    pulse: false,
+  }
+}
+
+// ── Component ────────────────────────────────────────────────────────────────
+
 export function Contact() {
   const ref = useScrollReveal<HTMLElement>()
-  const [mailState, setMailState] = useState<MailState>('idle')
-  const [subject, setSubject] = useState('')
-  const [body, setBody] = useState('')
 
-  function handleSend() {
-    if (!subject.trim() && !body.trim()) return
-    const mailto = `mailto:sc8134s@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    window.open(mailto, '_self')
-    setMailState('sent')
+  // Live clock — refreshes every 30 s
+  const [localTime, setLocalTime] = useState(getNepaliTime)
+  useEffect(() => {
+    const id = setInterval(() => setLocalTime(getNepaliTime()), 30_000)
+    return () => clearInterval(id)
+  }, [])
+
+  const avail = getAvailability(getNepaliHour())
+
+  // Form
+  const [formState, setFormState] = useState<FormState>('idle')
+  const [subject, setSubject] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [body, setBody] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
+
+  const canSubmit =
+    subject !== '' &&
+    name.trim() !== '' &&
+    email.trim() !== '' &&
+    body.trim() !== ''
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!canSubmit || formState === 'sending') return
+    setFormState('sending')
+    setErrorMsg('')
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Portfolio contact: ${subject}`,
+          name,
+          email,
+          message: body,
+        }),
+      })
+      const data: { success: boolean; message?: string } = await res.json()
+      if (data.success) {
+        setFormState('success')
+      } else {
+        throw new Error(data.message ?? 'Submission failed')
+      }
+    } catch (err) {
+      setErrorMsg(
+        err instanceof Error ? err.message : 'Something went wrong. Try emailing directly.',
+      )
+      setFormState('error')
+    }
   }
 
   function handleReset() {
-    setMailState('idle')
+    setFormState('idle')
     setSubject('')
+    setName('')
+    setEmail('')
     setBody('')
+    setErrorMsg('')
+  }
+
+  const inputBase: React.CSSProperties = {
+    width: '100%',
+    background: 'var(--color-bg)',
+    border: '1px solid var(--color-border)',
+    borderRadius: 'var(--radius-md)',
+    padding: '0.6rem 0.85rem',
+    fontFamily: 'var(--font-body)',
+    fontSize: '0.875rem',
+    color: 'var(--color-text)',
+    outline: 'none',
+    transition: 'border-color 150ms',
+    boxSizing: 'border-box' as const,
   }
 
   return (
     <section id="contact" ref={ref} className="section reveal-section">
 
-      {/* Centered heading */}
+      {/* ── Heading ── */}
       <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
         <p className="section-label" style={{ justifyContent: 'center' }}>Contact</p>
         <h2 className="heading-lg">Get in <em>touch</em></h2>
-        {/* Inter body text */}
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            marginTop: '0.6rem',
-            fontSize: '0.975rem',
-            color: 'var(--color-muted)',
-          }}
-        >
+        <p style={{ fontFamily: 'var(--font-body)', marginTop: '0.6rem', fontSize: '0.975rem', color: 'var(--color-muted)' }}>
           If you have an interesting problem, I want to hear about it.
           I also reply to messages that aren&apos;t job offers.
         </p>
         {about.openToWork && (
           <div style={{ marginTop: '0.75rem' }}>
-            {/* Available badge — Poppins */}
             <span
               style={{
                 display: 'inline-flex',
@@ -118,9 +244,7 @@ export function Contact() {
             >
               <span
                 style={{
-                  width: 6,
-                  height: 6,
-                  borderRadius: '50%',
+                  width: 6, height: 6, borderRadius: '50%',
                   background: 'var(--color-green)',
                   display: 'inline-block',
                   animation: 'pulse-dot 2s infinite',
@@ -132,48 +256,32 @@ export function Contact() {
         )}
       </div>
 
-      {/* Two-column layout */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '1.5rem',
-          alignItems: 'start',
-        }}
-      >
+      {/* ── Two-column grid ── */}
+      <div className="contact-grid">
 
-        {/* Left: Find me online */}
+        {/* ── LEFT PANEL ── */}
         <div
           style={{
-            background: 'var(--color-surface)',
+            background: 'var(--color-bg-alt)',
             border: '1px solid var(--color-border)',
             borderRadius: 'var(--radius-lg)',
             overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
-          {/* Panel header — Poppins uppercase label */}
           <div style={{ padding: '1.25rem 1.5rem', borderBottom: '1px solid var(--color-border)' }}>
-            <p
-              style={{
-                fontFamily: 'var(--font-ui)',
-                fontSize: '0.75rem',
-                fontWeight: 700,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: 'var(--color-muted)',
-              }}
-            >
-              Find me online
-            </p>
+            <p className="c-panel-label">Find me online</p>
           </div>
 
+          {/* Socials */}
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {contactSocials.map((social, i) => (
+            {contactSocials.map((s, i) => (
               <a
-                key={social.id}
-                href={social.url}
-                target={social.id === 'email' ? '_self' : '_blank'}
-                rel={social.id === 'email' ? undefined : 'noreferrer'}
+                key={s.id}
+                href={s.url}
+                target={s.id === 'email' ? '_self' : '_blank'}
+                rel={s.id === 'email' ? undefined : 'noreferrer'}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -186,305 +294,271 @@ export function Contact() {
                 onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-neon-dim)')}
                 onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
               >
-                {/* Icon bubble */}
                 <div
                   style={{
-                    width: '2.25rem',
-                    height: '2.25rem',
+                    width: '2.25rem', height: '2.25rem',
                     borderRadius: 'var(--radius-sm)',
                     background: 'var(--color-surface-alt)',
                     border: '1px solid var(--color-border)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'var(--color-neon)',
-                    flexShrink: 0,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    color: 'var(--color-neon)', flexShrink: 0,
                   }}
                 >
-                  {social.icon}
+                  {s.icon}
                 </div>
-
                 <div>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-ui)',
-                      fontSize: '0.875rem',
-                      fontWeight: 600,
-                      color: 'var(--color-text)',
-                      lineHeight: 1.2,
-                    }}
-                  >
-                    {social.platform}
+                  <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-text)', lineHeight: 1.2 }}>
+                    {s.platform}
                   </p>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.78rem',
-                      color: 'var(--color-muted)',
-                      marginTop: '0.1rem',
-                    }}
-                  >
-                    {social.handle}
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: 'var(--color-muted)', marginTop: '0.1rem' }}>
+                    {s.handle}
                   </p>
                 </div>
-
-                <span style={{ marginLeft: 'auto', color: 'var(--color-muted)', fontSize: '0.9rem' }}>
-                  ↗
-                </span>
+                <span style={{ marginLeft: 'auto', color: 'var(--color-muted)', fontSize: '0.9rem' }}>↗</span>
               </a>
             ))}
           </div>
+
+          {/* ── Local time + availability ── */}
+          <div
+            style={{
+              margin: '1rem 1.5rem 1.5rem',
+              padding: '0.85rem 1rem',
+              background: 'var(--color-surface-alt)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-md)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '0.5rem',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="var(--color-subtle)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.775rem', fontWeight: 600, color: 'var(--color-muted)' }}>
+                Lalitpur, <span style={{ color: 'var(--color-neon)' }}>Nepal</span>
+              </span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-text)', fontVariantNumeric: 'tabular-nums' }}>
+                {localTime}
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.28rem',
+                  fontFamily: 'var(--font-ui)', fontSize: '0.7rem', fontWeight: 600,
+                  color: avail.color,
+                  background: avail.bg,
+                  border: `1px solid ${avail.border}`,
+                  borderRadius: 'var(--radius-pill)',
+                  padding: '0.15rem 0.55rem',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                <span
+                  style={{
+                    width: 5, height: 5, borderRadius: '50%',
+                    background: avail.dot, display: 'inline-block', flexShrink: 0,
+                    animation: avail.pulse ? 'pulse-dot 2s infinite' : 'none',
+                  }}
+                />
+                {avail.label}
+              </span>
+            </div>
+          </div>
+
+
         </div>
 
-        {/* Right: Mail form */}
+        {/* ── RIGHT PANEL — Web3Forms ── */}
         <div
           style={{
-            background: 'var(--color-surface)',
+            background: 'var(--color-bg-alt)',
             border: '1px solid var(--color-border)',
             borderRadius: 'var(--radius-lg)',
             overflow: 'hidden',
           }}
         >
-          {/* Panel header */}
           <div style={{ padding: '1.25rem 1.5rem', borderBottom: '1px solid var(--color-border)' }}>
-            <p
-              style={{
-                fontFamily: 'var(--font-ui)',
-                fontSize: '0.75rem',
-                fontWeight: 700,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: 'var(--color-muted)',
-              }}
-            >
-              Send a message
-            </p>
+            <p className="c-panel-label">Send a message</p>
           </div>
 
-          {mailState === 'idle' ? (
-            <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {formState === 'success' ? (
+            <div style={{ padding: '2.5rem 1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', textAlign: 'center' }}>
+              <div
+                style={{
+                  width: '3rem', height: '3rem', borderRadius: '50%',
+                  border: '2px solid var(--color-green)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  color: 'var(--color-green)', fontSize: '1.4rem',
+                  background: 'var(--color-green-dim)',
+                }}
+              >
+                ✓
+              </div>
+              <div>
+                <p style={{ fontFamily: 'var(--font-ui)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-text)', marginBottom: '0.4rem' }}>
+                  Message sent!
+                </p>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-muted)' }}>
+                  I&apos;ll get back to you as soon as I can, usually within 24 hours.
+                </p>
+              </div>
+              <button
+                onClick={handleReset}
+                style={{
+                  marginTop: '0.5rem', background: 'transparent',
+                  border: '1px solid var(--color-border)', borderRadius: 'var(--radius-pill)',
+                  padding: '0.5rem 1.25rem', fontFamily: 'var(--font-ui)',
+                  fontSize: '0.825rem', fontWeight: 600, color: 'var(--color-muted)',
+                  cursor: 'pointer', transition: 'border-color 150ms, color 150ms',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--color-neon-border)'; e.currentTarget.style.color = 'var(--color-neon)' }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--color-border)'; e.currentTarget.style.color = 'var(--color-muted)' }}
+              >
+                Send another
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }} noValidate>
+              {/* Honeypot — bots fill this, humans won't see it */}
+              <input type="text" name="botcheck" defaultValue="" style={{ display: 'none' }} tabIndex={-1} aria-hidden="true" />
 
               {/* Subject chips */}
               <div>
-                <label
-                  style={{
-                    display: 'block',
-                    fontFamily: 'var(--font-ui)',
-                    fontSize: '0.78rem',
-                    fontWeight: 600,
-                    color: 'var(--color-muted)',
-                    marginBottom: '0.6rem',
-                    letterSpacing: '0.04em',
-                  }}
-                >
-                  Subject
-                </label>
+                <p style={{ fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600, color: 'var(--color-muted)', marginBottom: '0.6rem', letterSpacing: '0.04em' }}>
+                  What&apos;s this about? <span style={{ color: 'var(--color-neon)' }}>*</span>
+                </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                  {subjectOptions.map((option) => (
+                  {subjectOptions.map((opt) => (
                     <button
-                      key={option}
+                      key={opt}
                       type="button"
-                      onClick={() => setSubject(option)}
+                      onClick={() => setSubject(opt)}
                       style={{
-                        fontFamily: 'var(--font-ui)',
-                        fontSize: '0.78rem',
-                        fontWeight: 600,
-                        padding: '0.35rem 0.85rem',
-                        borderRadius: 'var(--radius-pill)',
-                        border: `1px solid ${subject === option ? 'var(--color-neon)' : 'var(--color-border)'}`,
-                        background: subject === option ? 'var(--color-neon-dim)' : 'var(--color-bg)',
-                        color: subject === option ? 'var(--color-neon)' : 'var(--color-muted)',
-                        cursor: 'pointer',
-                        transition: 'all 150ms ease',
+                        fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600,
+                        padding: '0.35rem 0.85rem', borderRadius: 'var(--radius-pill)',
+                        border: `1px solid ${subject === opt ? 'var(--color-neon)' : 'var(--color-border)'}`,
+                        background: subject === opt ? 'var(--color-neon-dim)' : 'var(--color-bg)',
+                        color: subject === opt ? 'var(--color-neon)' : 'var(--color-muted)',
+                        cursor: 'pointer', transition: 'all 150ms ease',
                       }}
                     >
-                      {option}
+                      {opt}
                     </button>
                   ))}
                 </div>
               </div>
 
+              {/* Name + Email */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+                <div>
+                  <label htmlFor="c-name" style={{ display: 'block', fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600, color: 'var(--color-muted)', marginBottom: '0.4rem', letterSpacing: '0.04em' }}>
+                    Name <span style={{ color: 'var(--color-neon)' }}>*</span>
+                  </label>
+                  <input
+                    id="c-name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name" required style={inputBase}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--color-neon-border)')}
+                    onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--color-border)')}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="c-email" style={{ display: 'block', fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600, color: 'var(--color-muted)', marginBottom: '0.4rem', letterSpacing: '0.04em' }}>
+                    Email <span style={{ color: 'var(--color-neon)' }}>*</span>
+                  </label>
+                  <input
+                    id="c-email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@example.com" required style={inputBase}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--color-neon-border)')}
+                    onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--color-border)')}
+                  />
+                </div>
+              </div>
+
               {/* Message */}
               <div>
-                <label
-                  htmlFor="contact-body"
-                  style={{
-                    display: 'block',
-                    fontFamily: 'var(--font-ui)',
-                    fontSize: '0.78rem',
-                    fontWeight: 600,
-                    color: 'var(--color-muted)',
-                    marginBottom: '0.4rem',
-                    letterSpacing: '0.04em',
-                  }}
-                >
-                  Message
+                <label htmlFor="c-body" style={{ display: 'block', fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600, color: 'var(--color-muted)', marginBottom: '0.4rem', letterSpacing: '0.04em' }}>
+                  Message <span style={{ color: 'var(--color-neon)' }}>*</span>
                 </label>
                 <textarea
-                  id="contact-body"
-                  value={body}
-                  onChange={(e) => setBody(e.target.value)}
-                  placeholder="Hi Sagar, I would like to..."
-                  rows={5}
-                  style={{
-                    width: '100%',
-                    background: 'var(--color-bg)',
-                    border: '1px solid var(--color-border)',
-                    borderRadius: 'var(--radius-md)',
-                    padding: '0.65rem 0.9rem',
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.875rem',
-                    color: 'var(--color-text)',
-                    outline: 'none',
-                    resize: 'vertical',
-                    lineHeight: 1.6,
-                    transition: 'border-color 150ms',
-                  }}
+                  id="c-body" name="message" value={body} onChange={(e) => setBody(e.target.value)}
+                  placeholder="Hi Sagar, I would like to..." rows={4} required
+                  style={{ ...inputBase, resize: 'vertical', lineHeight: 1.6 }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--color-neon-border)')}
                   onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--color-border)')}
                 />
               </div>
 
-              {/* Send button — Poppins */}
+              {/* Error */}
+              {formState === 'error' && (
+                <p role="alert" style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', color: '#b91c1c', background: 'rgba(185,28,28,0.07)', border: '1px solid rgba(185,28,28,0.18)', borderRadius: 'var(--radius-sm)', padding: '0.5rem 0.75rem', margin: 0 }}>
+                  {errorMsg || 'Something went wrong. Try emailing directly.'}
+                </p>
+              )}
+
+              {/* Submit */}
               <button
-                onClick={handleSend}
+                type="submit"
+                disabled={!canSubmit || formState === 'sending'}
                 style={{
-                  width: '100%',
-                  background: 'var(--color-neon)',
-                  color: '#ffffff',
-                  border: 'none',
-                  borderRadius: 'var(--radius-pill)',
-                  padding: '0.7rem',
-                  fontFamily: 'var(--font-ui)',
-                  fontSize: '0.9rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
+                  width: '100%', background: 'var(--color-neon)', color: '#fff', border: 'none',
+                  borderRadius: 'var(--radius-pill)', padding: '0.7rem',
+                  fontFamily: 'var(--font-ui)', fontSize: '0.9rem', fontWeight: 700,
+                  cursor: !canSubmit || formState === 'sending' ? 'not-allowed' : 'pointer',
+                  opacity: !canSubmit ? 0.5 : 1,
                   transition: 'opacity 150ms, transform 140ms',
                   boxShadow: 'var(--shadow-neon)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.opacity = '0.88'
-                  e.currentTarget.style.transform = 'translateY(-1px)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = '1'
-                  e.currentTarget.style.transform = 'translateY(0)'
-                }}
+                onMouseEnter={(e) => { if (canSubmit && formState !== 'sending') { e.currentTarget.style.opacity = '0.88'; e.currentTarget.style.transform = 'translateY(-1px)' } }}
+                onMouseLeave={(e) => { e.currentTarget.style.opacity = canSubmit ? '1' : '0.5'; e.currentTarget.style.transform = 'translateY(0)' }}
               >
-                Open mail app and send
+                {formState === 'sending' ? (
+                  <>
+                    <span style={{ width: 14, height: 14, border: '2px solid rgba(255,255,255,0.35)', borderTopColor: '#fff', borderRadius: '50%', display: 'inline-block', animation: 'c-spin 0.7s linear infinite' }} />
+                    Sending…
+                  </>
+                ) : 'Send message'}
               </button>
 
-              {/* Helper text — Inter */}
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.75rem',
-                  color: 'var(--color-muted)',
-                  textAlign: 'center',
-                }}
-              >
-                This pre-fills your mail client. Just hit Send.
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', textAlign: 'center', margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', fontStyle: 'italic' }}>
+                <LightningIcon size={13} coral="var(--color-navy)" navy="var(--color-navy)" />
+                <span style={{ color: 'var(--color-navy)' }}>Usually replies within 24h</span>
+                <span style={{ opacity: 0.3, color: 'var(--color-muted)' }}>·</span>
+                <ShieldCheckIcon size={13} coral="var(--color-neon)" navy="var(--color-neon)" />
+                <span style={{ color: 'var(--color-neon)' }}>No spam, ever</span>
               </p>
-            </div>
-          ) : (
-            <div
-              style={{
-                padding: '2.5rem 1.5rem',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '1rem',
-                textAlign: 'center',
-              }}
-            >
-              {/* Checkmark */}
-              <div
-                style={{
-                  width: '3rem',
-                  height: '3rem',
-                  borderRadius: '50%',
-                  border: '2px solid var(--color-neon)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--color-neon)',
-                  fontSize: '1.4rem',
-                }}
-              >
-                ✓
-              </div>
-
-              <div>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-ui)',
-                    fontSize: '1rem',
-                    fontWeight: 700,
-                    color: 'var(--color-text)',
-                    marginBottom: '0.4rem',
-                  }}
-                >
-                  Opening your mail app...
-                </p>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-muted)' }}>
-                  Your message has been pre-filled. Just hit Send.
-                </p>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%' }}>
-                <a
-                  href={`mailto:sc8134s@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.82rem',
-                    color: 'var(--color-neon)',
-                    textDecoration: 'underline',
-                    textUnderlineOffset: '3px',
-                  }}
-                >
-                  Open again?
-                </a>
-                {/* Reset button — Poppins */}
-                <button
-                  onClick={handleReset}
-                  style={{
-                    background: 'transparent',
-                    border: '1px solid var(--color-border)',
-                    borderRadius: 'var(--radius-pill)',
-                    padding: '0.5rem 1rem',
-                    fontFamily: 'var(--font-ui)',
-                    fontSize: '0.825rem',
-                    fontWeight: 600,
-                    color: 'var(--color-muted)',
-                    cursor: 'pointer',
-                    transition: 'border-color 150ms, color 150ms',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-neon-border)'
-                    e.currentTarget.style.color = 'var(--color-neon)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--color-border)'
-                    e.currentTarget.style.color = 'var(--color-muted)'
-                  }}
-                >
-                  Send another message
-                </button>
-              </div>
-            </div>
+            </form>
           )}
         </div>
       </div>
 
-      {/* Mobile responsive */}
       <style>{`
-        @media (max-width: 680px) {
-          #contact > div[style*="grid-template-columns"] {
-            grid-template-columns: 1fr !important;
-          }
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+          align-items: start;
         }
+        .c-panel-label {
+          font-family: var(--font-ui);
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--color-muted);
+          margin: 0;
+        }
+        @media (max-width: 680px) {
+          .contact-grid { grid-template-columns: 1fr; }
+        }
+        @keyframes c-spin { to { transform: rotate(360deg); } }
       `}</style>
-
     </section>
   )
 }

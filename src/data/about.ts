@@ -56,7 +56,7 @@ export const about: AboutData = {
     { value: '3',   label: 'Open Source'     },
   ],
 
-  resumeUrl: '/Resume/Sagar_Roka_Chhetri_Resume_ATS.pdf',
+  resumeUrl: '/resume/Sagar_Roka_Chhetri_Resume_ATS.pdf',
   openToWork: true,
   openToWorkText: 'Currently open to interesting problems',
 

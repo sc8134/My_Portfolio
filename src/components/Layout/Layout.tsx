@@ -95,10 +95,13 @@ export function Layout({ children, isBlogPage = false, onBlogClick, onHomeClick 
 
   return (
     <>
-      <div className="site-shell">
-
-        {/* ── Command bar header ──────────────────────────── */}
-        <header className={`cmd-bar${scrolled ? ' cmd-bar--scrolled' : ''}`} role="banner">
+      {/* ── Command bar header — full viewport width ──────── */}
+      <header
+        className={`cmd-bar${scrolled ? ' cmd-bar--scrolled' : ''}`}
+        role="banner"
+      >
+        {/* Inner content constrained to site width */}
+        <div className="cmd-bar-inner" style={{ position: 'relative', zIndex: 1 }}>
 
           {/* Left: brand tagline */}
           <a
@@ -181,8 +184,10 @@ export function Layout({ children, isBlogPage = false, onBlogClick, onHomeClick 
             <span className={`hamburger-line${menuOpen ? ' open' : ''}`} />
             <span className={`hamburger-line${menuOpen ? ' open' : ''}`} />
           </button>
-        </header>
+        </div>{/* end cmd-bar-inner */}
+      </header>
 
+      <div className="site-shell">
         {/* Mobile drawer */}
         <div
           className={`mobile-menu${menuOpen ? ' mobile-menu-open' : ''}`}

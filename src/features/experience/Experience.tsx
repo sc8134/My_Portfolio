@@ -72,7 +72,7 @@ export function Experience() {
             <div
               style={{
                 flex: 1,
-                background: 'var(--color-surface)',
+                background: 'var(--color-bg-alt)',
                 border: '1px solid var(--color-border)',
                 borderLeft: `3px solid ${exp.type === 'work' ? 'var(--color-neon)' : 'var(--color-neon-border)'}`,
                 borderRadius: 'var(--radius-lg)',

@@ -1139,12 +1139,34 @@ a { color: inherit; }
   .site-header { flex-wrap: wrap; }
   .nav-list { order: 3; width: 100%; justify-content: center; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  /* Keep full brand visible on mobile — don't hide tagline */
+  .cmd-brand { white-space: nowrap; max-width: 60vw; overflow: hidden; text-overflow: ellipsis; }
+  .cmd-bar-inner { padding: 0.65rem 1rem; gap: 0.5rem; }
+}
+
+@media (max-width: 540px) {
+  .projects-grid  { grid-template-columns: 1fr; }
+  /* Scale down brand font slightly so it fits */
+  .cmd-brand-namaste { font-size: 0.82rem; }
+  .cmd-brand-sep { font-size: 0.82rem; }
+  .cmd-brand-tagline { font-size: 0.82rem; }
 }
 
 @media (max-width: 480px) {
   .about-stats    { grid-template-columns: 1fr; }
-  .projects-grid  { grid-template-columns: 1fr; }
   .experience-header { flex-direction: column; }
+  /* On very small screens hide separator + tagline */
+  .cmd-brand-sep,
+  .cmd-brand-tagline { display: none; }
+  .cmd-brand-namaste { font-size: 0.9rem; }
+  /* Tighten site shell padding */
+  .site-shell { width: 100%; }
+  .cmd-bar-inner { padding: 0.6rem 0.85rem; }
+  /* Hero */
+  .hero-section { padding-top: 0.5rem; }
+  .hero-badge { font-size: 0.72rem; padding: 0.28rem 0.75rem; margin-bottom: 1.25rem; }
+  /* About stats stacked */
+  .about-stats { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ═══════════════════════════════════════════════════════

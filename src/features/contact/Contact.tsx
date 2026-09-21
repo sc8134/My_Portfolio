@@ -455,7 +455,7 @@ export function Contact() {
               </div>
 
               {/* Name + Email */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+              <div className="contact-name-email-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                 <div>
                   <label htmlFor="c-name" style={{ display: 'block', fontFamily: 'var(--font-ui)', fontSize: '0.78rem', fontWeight: 600, color: 'var(--color-muted)', marginBottom: '0.4rem', letterSpacing: '0.04em' }}>
                     Name <span style={{ color: 'var(--color-neon)' }}>*</span>
@@ -556,6 +556,7 @@ export function Contact() {
         }
         @media (max-width: 680px) {
           .contact-grid { grid-template-columns: 1fr; }
+          .contact-name-email-row { grid-template-columns: 1fr !important; }
         }
         @keyframes c-spin { to { transform: rotate(360deg); } }
       `}</style>

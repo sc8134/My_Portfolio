@@ -4,11 +4,11 @@
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/🌐%20Live%20Portfolio-sagarrc.com.np-e8532a?style=for-the-badge&logoColor=white)](https://sagarrc.com.np)
+[![Portfolio](https://img.shields.io/badge/Live%20Portfolio-sagarrc.com.np-e8532a?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://sagarrc.com.np)
 [![GitHub](https://img.shields.io/badge/GitHub-sc8134-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sc8134)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sagar--rc-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sagar-rc)
 [![Email](https://img.shields.io/badge/Email-sc8134s@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sc8134s@gmail.com)
-[![License](https://img.shields.io/badge/License-Proprietary-1e2d4d?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/badge/License-Proprietary-1e2d4d?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](./LICENSE)
 
 <br/>
 
@@ -20,7 +20,7 @@
 
 ## What This Is
 
-My personal portfolio - built from scratch, no templates, no shortcuts. Every component, every animation, every design token was designed and written by me because I wanted something that actually represents how I work.
+My personal portfolio built from scratch, no templates, no shortcuts. Every component, every animation, every design token was designed and written by me because I wanted something that actually represents how I work.
 
 **Live at [sagarrc.com.np](https://sagarrc.com.np)**
 
@@ -30,15 +30,15 @@ My personal portfolio - built from scratch, no templates, no shortcuts. Every co
 
 | | |
 |---|---|
-| 🏗 **Built from scratch** | Zero templates, zero boilerplate — every line authored manually |
-| ⚡ **Production-grade stack** | React 19 · TypeScript · Vite 8 · Tailwind CSS v4 |
-| 🎨 **Custom design system** | Full token-based theming in `tokens.css` — one file to rule all colors |
-| 🤖 **SARA — AI chatbot** | Keyword-trained on my full background — ask it anything about me |
-| 🍪 **Cookie consent** | GDPR-compliant banner with `localStorage` persistence |
-| 📬 **Real contact form** | Web3Forms integration — no mail client required |
-| 🔒 **Security headers** | CSP · HSTS · COOP · X-Frame-Options via `_headers` |
-| 🌐 **SEO ready** | `robots.txt` · `sitemap.xml` · `llms.txt` for AI crawlers |
-| 📱 **Fully responsive** | Mobile-first, tested down to 360px |
+| ![scratch](https://img.shields.io/badge/Built%20From%20Scratch-e8532a?style=flat-square&logo=hammer&logoColor=white) | Zero templates, zero boilerplate. Every line authored manually |
+| ![stack](https://img.shields.io/badge/Production%20Grade%20Stack-1e2d4d?style=flat-square&logo=react&logoColor=61DAFB) | React 19 · TypeScript · Vite 8 · Tailwind CSS v4 |
+| ![design](https://img.shields.io/badge/Custom%20Design%20System-e8532a?style=flat-square&logo=css3&logoColor=white) | Full token-based theming in `tokens.css` |
+| ![sara](https://img.shields.io/badge/SARA%20AI%20Chatbot-1e2d4d?style=flat-square&logo=openai&logoColor=white) | Keyword-trained on my full background |
+| ![cookie](https://img.shields.io/badge/Cookie%20Consent-e8532a?style=flat-square&logo=cookiecutter&logoColor=white) | GDPR-compliant banner with `localStorage` persistence |
+| ![form](https://img.shields.io/badge/Real%20Contact%20Form-1e2d4d?style=flat-square&logo=mailgun&logoColor=white) | Web3Forms integration, no mail client required |
+| ![security](https://img.shields.io/badge/Security%20Headers-e8532a?style=flat-square&logo=letsencrypt&logoColor=white) | CSP · HSTS · COOP · X-Frame-Options via `_headers` |
+| ![seo](https://img.shields.io/badge/SEO%20Ready-1e2d4d?style=flat-square&logo=googlesearchconsole&logoColor=white) | `robots.txt` · `sitemap.xml` · `llms.txt` for AI crawlers |
+| ![responsive](https://img.shields.io/badge/Fully%20Responsive-e8532a?style=flat-square&logo=responsive&logoColor=white) | Mobile-first, tested down to 360px |
 
 ---
 
@@ -55,7 +55,7 @@ My personal portfolio - built from scratch, no templates, no shortcuts. Every co
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Web3Forms](https://img.shields.io/badge/Web3Forms-FF6B35?style=flat-square&logoColor=white)
+![Web3Forms](https://img.shields.io/badge/Web3Forms-e8532a?style=flat-square&logo=formspree&logoColor=white)
 
 </div>
 
@@ -63,29 +63,29 @@ My personal portfolio - built from scratch, no templates, no shortcuts. Every co
 
 ## Sections
 
-### 🦸 Hero
+### ![hero](https://img.shields.io/badge/Hero-e8532a?style=flat-square&logo=sparkles&logoColor=white)
 Typewriter effect cycling through my roles. Short honest bio. Direct links to resume, projects, and socials.
 
-### 👤 About
-My story, philosophy cards, and quick stats. Written in my own words - no corporate speak.
+### ![about](https://img.shields.io/badge/About-1e2d4d?style=flat-square&logo=person&logoColor=white)
+My story, philosophy cards, and quick stats. Written in my own words, no corporate speak.
 
-### ⚙️ Skills — Bento grid with proficiency bars
-4 category cards (Frontend · Backend · Database · Tools & DevOps) with animated fill bars showing proficiency level. Click any skill to see exactly where it shipped in production.
+### ![skills](https://img.shields.io/badge/Skills-e8532a?style=flat-square&logo=stackshare&logoColor=white) Bento Grid with Proficiency Bars
+4 category cards (Frontend · Backend · Database · Tools and DevOps) with animated fill bars showing proficiency level. Click any skill to see exactly where it shipped in production.
 
-### 🗂 Projects — App icon showcase
-All 8 projects rendered as app icons with real cover screenshots. Click any icon and a bottom-sheet drawer slides up with the full project detail — cover image, why I built it, what I shipped, tech stack, and CTAs.
+### ![projects](https://img.shields.io/badge/Projects-1e2d4d?style=flat-square&logo=github&logoColor=white) App Icon Showcase
+All 8 projects rendered as app icons with real cover screenshots. Click any icon and a bottom-sheet drawer slides up with the full project detail: cover image, why I built it, what I shipped, tech stack, and CTAs.
 
-### 💼 Experience & Education
+### ![experience](https://img.shields.io/badge/Experience-e8532a?style=flat-square&logo=briefcase&logoColor=white)
 Timeline layout with icon bubbles. Work entries use coral accent, education uses navy. CodeAlpha internship, CodeRunners Technologies, Cosmos College, Milestone International College.
 
-### 🏆 Certifications & Recognition
-Timeline cards matching the Experience section style. CodeAlpha Certificate of Completion and Letter of Recommendation — both with PDF download links, verified badge, and credential ID.
+### ![creds](https://img.shields.io/badge/Certifications-1e2d4d?style=flat-square&logo=awsacademygraduate&logoColor=white)
+Timeline cards matching the Experience section style. CodeAlpha Certificate of Completion and Letter of Recommendation, both with PDF download links, verified badge, and credential ID.
 
-### 🤖 SARA — AI Assistant
-A keyword-driven chatbot trained on my complete background. Handles questions about projects, skills, experience, philosophy, and hiring. No API key required - runs entirely on pattern matching.
+### ![sara](https://img.shields.io/badge/SARA-e8532a?style=flat-square&logo=openai&logoColor=white) AI Assistant
+A keyword-driven chatbot trained on my complete background. Handles questions about projects, skills, experience, philosophy, and hiring. No API key required, runs entirely on pattern matching.
 
-### 📬 Contact
-Two-panel layout. Left: social links, live Kathmandu clock, and real-time availability status. Right: Web3Forms submission - no mail client popup, messages go directly to inbox.
+### ![contact](https://img.shields.io/badge/Contact-1e2d4d?style=flat-square&logo=maildotru&logoColor=white)
+Two-panel layout. Left: social links, live Kathmandu clock, and real-time availability status. Right: Web3Forms submission, no mail client popup, messages go directly to inbox.
 
 ---
 
@@ -93,14 +93,14 @@ Two-panel layout. Left: social links, live Kathmandu clock, and real-time availa
 
 | # | Project | Stack | Status |
 |---|---|---|---|
-| 01 | [Janakpur Bolts Army](https://boltsarmy.com) | React · TypeScript · Node.js · Tailwind · cPanel | 🟢 Live |
-| 02 | [Nova DVR](https://nova-dvr.vercel.app) | React · TypeScript · Python · Flask · Vercel | 🟢 Live |
-| 03 | [Velora](https://github.com/sc8134/Velora) | React · TypeScript · Tailwind · AI APIs | ⚫ GitHub |
-| 04 | [Signal Job Portal](https://github.com/sc8134/signal-job-portal) | React · Node.js · PostgreSQL · TypeScript | ⚫ GitHub |
-| 05 | [JobHunt Agent](https://github.com/sc8134/JobHunt-Agent) | Python · LangGraph · spaCy · sentence-transformers | ⚫ GitHub |
-| 06 | [AI Reel Generator](https://github.com/sc8134/ai-reel-generator) | Python · FFmpeg · OpenAI API | ⚫ GitHub |
-| 07 | [Namo Patro](https://github.com/sc8134/Namo-Patro) | React · Node.js · PostgreSQL · TypeScript | ⚫ GitHub |
-| 08 | [Phishing Simulation Tool](https://github.com/sc8134/phishing-simulation-tool) | React · Flask · Python · TypeScript | ⚫ GitHub |
+| 01 | [Janakpur Bolts Army](https://boltsarmy.com) | React · TypeScript · Node.js · Tailwind · cPanel | ![live](https://img.shields.io/badge/Live-22c55e?style=flat-square&logo=vercel&logoColor=white) |
+| 02 | [Nova DVR](https://nova-dvr.vercel.app) | React · TypeScript · Python · Flask · Vercel | ![live](https://img.shields.io/badge/Live-22c55e?style=flat-square&logo=vercel&logoColor=white) |
+| 03 | [Velora](https://github.com/sc8134/Velora) | React · TypeScript · Tailwind · AI APIs | ![github](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
+| 04 | [Signal Job Portal](https://github.com/sc8134/signal-job-portal) | React · Node.js · PostgreSQL · TypeScript | ![github](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
+| 05 | [JobHunt Agent](https://github.com/sc8134/JobHunt-Agent) | Python · LangGraph · spaCy · sentence-transformers | ![github](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
+| 06 | [AI Reel Generator](https://github.com/sc8134/ai-reel-generator) | Python · FFmpeg · OpenAI API | ![github](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
+| 07 | [Namo Patro](https://github.com/sc8134/Namo-Patro) | React · Node.js · PostgreSQL · TypeScript | ![github](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
+| 08 | [Phishing Simulation Tool](https://github.com/sc8134/phishing-simulation-tool) | React · Flask · Python · TypeScript | ![github](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
 
 ---
 
@@ -109,8 +109,8 @@ Two-panel layout. Left: social links, live Kathmandu clock, and real-time availa
 ```
 My_Portfolio/
 ├── public/
-│   ├── background/          navbar.webp · professional.webp
-│   ├── certificate/         codealpha-certificate.pdf · codealpha-lor.pdf
+│   ├── background/          navbar.webp, professional.webp
+│   ├── certificate/         codealpha-certificate.pdf, codealpha-lor.pdf
 │   ├── projects/            cover images for all 8 projects
 │   ├── resume/              Sagar_Roka_Chhetri_Resume_ATS.pdf
 │   ├── favicon.svg
@@ -127,7 +127,7 @@ My_Portfolio/
     │   ├── icons/           custom SVG icon set (two-color: coral + navy)
     │   └── Layout/          sticky nav, mobile drawer, closing footer
     │
-    ├── data/                static content — about, projects, experience, skills, socials, blog
+    ├── data/                static content: about, projects, experience, skills, socials, blog
     ├── features/
     │   ├── about/
     │   ├── blog/            BlogList + BlogPost
@@ -139,9 +139,9 @@ My_Portfolio/
     │   ├── sara/            AI chatbot
     │   └── skills/          bento grid with animated proficiency bars
     │
-    ├── hooks/               useActiveSection · useScrollReveal · useTypewriter · useMounted · useGitHubStats
-    ├── styles/              base.css · index.css
-    ├── theme/               tokens.css — all design tokens via @theme
+    ├── hooks/               useActiveSection, useScrollReveal, useTypewriter, useMounted, useGitHubStats
+    ├── styles/              base.css, index.css
+    ├── theme/               tokens.css: all design tokens via @theme
     ├── types/               TypeScript interfaces for all data models
     └── utils/               cn.ts
 ```
@@ -155,14 +155,14 @@ All design decisions live in `src/theme/tokens.css` as CSS custom properties via
 ```css
 /* Palette */
 --color-bg:       #f0ebe0   /* warm parchment */
---color-neon:     #e8532a   /* coral red — primary accent */
---color-navy:     #1e2d4d   /* deep navy — headings */
+--color-neon:     #e8532a   /* coral red, primary accent */
+--color-navy:     #1e2d4d   /* deep navy, headings */
 --color-green:    #22c55e   /* status green */
 
 /* Typography */
---font-display:   Cormorant Garamond   /* editorial serif — italic accents */
+--font-display:   Cormorant Garamond   /* editorial serif, italic accents */
 --font-body:      Inter                /* clean readable sans */
---font-ui:        Poppins              /* bold geometric — buttons, labels */
+--font-ui:        Poppins              /* bold geometric, buttons and labels */
 ```
 
 One token change = sitewide update. Nothing hardcoded in components.
@@ -192,7 +192,7 @@ npm run build
 npm run preview
 ```
 
-**Node.js 18+** required.
+![node](https://img.shields.io/badge/Node.js_18+-339933?style=flat-square&logo=nodedotjs&logoColor=white) required.
 
 ---
 
@@ -220,10 +220,10 @@ npm run preview
 
 | Credential | Issuer | Date | ID |
 |---|---|---|---|
-| Certificate of Completion — Full Stack Dev | CodeAlpha | Sep 20, 2026 | CA/DF1/252458 |
-| Letter of Recommendation — Full Stack Dev | CodeAlpha (Founder & CEO) | Sep 20, 2026 | CA/DF1/252458 |
+| ![cert](https://img.shields.io/badge/Certificate%20of%20Completion-e8532a?style=flat-square&logo=awsacademygraduate&logoColor=white) Full Stack Dev | CodeAlpha | Sep 20, 2026 | CA/DF1/252458 |
+| ![lor](https://img.shields.io/badge/Letter%20of%20Recommendation-1e2d4d?style=flat-square&logo=googledocs&logoColor=white) Full Stack Dev | CodeAlpha, Founder and CEO | Sep 20, 2026 | CA/DF1/252458 |
 
-*Recognized by Ministry of Corporate Affairs, Government of India*
+![gov](https://img.shields.io/badge/Recognized%20by%20Ministry%20of%20Corporate%20Affairs-Government%20of%20India-1e2d4d?style=flat-square&logo=indiangovernment&logoColor=white)
 
 </div>
 
@@ -243,8 +243,9 @@ See the full terms in [`LICENSE`](./LICENSE).
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=0:e8532a,100:1e2d4d&height=140&section=footer)
 
-**Built with care from Kathmandu, Nepal 🇳🇵**
+**Built with care from Kathmandu, Nepal**
 
-*© 2026 Sagar Roka Chhetri · [sagarrc.com.np](https://sagarrc.com.np)*
+[![nepal](https://img.shields.io/badge/Nepal-1e2d4d?style=flat-square&logo=googleearth&logoColor=white)](https://sagarrc.com.np)
+[![year](https://img.shields.io/badge/2026-Sagar%20Roka%20Chhetri-e8532a?style=flat-square&logo=calendar&logoColor=white)](https://sagarrc.com.np)
 
 </div>

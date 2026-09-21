@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
   background-image:
     linear-gradient(to bottom, transparent 0%, var(--color-bg) 680px),
-    url('/background/navbar.webp'),
+    url('/img/navbar.webp'),
     radial-gradient(ellipse 80% 50% at 50% -10%, rgba(30, 45, 77, 0.18) 0%, transparent 70%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Ccircle cx='12' cy='18' r='0.8' fill='%231e2d4d' opacity='0.25'/%3E%3Ccircle cx='80' cy='55' r='0.6' fill='%231e2d4d' opacity='0.2'/%3E%3Ccircle cx='150' cy='22' r='1' fill='%231e2d4d' opacity='0.18'/%3E%3Ccircle cx='230' cy='70' r='0.7' fill='%231e2d4d' opacity='0.22'/%3E%3Ccircle cx='310' cy='15' r='0.9' fill='%231e2d4d' opacity='0.2'/%3E%3Ccircle cx='390' cy='60' r='0.6' fill='%231e2d4d' opacity='0.18'/%3E%3Ccircle cx='460' cy='30' r='1.1' fill='%231e2d4d' opacity='0.15'/%3E%3Ccircle cx='540' cy='80' r='0.7' fill='%231e2d4d' opacity='0.2'/%3E%3Ccircle cx='50' cy='120' r='0.9' fill='%231e2d4d' opacity='0.12'/%3E%3Ccircle cx='120' cy='100' r='0.6' fill='%231e2d4d' opacity='0.15'/%3E%3Ccircle cx='200' cy='140' r='0.8' fill='%231e2d4d' opacity='0.1'/%3E%3Ccircle cx='280' cy='110' r='1' fill='%231e2d4d' opacity='0.12'/%3E%3Ccircle cx='360' cy='130' r='0.5' fill='%231e2d4d' opacity='0.13'/%3E%3Ccircle cx='440' cy='105' r='0.8' fill='%231e2d4d' opacity='0.1'/%3E%3Ccircle cx='520' cy='145' r='0.6' fill='%231e2d4d' opacity='0.12'/%3E%3Ccircle cx='580' cy='90' r='0.9' fill='%231e2d4d' opacity='0.1'/%3E%3Ccircle cx='35' cy='180' r='0.7' fill='%231e2d4d' opacity='0.08'/%3E%3Ccircle cx='170' cy='200' r='0.5' fill='%231e2d4d' opacity='0.07'/%3E%3Ccircle cx='320' cy='185' r='0.8' fill='%231e2d4d' opacity='0.07'/%3E%3Ccircle cx='490' cy='195' r='0.6' fill='%231e2d4d' opacity='0.06'/%3E%3C/svg%3E");
   background-repeat: no-repeat, no-repeat, no-repeat, repeat;
@@ -314,11 +314,13 @@ a { color: inherit; }
 /* Hero headline wrapper — font-size only, no font-family set here
    so each span controls its own font cleanly */
 .hero-headline {
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-size: clamp(1.8rem, 5.5vw, 4.2rem);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 0.9rem;
   display: block;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* "Hi, I'm" — Inter 800, clean geometric sans */
@@ -353,11 +355,15 @@ a { color: inherit; }
 /* Bio paragraph */
 .hero-bio {
   max-width: 58ch;
+  width: 100%;
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.8;
   color: var(--color-muted);
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 0 0.5rem;
 }
 
 /* CTA buttons row */
@@ -911,7 +917,7 @@ a { color: inherit; }
   text-align: center;
   background-image:
     linear-gradient(to top, transparent 0%, var(--color-bg) 65%),
-    url('/background/navbar.webp');
+    url('/img/navbar.webp');
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%, 100% 100%;
   background-position: bottom center, bottom center;

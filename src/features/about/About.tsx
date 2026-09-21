@@ -34,7 +34,7 @@ export function About() {
               }}
             >
               <img
-                src="/background/professional.webp"
+                src="/img/professional.webp"
                 alt="Sagar Roka Chhetri"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 onError={(e) => {

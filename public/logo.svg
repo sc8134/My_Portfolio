@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background gradient — deep navy to slightly lighter navy, premium dark feel -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1a2540"/>
+      <stop offset="100%" stop-color="#0e1a30"/>
+    </linearGradient>
+
+    <!-- Top-light sheen overlay -->
+    <linearGradient id="sheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="45%"  stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- S letter gradient — navy with 3D light hit -->
+    <linearGradient id="sGrad" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%"   stop-color="#4a6aaa"/>
+      <stop offset="40%"  stop-color="#1e2d4d"/>
+      <stop offset="100%" stop-color="#0e1a30"/>
+    </linearGradient>
+
+    <!-- R letter gradient — coral with 3D light hit -->
+    <linearGradient id="rGrad" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%"   stop-color="#f07050"/>
+      <stop offset="40%"  stop-color="#e8532a"/>
+      <stop offset="100%" stop-color="#b83a18"/>
+    </linearGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Inner letter shadow -->
+    <filter id="letterShadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Clip to rounded square -->
+    <clipPath id="bgClip">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer glow ring -->
+  <rect width="64" height="64" rx="15" fill="none" stroke="#e8532a" stroke-width="1.5" stroke-opacity="0.35"/>
+
+  <!-- Main background -->
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)" filter="url(#shadow)"/>
+
+  <!-- Sheen overlay clipped to shape -->
+  <rect width="64" height="64" rx="14" fill="url(#sheen)" clip-path="url(#bgClip)"/>
+
+  <!-- Bottom-edge subtle highlight line -->
+  <rect x="12" y="60" width="40" height="1.5" rx="1" fill="#e8532a" fill-opacity="0.5"/>
+
+  <!-- ── 3D S letter ── -->
+  <!-- Shadow/depth layer — offset down-right -->
+  <text
+    x="19.5" y="42.5"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="31"
+    font-weight="900"
+    font-style="italic"
+    fill="#0a1220"
+    fill-opacity="0.7"
+    letter-spacing="-1"
+  >S</text>
+  <!-- Main S -->
+  <text
+    x="18" y="41"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="31"
+    font-weight="900"
+    font-style="italic"
+    fill="url(#sGrad)"
+    filter="url(#letterShadow)"
+    letter-spacing="-1"
+  >S</text>
+  <!-- S highlight streak — top-left light catch -->
+  <text
+    x="18" y="41"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="31"
+    font-weight="900"
+    font-style="italic"
+    fill="#ffffff"
+    fill-opacity="0.12"
+    letter-spacing="-1"
+  >S</text>
+
+  <!-- ── 3D R letter ── -->
+  <!-- Shadow/depth layer -->
+  <text
+    x="36.5" y="42.5"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="31"
+    font-weight="900"
+    font-style="italic"
+    fill="#5a1a08"
+    fill-opacity="0.65"
+    letter-spacing="-1"
+  >R</text>
+  <!-- Main R -->
+  <text
+    x="35" y="41"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="31"
+    font-weight="900"
+    font-style="italic"
+    fill="url(#rGrad)"
+    filter="url(#letterShadow)"
+    letter-spacing="-1"
+  >R</text>
+  <!-- R highlight streak -->
+  <text
+    x="35" y="41"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="31"
+    font-weight="900"
+    font-style="italic"
+    fill="#ffffff"
+    fill-opacity="0.15"
+    letter-spacing="-1"
+  >R</text>
+
+  <!-- Bottom dot accent — coral brand dot -->
+  <circle cx="32" cy="56.5" r="2" fill="#e8532a" fill-opacity="0.75"/>
+</svg>

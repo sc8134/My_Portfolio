@@ -289,7 +289,7 @@ a { color: inherit; }
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-text);
-  background: rgba(232, 224, 208, 0.92);
+  background: var(--color-bg-alt);
   border: 1px solid rgba(232, 83, 42, 0.35);
   border-radius: var(--radius-pill);
   padding: 0.35rem 1rem;

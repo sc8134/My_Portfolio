@@ -1,135 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680" preserveAspectRatio="xMidYMid slice" width="1440" height="680">
   <defs>
-
-    <!-- ── Filters ── -->
     <filter id="blur-xl" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="60"/>
+      <feGaussianBlur stdDeviation="80"/>
     </filter>
     <filter id="blur-lg" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="40"/>
+      <feGaussianBlur stdDeviation="55"/>
     </filter>
     <filter id="blur-md" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="25"/>
-    </filter>
-    <filter id="blur-sm" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="14"/>
+      <feGaussianBlur stdDeviation="35"/>
     </filter>
 
-    <!-- ── Fade to transparent at bottom ── -->
+    <!-- Fade to page bg at bottom -->
     <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#f0ebe0" stop-opacity="0"/>
-      <stop offset="55%"  stop-color="#f0ebe0" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#f0ebe0" stop-opacity="0"/>
       <stop offset="100%" stop-color="#f0ebe0" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- ── Coral radial glow ── -->
+    <!-- Soft coral radial -->
     <radialGradient id="coralGlow" cx="50%" cy="40%" r="55%">
-      <stop offset="0%"   stop-color="#e8532a" stop-opacity="0.55"/>
+      <stop offset="0%"   stop-color="#e8532a" stop-opacity="0.22"/>
       <stop offset="100%" stop-color="#e8532a" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- ── Navy radial glow ── -->
+    <!-- Soft navy radial -->
     <radialGradient id="navyGlow" cx="50%" cy="50%" r="55%">
-      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.45"/>
+      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.16"/>
       <stop offset="100%" stop-color="#1e2d4d" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- ── Amber streak ── -->
-    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#f59e0b" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
-    </radialGradient>
-
   </defs>
 
-  <!-- ── Base: warm cream background ── -->
+  <!-- Base -->
   <rect width="1440" height="680" fill="#f0ebe0"/>
 
-  <!-- ══════════════════════════════════════
-       LAYER 1 — Large navy depth blob (back)
-       Slow drift left-right
-  ══════════════════════════════════════ -->
-  <ellipse cx="720" cy="180" rx="900" ry="260" fill="url(#navyGlow)" filter="url(#blur-xl)" opacity="0.7">
-    <animate attributeName="cx" values="720;580;820;650;720" dur="18s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.7;0.5;0.75;0.55;0.7" dur="13s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="ry" values="260;300;240;280;260" dur="15s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+  <!-- Navy depth blob — very subtle -->
+  <ellipse cx="720" cy="180" rx="900" ry="280" fill="url(#navyGlow)" filter="url(#blur-xl)" opacity="0.6">
+    <animate attributeName="cx" values="720;580;820;650;720" dur="20s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.6;0.4;0.65;0.45;0.6" dur="15s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
   </ellipse>
 
-  <!-- ══════════════════════════════════════
-       LAYER 2 — Main coral aurora wave
-       Primary animation — wave + breathe
-  ══════════════════════════════════════ -->
-  <ellipse cx="600" cy="140" rx="780" ry="200" fill="url(#coralGlow)" filter="url(#blur-xl)" opacity="0.8">
-    <animate attributeName="cx" values="600;800;500;750;600" dur="14s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="cy" values="140;110;160;120;140" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.8;0.55;0.85;0.6;0.8" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="rx" values="780;680;820;740;780" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+  <!-- Main coral blob — muted, soft -->
+  <ellipse cx="600" cy="140" rx="800" ry="200" fill="url(#coralGlow)" filter="url(#blur-xl)" opacity="0.55">
+    <animate attributeName="cx" values="600;800;500;750;600" dur="16s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="cy" values="140;110;160;125;140" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.55;0.35;0.6;0.4;0.55" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
   </ellipse>
 
-  <!-- ══════════════════════════════════════
-       LAYER 3 — Second coral blob (right side)
-       Offset timing for natural feel
-  ══════════════════════════════════════ -->
-  <ellipse cx="1100" cy="200" rx="500" ry="160" fill="#e8532a" filter="url(#blur-lg)" opacity="0.35">
-    <animate attributeName="cx" values="1100;950;1200;1050;1100" dur="16s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.35;0.55;0.28;0.48;0.35" dur="11s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="ry" values="160;200;140;180;160" dur="13s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+  <!-- Right coral — very faint -->
+  <ellipse cx="1100" cy="200" rx="480" ry="150" fill="#e8532a" filter="url(#blur-lg)" opacity="0.12">
+    <animate attributeName="cx" values="1100;960;1200;1060;1100" dur="18s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.12;0.2;0.09;0.16;0.12" dur="13s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
   </ellipse>
 
-  <!-- ══════════════════════════════════════
-       LAYER 4 — Amber horizon streak (middle)
-       Thin, horizontal, sunrise feel
-  ══════════════════════════════════════ -->
-  <ellipse cx="720" cy="260" rx="1100" ry="70" fill="url(#amberGlow)" filter="url(#blur-md)" opacity="0.5">
-    <animate attributeName="cx" values="720;620;820;700;720" dur="20s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.5;0.3;0.55;0.35;0.5" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+  <!-- Left bloom — heartbeat, barely visible -->
+  <ellipse cx="240" cy="160" rx="340" ry="170" fill="#e8532a" filter="url(#blur-lg)" opacity="0.1">
+    <animate attributeName="rx" values="340;400;320;380;340" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.1;0.18;0.08;0.15;0.1" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
   </ellipse>
 
-  <!-- ══════════════════════════════════════
-       LAYER 5 — Left coral bloom
-       Heartbeat pulse animation
-  ══════════════════════════════════════ -->
-  <ellipse cx="240" cy="160" rx="360" ry="180" fill="#e8532a" filter="url(#blur-lg)" opacity="0.3">
-    <animate attributeName="rx" values="360;420;340;400;360" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="ry" values="180;210;165;195;180" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.3;0.48;0.25;0.42;0.3" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+  <!-- Central pulse — very soft -->
+  <ellipse cx="720" cy="100" rx="280" ry="120" fill="#e8532a" filter="url(#blur-md)" opacity="0.14">
+    <animate attributeName="rx" values="280;350;260;320;280" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.14;0.22;0.10;0.18;0.14" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
   </ellipse>
 
-  <!-- ══════════════════════════════════════
-       LAYER 6 — Central radial bloom
-       Slow heartbeat — the focal pulse
-  ══════════════════════════════════════ -->
-  <ellipse cx="720" cy="120" rx="300" ry="150" fill="#e8532a" filter="url(#blur-md)" opacity="0.45">
-    <animate attributeName="rx" values="300;380;280;350;300" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="ry" values="150;190;135;170;150" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.45;0.65;0.35;0.58;0.45" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+  <!-- Navy top anchor — barely there -->
+  <ellipse cx="720" cy="0" rx="1440" ry="100" fill="#1e2d4d" filter="url(#blur-lg)" opacity="0.08">
+    <animate attributeName="opacity" values="0.08;0.13;0.06;0.10;0.08" dur="18s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
   </ellipse>
 
-  <!-- ══════════════════════════════════════
-       LAYER 7 — Navy top edge depth
-       Anchors the aurora to the top
-  ══════════════════════════════════════ -->
-  <ellipse cx="720" cy="0" rx="1440" ry="120" fill="#1e2d4d" filter="url(#blur-lg)" opacity="0.18">
-    <animate attributeName="ry" values="120;150;110;135;120" dur="17s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.18;0.28;0.14;0.22;0.18" dur="17s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-
-  <!-- ══════════════════════════════════════
-       LAYER 8 — Fine coral wisps (top)
-       Delicate streaks like real aurora
-  ══════════════════════════════════════ -->
-  <ellipse cx="400" cy="80" rx="220" ry="45" fill="#e8532a" filter="url(#blur-sm)" opacity="0.35" transform="rotate(-8 400 80)">
-    <animate attributeName="cx" values="400;480;360;440;400" dur="11s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.35;0.55;0.25;0.45;0.35" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-  <ellipse cx="1050" cy="90" rx="200" ry="40" fill="#f59e0b" filter="url(#blur-sm)" opacity="0.28" transform="rotate(6 1050 90)">
-    <animate attributeName="cx" values="1050;980;1120;1020;1050" dur="13s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.28;0.44;0.2;0.38;0.28" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-
-  <!-- ══════════════════════════════════════
-       FADE OVERLAY — blends into page bg
-  ══════════════════════════════════════ -->
+  <!-- Fade overlay -->
   <rect width="1440" height="680" fill="url(#fadeBottom)"/>
-
 </svg>

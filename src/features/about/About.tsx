@@ -53,7 +53,7 @@ export function About() {
               <img
                 src="/pic/me.webp"
                 alt="Sagar Roka Chhetri — Graduation 2022"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', display: 'block', transform: 'scale(1.35)', transformOrigin: 'center 25%' }}
                 onError={(e) => {
                   const t = e.currentTarget
                   t.style.display = 'none'

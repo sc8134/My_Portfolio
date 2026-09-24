@@ -1,17 +1,18 @@
 Options -Indexes
 
+# ── HTTPS redirect ──────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 # ── SPA routing ────────────────────────────────────────
-# Send all non-file, non-directory requests to index.html
-# so client-side routes (e.g. /blog) don't 404 on reload.
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-
-  # Let real files and directories pass through unchanged
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-
-  # Everything else → index.html
   RewriteRule ^ index.html [L]
 </IfModule>
 

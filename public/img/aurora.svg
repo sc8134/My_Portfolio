@@ -9,66 +9,68 @@
     <filter id="blur-md" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="35"/>
     </filter>
-
-    <!-- Fade to page bg at bottom -->
     <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#f0ebe0" stop-opacity="0"/>
       <stop offset="50%"  stop-color="#f0ebe0" stop-opacity="0"/>
       <stop offset="100%" stop-color="#f0ebe0" stop-opacity="1"/>
     </linearGradient>
-
-    <!-- Soft coral radial -->
     <radialGradient id="coralGlow" cx="50%" cy="40%" r="55%">
       <stop offset="0%"   stop-color="#e8532a" stop-opacity="0.22"/>
       <stop offset="100%" stop-color="#e8532a" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- Soft navy radial -->
     <radialGradient id="navyGlow" cx="50%" cy="50%" r="55%">
       <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.16"/>
       <stop offset="100%" stop-color="#1e2d4d" stop-opacity="0"/>
     </radialGradient>
+
+    <style>
+      /* Composited CSS animations — use only opacity + transform */
+      @keyframes drift1 {
+        0%,100% { transform: translateX(0px) translateY(0px); opacity: 0.55; }
+        33%      { transform: translateX(-80px) translateY(-20px); opacity: 0.35; }
+        66%      { transform: translateX(60px) translateY(15px); opacity: 0.6; }
+      }
+      @keyframes drift2 {
+        0%,100% { transform: translateX(0px) translateY(0px); opacity: 0.6; }
+        40%      { transform: translateX(120px) translateY(-30px); opacity: 0.38; }
+        70%      { transform: translateX(-60px) translateY(20px); opacity: 0.65; }
+      }
+      @keyframes drift3 {
+        0%,100% { transform: translateX(0px); opacity: 0.12; }
+        50%      { transform: translateX(-100px); opacity: 0.2; }
+      }
+      @keyframes pulse1 {
+        0%,100% { opacity: 0.1; transform: scale(1); }
+        50%      { opacity: 0.18; transform: scale(1.08); }
+      }
+      @keyframes pulse2 {
+        0%,100% { opacity: 0.14; transform: scale(1); }
+        50%      { opacity: 0.22; transform: scale(1.1); }
+      }
+      @keyframes fadeWave {
+        0%,100% { opacity: 0.08; }
+        50%      { opacity: 0.13; }
+      }
+      .a1 { animation: drift2 16s ease-in-out infinite; transform-origin: 720px 180px; }
+      .a2 { animation: drift1 14s ease-in-out infinite; transform-origin: 600px 140px; }
+      .a3 { animation: drift3 18s ease-in-out infinite; transform-origin: 1100px 200px; }
+      .a4 { animation: pulse1 8s ease-in-out infinite; transform-origin: 240px 160px; }
+      .a5 { animation: pulse2 7s ease-in-out infinite; transform-origin: 720px 100px; }
+      .a6 { animation: fadeWave 17s ease-in-out infinite; transform-origin: 720px 0px; }
+    </style>
   </defs>
 
   <!-- Base -->
   <rect width="1440" height="680" fill="#f0ebe0"/>
 
-  <!-- Navy depth blob — very subtle -->
-  <ellipse cx="720" cy="180" rx="900" ry="280" fill="url(#navyGlow)" filter="url(#blur-xl)" opacity="0.6">
-    <animate attributeName="cx" values="720;580;820;650;720" dur="20s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.6;0.4;0.65;0.45;0.6" dur="15s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
+  <!-- Blobs — animations via CSS only (composited opacity + transform) -->
+  <ellipse class="a1" cx="720" cy="180" rx="900" ry="280" fill="url(#navyGlow)" filter="url(#blur-xl)"/>
+  <ellipse class="a2" cx="600" cy="140" rx="800" ry="200" fill="url(#coralGlow)" filter="url(#blur-xl)"/>
+  <ellipse class="a3" cx="1100" cy="200" rx="480" ry="150" fill="#e8532a" filter="url(#blur-lg)" opacity="0.12"/>
+  <ellipse class="a4" cx="240" cy="160" rx="340" ry="170" fill="#e8532a" filter="url(#blur-lg)" opacity="0.1"/>
+  <ellipse class="a5" cx="720" cy="100" rx="280" ry="120" fill="#e8532a" filter="url(#blur-md)" opacity="0.14"/>
+  <ellipse class="a6" cx="720" cy="0" rx="1440" ry="100" fill="#1e2d4d" filter="url(#blur-lg)" opacity="0.08"/>
 
-  <!-- Main coral blob — muted, soft -->
-  <ellipse cx="600" cy="140" rx="800" ry="200" fill="url(#coralGlow)" filter="url(#blur-xl)" opacity="0.55">
-    <animate attributeName="cx" values="600;800;500;750;600" dur="16s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="cy" values="140;110;160;125;140" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.55;0.35;0.6;0.4;0.55" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-
-  <!-- Right coral — very faint -->
-  <ellipse cx="1100" cy="200" rx="480" ry="150" fill="#e8532a" filter="url(#blur-lg)" opacity="0.12">
-    <animate attributeName="cx" values="1100;960;1200;1060;1100" dur="18s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.12;0.2;0.09;0.16;0.12" dur="13s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-
-  <!-- Left bloom — heartbeat, barely visible -->
-  <ellipse cx="240" cy="160" rx="340" ry="170" fill="#e8532a" filter="url(#blur-lg)" opacity="0.1">
-    <animate attributeName="rx" values="340;400;320;380;340" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.1;0.18;0.08;0.15;0.1" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-
-  <!-- Central pulse — very soft -->
-  <ellipse cx="720" cy="100" rx="280" ry="120" fill="#e8532a" filter="url(#blur-md)" opacity="0.14">
-    <animate attributeName="rx" values="280;350;260;320;280" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-    <animate attributeName="opacity" values="0.14;0.22;0.10;0.18;0.14" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-
-  <!-- Navy top anchor — barely there -->
-  <ellipse cx="720" cy="0" rx="1440" ry="100" fill="#1e2d4d" filter="url(#blur-lg)" opacity="0.08">
-    <animate attributeName="opacity" values="0.08;0.13;0.06;0.10;0.08" dur="18s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-  </ellipse>
-
-  <!-- Fade overlay -->
+  <!-- Fade to page bg -->
   <rect width="1440" height="680" fill="url(#fadeBottom)"/>
 </svg>

@@ -426,7 +426,7 @@ export function Contact() {
           ) : (
             <form onSubmit={handleSubmit} style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }} noValidate>
               {/* Honeypot — bots fill this, humans won't see it */}
-              <input type="text" name="botcheck" defaultValue="" style={{ display: 'none' }} tabIndex={-1} aria-hidden="true" />
+              <input type="text" id="botcheck" name="botcheck" autoComplete="off" defaultValue="" style={{ display: 'none' }} tabIndex={-1} aria-hidden="true" />
 
               {/* Subject chips */}
               <div>
@@ -461,7 +461,7 @@ export function Contact() {
                     Name <span style={{ color: 'var(--color-neon)' }}>*</span>
                   </label>
                   <input
-                    id="c-name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)}
+                    id="c-name" name="name" type="text" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)}
                     placeholder="Your name" required style={inputBase}
                     onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--color-neon-border)')}
                     onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--color-border)')}
@@ -472,7 +472,7 @@ export function Contact() {
                     Email <span style={{ color: 'var(--color-neon)' }}>*</span>
                   </label>
                   <input
-                    id="c-email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                    id="c-email" name="email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com" required style={inputBase}
                     onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--color-neon-border)')}
                     onBlur={(e) => (e.currentTarget.style.borderColor = 'var(--color-border)')}
@@ -486,7 +486,7 @@ export function Contact() {
                   Message <span style={{ color: 'var(--color-neon)' }}>*</span>
                 </label>
                 <textarea
-                  id="c-body" name="message" value={body} onChange={(e) => setBody(e.target.value)}
+                  id="c-body" name="message" autoComplete="off" value={body} onChange={(e) => setBody(e.target.value)}
                   placeholder="Hi Sagar, I would like to..." rows={4} required
                   style={{ ...inputBase, resize: 'vertical', lineHeight: 1.6 }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = 'var(--color-neon-border)')}

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680" preserveAspectRatio="xMidYMid slice" width="1440" height="680">
+  <defs>
+
+    <!-- Very faint sky — barely visible -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.08"/>
+      <stop offset="30%"  stop-color="#e8532a" stop-opacity="0.07"/>
+      <stop offset="60%"  stop-color="#f59e0b" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#f0ebe0" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Faint sun glow -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#e8532a" stop-opacity="0.18"/>
+      <stop offset="50%"  stop-color="#f59e0b" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f0ebe0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mountain fills — very low opacity -->
+    <linearGradient id="mtn3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2a3d5f" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1a2840" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#152236" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a2840" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0e1a2e" stop-opacity="0.22"/>
+    </linearGradient>
+
+    <!-- Heavy fade — content stays fully readable -->
+    <linearGradient id="pageFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0ebe0" stop-opacity="1"/>
+      <stop offset="35%"  stop-color="#f0ebe0" stop-opacity="1"/>
+      <stop offset="62%"  stop-color="#f0ebe0" stop-opacity="0.75"/>
+      <stop offset="82%"  stop-color="#f0ebe0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f0ebe0" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="50"/>
+    </filter>
+    <filter id="glowSm" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+
+    <style>
+      @keyframes glowPulse {
+        0%,100% { opacity: 0.8; transform: scale(1); }
+        50%      { opacity: 1;  transform: scale(1.06); }
+      }
+      @keyframes shimmer {
+        0%,100% { opacity: 0.5; }
+        50%      { opacity: 0.8; }
+      }
+      @keyframes floatUp {
+        0%   { opacity: 0;    transform: translateY(0px); }
+        15%  { opacity: 0.45; }
+        85%  { opacity: 0.35; }
+        100% { opacity: 0;    transform: translateY(-100px); }
+      }
+      .sun-glow { animation: glowPulse 6s ease-in-out infinite; transform-origin: 720px 300px; }
+      .shimmer  { animation: shimmer  5s ease-in-out infinite; }
+      .p1 { animation: floatUp 10s ease-in-out infinite 0s;   }
+      .p2 { animation: floatUp 12s ease-in-out infinite 2.5s; }
+      .p3 { animation: floatUp  9s ease-in-out infinite 5s;   }
+    </style>
+  </defs>
+
+  <!-- Base transparent -->
+  <rect width="1440" height="680" fill="#f0ebe0" fill-opacity="0"/>
+
+  <!-- Sky — barely there -->
+  <rect width="1440" height="680" fill="url(#sky)"/>
+
+  <!-- Sun glow — very faint -->
+  <ellipse class="sun-glow" cx="720" cy="290" rx="280" ry="200" fill="url(#sunGlow)" filter="url(#glow)"/>
+
+  <!-- Horizon shimmer — whisper thin -->
+  <ellipse class="shimmer" cx="720" cy="362" rx="600" ry="10" fill="#e8532a" opacity="0.06" filter="url(#glowSm)"/>
+
+  <!-- Mountain Layer 3 — far, barely visible -->
+  <path fill="url(#mtn3)" d="
+    M0 500 L55 460 L120 472 L190 438 L265 450 L340 412
+    L410 425 L480 392 L545 405 L615 370 L685 382
+    L750 348 L815 362 L885 328 L950 342 L1015 312
+    L1085 328 L1150 298 L1220 315 L1295 285 L1365 302
+    L1440 272 L1440 680 L0 680 Z
+  "/>
+
+  <!-- Mountain Layer 2 -->
+  <path fill="url(#mtn2)" d="
+    M0 538 L75 495 L150 510 L225 475 L300 488 L370 452
+    L445 468 L515 435 L590 450 L660 415 L730 430
+    L800 396 L870 412 L940 378 L1010 395 L1080 362
+    L1155 380 L1225 348 L1300 366 L1375 334 L1440 350
+    L1440 680 L0 680 Z
+  "/>
+
+  <!-- Mountain Layer 1 — closest -->
+  <path fill="url(#mtn1)" d="
+    M0 575 L65 535 L95 543 L132 520 L168 530 L205 508
+    L245 518 L285 495 L332 507 L382 482 L422 494
+    L465 470 L512 483 L562 458 L612 470 L658 445
+    L705 458 L748 432 L796 446 L845 420 L894 435
+    L942 408 L992 424 L1042 398 L1092 414 L1142 388
+    L1192 404 L1245 378 L1295 394 L1352 366 L1440 382
+    L1440 680 L0 680 Z
+  "/>
+
+  <!-- Snow caps — barely visible -->
+  <path fill="#f5f0e8" opacity="0.25" d="
+    M202 508 L218 520 L234 508 L222 515 Z
+    M380 482 L398 494 L416 482 L404 490 Z
+    M610 445 L630 458 L650 445 L638 455 Z
+    M703 432 L724 446 L745 432 L732 442 Z
+    M940 408 L962 424 L984 408 L970 418 Z
+    M1243 378 L1266 394 L1289 378 L1275 388 Z
+  "/>
+
+  <!-- 3 floating code particles only -->
+  <text class="p1" x="340" y="390" font-family="'Fira Code',Consolas,monospace"
+    font-size="12" fill="#e8532a" opacity="0" font-weight="600">{ }</text>
+  <text class="p2" x="700" y="408" font-family="'Fira Code',Consolas,monospace"
+    font-size="11" fill="#1e2d4d" opacity="0" font-weight="600">&lt;/&gt;</text>
+  <text class="p3" x="1050" y="385" font-family="'Fira Code',Consolas,monospace"
+    font-size="11" fill="#e8532a" opacity="0" font-weight="600">async</text>
+
+  <!-- Heavy cream overlay — top stays completely clean -->
+  <rect width="1440" height="680" fill="url(#pageFade)"/>
+</svg>

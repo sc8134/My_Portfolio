@@ -567,12 +567,10 @@ a { color: inherit; }
 
 /* ── Contact section — very faint mountain hint at bottom ── */
 #contact {
-  background-image:
-    linear-gradient(to bottom, var(--color-bg) 0%, var(--color-bg) 55%, rgba(240,235,224,0.6) 80%, transparent 100%),
-    url('/img/aurora.svg');
-  background-size: 100%, 300% 350%;
-  background-position: center, center 95%;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url('/img/aurora-subtle.svg');
+  background-size: 100% 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 .about-grid {

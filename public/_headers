@@ -6,3 +6,17 @@
   Cross-Origin-Opener-Policy: same-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://api.web3forms.com; frame-ancestors 'none'
+
+# HTML — never cache, always revalidate so CDNs never serve stale content
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+
+# Root — same as HTML
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+
+# Static assets — long cache with content-hash in filename (Vite handles this)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

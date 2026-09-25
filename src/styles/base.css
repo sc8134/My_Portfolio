@@ -565,13 +565,7 @@ a { color: inherit; }
   background-repeat: no-repeat;
 }
 
-/* ── Contact section — very faint mountain hint at bottom ── */
-#contact {
-  background-image: url('/img/aurora-subtle.svg');
-  background-size: 100% 100%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
+/* ── Contact section — clean, no background ── */
 
 .about-grid {
   display: grid;

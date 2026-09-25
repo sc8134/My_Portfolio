@@ -1,177 +1,189 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680" preserveAspectRatio="xMidYMid slice" width="1440" height="680">
   <defs>
 
-    <!-- Sky gradient — warm sunrise, cream at bottom -->
+    <!-- Sky gradient — strong warm sunrise -->
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.18"/>
-      <stop offset="28%"  stop-color="#e8532a" stop-opacity="0.22"/>
-      <stop offset="55%"  stop-color="#f59e0b" stop-opacity="0.12"/>
-      <stop offset="78%"  stop-color="#f0ebe0" stop-opacity="0.04"/>
+      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.45"/>
+      <stop offset="22%"  stop-color="#e8532a" stop-opacity="0.55"/>
+      <stop offset="48%"  stop-color="#f59e0b" stop-opacity="0.32"/>
+      <stop offset="72%"  stop-color="#fde68a" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#f0ebe0" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Sun radial glow -->
+    <!-- Sun outer glow — big warm bloom -->
     <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#e8532a" stop-opacity="0.55"/>
-      <stop offset="40%"  stop-color="#f59e0b" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#e8532a" stop-opacity="0.75"/>
+      <stop offset="35%"  stop-color="#f59e0b" stop-opacity="0.45"/>
+      <stop offset="70%"  stop-color="#fde68a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f0ebe0" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Sun core -->
+    <!-- Sun core bright -->
     <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#fff5e0" stop-opacity="0.9"/>
-      <stop offset="50%"  stop-color="#e8532a" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#e8532a" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#ffffff"  stop-opacity="1"/>
+      <stop offset="30%"  stop-color="#fff5c0"  stop-opacity="0.9"/>
+      <stop offset="65%"  stop-color="#e8532a"  stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#e8532a"  stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Mountain fill gradients -->
-    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#1e2d4d" stop-opacity="0.55"/>
+    <!-- Mountain fills — much stronger -->
+    <linearGradient id="mtn3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2a3d5f" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#1a2840" stop-opacity="0.60"/>
     </linearGradient>
     <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#1e2d4d" stop-opacity="0.38"/>
+      <stop offset="0%"   stop-color="#1e2d4d" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#152236" stop-opacity="0.75"/>
     </linearGradient>
-    <linearGradient id="mtn3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#2a3d5f" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#2a3d5f" stop-opacity="0.22"/>
+    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a2840" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#0e1a2e" stop-opacity="0.92"/>
     </linearGradient>
 
-    <!-- Fade overlay — page blends in at bottom -->
+    <!-- Page fade -->
     <linearGradient id="pageFade" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#f0ebe0" stop-opacity="0"/>
-      <stop offset="55%"  stop-color="#f0ebe0" stop-opacity="0"/>
+      <stop offset="48%"  stop-color="#f0ebe0" stop-opacity="0"/>
       <stop offset="100%" stop-color="#f0ebe0" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Blur for glow -->
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="32"/>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="glowMd" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
     </filter>
     <filter id="glowSm" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="12"/>
+      <feGaussianBlur stdDeviation="8"/>
     </filter>
 
     <style>
-      /* All composited — only opacity + transform */
       @keyframes sunrise {
-        0%,100% { opacity: 0.85; transform: translateY(0px); }
-        50%      { opacity: 1;    transform: translateY(-6px); }
+        0%,100% { opacity: 0.9;  transform: translateY(0px); }
+        50%      { opacity: 1;   transform: translateY(-8px); }
       }
       @keyframes glowPulse {
-        0%,100% { opacity: 0.7;  transform: scale(1); }
-        50%      { opacity: 1;   transform: scale(1.08); }
-      }
-      @keyframes floatUp1 {
-        0%   { opacity: 0;   transform: translateY(0px) translateX(0px); }
-        15%  { opacity: 0.5; }
-        85%  { opacity: 0.4; }
-        100% { opacity: 0;   transform: translateY(-120px) translateX(18px); }
-      }
-      @keyframes floatUp2 {
-        0%   { opacity: 0;   transform: translateY(0px) translateX(0px); }
-        15%  { opacity: 0.4; }
-        85%  { opacity: 0.3; }
-        100% { opacity: 0;   transform: translateY(-100px) translateX(-14px); }
-      }
-      @keyframes floatUp3 {
-        0%   { opacity: 0;   transform: translateY(0px); }
-        20%  { opacity: 0.35; }
-        80%  { opacity: 0.25; }
-        100% { opacity: 0;   transform: translateY(-90px); }
+        0%,100% { opacity: 0.75; transform: scale(1); }
+        50%      { opacity: 1;   transform: scale(1.1); }
       }
       @keyframes shimmer {
-        0%,100% { opacity: 0.18; }
-        50%      { opacity: 0.28; }
+        0%,100% { opacity: 0.45; }
+        50%      { opacity: 0.7; }
       }
-      .sun-glow  { animation: glowPulse 5s ease-in-out infinite; transform-origin: 720px 295px; }
-      .sun-core  { animation: sunrise  6s ease-in-out infinite; transform-origin: 720px 310px; }
-      .p1 { animation: floatUp1 9s ease-in-out infinite 0s; transform-origin: 340px 380px; }
-      .p2 { animation: floatUp2 11s ease-in-out infinite 2s; transform-origin: 620px 400px; }
-      .p3 { animation: floatUp3 8s ease-in-out infinite 4s; transform-origin: 900px 370px; }
-      .p4 { animation: floatUp1 12s ease-in-out infinite 1s; transform-origin: 1100px 390px; }
-      .p5 { animation: floatUp2 10s ease-in-out infinite 3s; transform-origin: 200px 360px; }
-      .p6 { animation: floatUp3 13s ease-in-out infinite 5s; transform-origin: 780px 420px; }
-      .shimmer { animation: shimmer 8s ease-in-out infinite; }
+      @keyframes floatUp1 {
+        0%   { opacity: 0;    transform: translateY(0px) translateX(0px); }
+        12%  { opacity: 0.65; }
+        88%  { opacity: 0.5;  }
+        100% { opacity: 0;    transform: translateY(-130px) translateX(20px); }
+      }
+      @keyframes floatUp2 {
+        0%   { opacity: 0;    transform: translateY(0px) translateX(0px); }
+        12%  { opacity: 0.55; }
+        88%  { opacity: 0.4;  }
+        100% { opacity: 0;    transform: translateY(-110px) translateX(-16px); }
+      }
+      @keyframes floatUp3 {
+        0%   { opacity: 0;    transform: translateY(0px); }
+        15%  { opacity: 0.50; }
+        85%  { opacity: 0.35; }
+        100% { opacity: 0;    transform: translateY(-100px); }
+      }
+      .sun-glow  { animation: glowPulse 5s ease-in-out infinite; transform-origin: 720px 290px; }
+      .sun-mid   { animation: glowPulse 4s ease-in-out infinite 0.5s; transform-origin: 720px 300px; }
+      .sun-core  { animation: sunrise  6s ease-in-out infinite; transform-origin: 720px 308px; }
+      .shimmer   { animation: shimmer  4s ease-in-out infinite; }
+      .p1 { animation: floatUp1  9s ease-in-out infinite 0s;  }
+      .p2 { animation: floatUp2 11s ease-in-out infinite 2s;  }
+      .p3 { animation: floatUp3  8s ease-in-out infinite 4s;  }
+      .p4 { animation: floatUp1 12s ease-in-out infinite 1s;  }
+      .p5 { animation: floatUp2 10s ease-in-out infinite 3s;  }
+      .p6 { animation: floatUp3 13s ease-in-out infinite 5.5s;}
     </style>
   </defs>
 
-  <!-- Base — warm cream -->
+  <!-- Base cream -->
   <rect width="1440" height="680" fill="#f0ebe0"/>
 
-  <!-- Sky wash -->
+  <!-- Sky wash — strong warm gradient -->
   <rect width="1440" height="680" fill="url(#sky)"/>
 
-  <!-- Sun outer glow -->
-  <ellipse class="sun-glow" cx="720" cy="295" rx="260" ry="200" fill="url(#sunGlow)" filter="url(#glow)"/>
+  <!-- Sun outer bloom -->
+  <ellipse class="sun-glow" cx="720" cy="290" rx="320" ry="240" fill="url(#sunGlow)" filter="url(#glow)"/>
 
-  <!-- Sun horizon shimmer — thin warm line -->
-  <ellipse class="shimmer" cx="720" cy="362" rx="580" ry="14" fill="#e8532a" opacity="0.18" filter="url(#glowSm)"/>
+  <!-- Sun mid ring -->
+  <ellipse class="sun-mid" cx="720" cy="300" rx="130" ry="100" fill="#f59e0b" opacity="0.35" filter="url(#glowMd)"/>
+
+  <!-- Horizon shimmer -->
+  <ellipse class="shimmer" cx="720" cy="358" rx="640" ry="16" fill="#e8532a" filter="url(#glowMd)"/>
 
   <!-- Sun core -->
-  <ellipse class="sun-core" cx="720" cy="310" rx="54" ry="54" fill="url(#sunCore)" filter="url(#glowSm)"/>
+  <ellipse class="sun-core" cx="720" cy="308" rx="52" ry="52" fill="url(#sunCore)" filter="url(#glowSm)"/>
 
-  <!-- ── Mountain Layer 3 — farthest, lightest (background range) ── -->
+  <!-- ── Mountain Layer 3 — far range ── -->
   <path fill="url(#mtn3)" d="
-    M0 480
-    L60 440 L130 455 L200 415 L280 425 L360 390
-    L430 405 L500 370 L560 385 L630 350 L700 360
-    L760 330 L820 345 L890 310 L950 325 L1010 300
-    L1080 318 L1150 290 L1220 308 L1290 278 L1360 295
-    L1440 270 L1440 680 L0 680 Z
+    M0 500
+    L55 460 L120 472 L190 438 L265 450 L340 412
+    L410 425 L480 392 L545 405 L615 370 L685 382
+    L750 348 L815 362 L885 328 L950 342 L1015 312
+    L1085 328 L1150 298 L1220 315 L1295 285 L1365 302
+    L1440 272 L1440 680 L0 680 Z
   "/>
 
   <!-- ── Mountain Layer 2 — mid range ── -->
   <path fill="url(#mtn2)" d="
-    M0 520
-    L80 475 L160 490 L240 458 L310 468 L380 435
-    L450 448 L520 418 L600 430 L670 398 L740 412
-    L810 380 L880 395 L950 362 L1020 378 L1090 348
-    L1160 365 L1230 338 L1310 355 L1380 325 L1440 340
+    M0 538
+    L75 495 L150 510 L225 475 L300 488 L370 452
+    L445 468 L515 435 L590 450 L660 415 L730 430
+    L800 396 L870 412 L940 378 L1010 395 L1080 362
+    L1155 380 L1225 348 L1300 366 L1375 334 L1440 350
     L1440 680 L0 680 Z
   "/>
 
-  <!-- ── Mountain Layer 1 — closest, darkest, most detailed ── -->
+  <!-- ── Mountain Layer 1 — closest, strongest ── -->
   <path fill="url(#mtn1)" d="
-    M0 560
-    L70 520 L100 528 L140 505 L180 515 L220 492
-    L260 500 L300 478 L350 488 L400 462 L440 472
-    L480 450 L530 462 L580 438 L630 448 L670 424
-    L720 436 L760 412 L810 425 L860 400 L910 415
-    L960 390 L1010 405 L1060 380 L1110 395 L1160 368
-    L1210 382 L1260 358 L1310 372 L1370 345 L1440 360
+    M0 575
+    L65 535 L95 543 L132 520 L168 530 L205 508
+    L245 518 L285 495 L332 507 L382 482 L422 494
+    L465 470 L512 483 L562 458 L612 470 L658 445
+    L705 458 L748 432 L796 446 L845 420 L894 435
+    L942 408 L992 424 L1042 398 L1092 414 L1142 388
+    L1192 404 L1245 378 L1295 394 L1352 366 L1440 382
     L1440 680 L0 680 Z
   "/>
 
-  <!-- ── Floating code particles ── -->
-  <!-- { } -->
-  <text class="p1" x="330" y="385" font-family="'Fira Code',Consolas,monospace" font-size="13" fill="#e8532a" opacity="0" font-weight="700">{ }</text>
-  <!-- &lt;/&gt; -->
-  <text class="p2" x="610" y="402" font-family="'Fira Code',Consolas,monospace" font-size="12" fill="#1e2d4d" opacity="0" font-weight="600">&lt;/&gt;</text>
-  <!-- () => -->
-  <text class="p3" x="888" y="375" font-family="'Fira Code',Consolas,monospace" font-size="11" fill="#e8532a" opacity="0" font-weight="600">() =&gt;</text>
-  <!-- npm run -->
-  <text class="p4" x="1088" y="393" font-family="'Fira Code',Consolas,monospace" font-size="10" fill="#1e2d4d" opacity="0" font-weight="500">npm run</text>
-  <!-- import -->
-  <text class="p5" x="188" y="368" font-family="'Fira Code',Consolas,monospace" font-size="10" fill="#e8532a" opacity="0" font-weight="500">import</text>
-  <!-- async -->
-  <text class="p6" x="768" y="425" font-family="'Fira Code',Consolas,monospace" font-size="11" fill="#1e2d4d" opacity="0" font-weight="500">async</text>
-
-  <!-- Snow caps on closest mountain peaks — subtle white tips -->
-  <path fill="#f0ebe0" opacity="0.55" d="
-    M218 492 L232 500 L220 498 Z
-    M298 478 L314 488 L300 485 Z
-    M398 462 L414 472 L400 469 Z
-    M528 438 L545 448 L530 445 Z
-    M628 424 L644 436 L630 432 Z
-    M718 412 L736 425 L720 420 Z
-    M808 400 L826 415 L810 410 Z
-    M958 390 L976 405 L960 400 Z
-    M1108 368 L1126 382 L1110 378 Z
-    M1258 345 L1276 360 L1260 356 Z
+  <!-- Snow caps — brighter and more visible -->
+  <path fill="#f5f0e8" opacity="0.82" d="
+    M202 508 L218 520 L234 508 L222 515 Z
+    M283 495 L299 507 L315 495 L303 503 Z
+    M380 482 L398 494 L416 482 L404 490 Z
+    M510 458 L530 470 L550 458 L538 467 Z
+    M610 445 L630 458 L650 445 L638 455 Z
+    M703 432 L724 446 L745 432 L732 442 Z
+    M794 420 L815 434 L836 420 L823 430 Z
+    M940 408 L962 424 L984 408 L970 418 Z
+    M1090 388 L1112 404 L1134 388 L1120 398 Z
+    M1243 378 L1266 394 L1289 378 L1275 388 Z
   "/>
 
-  <!-- Page fade overlay -->
+  <!-- ── Floating code particles — more visible ── -->
+  <text class="p1" x="330" y="388" font-family="'Fira Code',Consolas,monospace"
+    font-size="14" fill="#e8532a" opacity="0" font-weight="700">{ }</text>
+
+  <text class="p2" x="610" y="405" font-family="'Fira Code',Consolas,monospace"
+    font-size="13" fill="#1e2d4d" opacity="0" font-weight="700">&lt;/&gt;</text>
+
+  <text class="p3" x="888" y="378" font-family="'Fira Code',Consolas,monospace"
+    font-size="12" fill="#e8532a" opacity="0" font-weight="600">() =&gt;</text>
+
+  <text class="p4" x="1085" y="395" font-family="'Fira Code',Consolas,monospace"
+    font-size="11" fill="#1e2d4d" opacity="0" font-weight="600">npm run</text>
+
+  <text class="p5" x="185" y="370" font-family="'Fira Code',Consolas,monospace"
+    font-size="11" fill="#e8532a" opacity="0" font-weight="600">import</text>
+
+  <text class="p6" x="765" y="428" font-family="'Fira Code',Consolas,monospace"
+    font-size="12" fill="#1e2d4d" opacity="0" font-weight="600">async</text>
+
+  <!-- Page fade to cream -->
   <rect width="1440" height="680" fill="url(#pageFade)"/>
 </svg>

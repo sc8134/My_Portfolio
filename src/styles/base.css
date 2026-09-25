@@ -565,13 +565,13 @@ a { color: inherit; }
   background-repeat: no-repeat;
 }
 
-/* ── Contact section — mountain horizon echo ── */
+/* ── Contact section — very faint mountain hint at bottom ── */
 #contact {
   background-image:
-    url('/img/aurora.svg'),
-    linear-gradient(to top, var(--color-bg) 0%, transparent 40%);
-  background-size: 200% 280%, 100%;
-  background-position: center 80%, center;
+    linear-gradient(to bottom, var(--color-bg) 0%, var(--color-bg) 55%, rgba(240,235,224,0.6) 80%, transparent 100%),
+    url('/img/aurora.svg');
+  background-size: 100%, 300% 350%;
+  background-position: center, center 95%;
   background-repeat: no-repeat, no-repeat;
 }
 

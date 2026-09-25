@@ -1,73 +1,126 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- SEO -->
+    <!-- ═══════════════════════════════════════════
+         PRIMARY SEO
+    ═══════════════════════════════════════════ -->
     <title>Sagar Roka Chhetri | Full Stack Engineer</title>
-    <meta name="description" content="Full Stack  Engineer from Nepal. I build fast, scalable web applications. Open to full-time roles and internships." />
-    <meta name="author" content="Sagar Roka Chhetri" />
-    <meta name="keywords" content="Sagar Roka Chhetri, Full Stack Engineer, React, Python, Nepal, portfolio" />
+    <meta name="description"   content="Full Stack Engineer from Nepal. I build fast, scalable web applications with React, TypeScript, Python and Node.js. Open to full-time roles and internships." />
+    <meta name="author"        content="Sagar Roka Chhetri" />
+    <meta name="keywords"      content="Sagar Roka Chhetri, Full Stack Engineer, React Developer, TypeScript, Python, Nepal, portfolio, web developer" />
+    <meta name="robots"        content="index, follow" />
+    <meta name="theme-color"   content="#e8532a" />
 
-    <!-- Open Graph — LinkedIn, Slack, WhatsApp previews -->
-    <meta property="og:type"        content="website" />
-    <meta property="og:title"       content="Sagar Roka Chhetri | Full Stack Engineer" />
-    <meta property="og:description" content="Full Stack Engineer from Nepal. React, TypeScript, Python, Flask, Node.js. Open to roles." />
-    <meta property="og:url"         content="https://sagarrc.com.np" />
-    <meta property="og:image"       content="https://sagarrc.com.np/og-image.png" />
+    <!-- ═══════════════════════════════════════════
+         OPEN GRAPH — LinkedIn, Slack, WhatsApp
+    ═══════════════════════════════════════════ -->
+    <meta property="og:type"         content="website" />
+    <meta property="og:title"        content="Sagar Roka Chhetri | Full Stack Engineer" />
+    <meta property="og:description"  content="Full Stack Engineer from Nepal. React, TypeScript, Python, Flask, Node.js. Building real products that solve real problems." />
+    <meta property="og:url"          content="https://sagarrc.com.np" />
+    <meta property="og:image"        content="https://sagarrc.com.np/og-image.png" />
     <meta property="og:image:width"  content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:site_name"   content="Sagar RC Portfolio" />
-    <meta property="og:locale"      content="en_US" />
+    <meta property="og:image:alt"    content="Sagar Roka Chhetri — Full Stack Engineer Portfolio" />
+    <meta property="og:site_name"    content="Sagar RC" />
+    <meta property="og:locale"       content="en_US" />
 
-    <!-- Twitter Card -->
+    <!-- ═══════════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════════ -->
     <meta name="twitter:card"        content="summary_large_image" />
     <meta name="twitter:site"        content="@Sagarch05339168" />
     <meta name="twitter:creator"     content="@Sagarch05339168" />
-    <meta name="twitter:title"       content="Sagar Roka Chhetri | Full Stack Developer" />
+    <meta name="twitter:title"       content="Sagar Roka Chhetri | Full Stack Engineer" />
     <meta name="twitter:description" content="Full Stack Engineer from Nepal. React, TypeScript, Python. Open to roles." />
     <meta name="twitter:image"       content="https://sagarrc.com.np/og-image.png" />
+    <meta name="twitter:image:alt"   content="Sagar Roka Chhetri Portfolio" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="/logo/logo.webp" />
-    <link rel="apple-touch-icon" href="/logo/logo.webp" />
+    <!-- ═══════════════════════════════════════════
+         FAVICON & ICONS
+    ═══════════════════════════════════════════ -->
+    <link rel="icon"             type="image/webp"   href="/logo/logo.webp" />
+    <link rel="apple-touch-icon"                     href="/logo/logo.webp" />
+    <link rel="shortcut icon"    type="image/webp"   href="/logo/logo.webp" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://sagarrc.com.np" />
+    <!-- ═══════════════════════════════════════════
+         CANONICAL & SITEMAP
+    ═══════════════════════════════════════════ -->
+    <link rel="canonical"  href="https://sagarrc.com.np" />
+    <link rel="sitemap"    type="application/xml" href="/sitemap.xml" />
 
-    <!-- Preload LCP resource — aurora background loads first -->
-    <link rel="preload" as="image" href="/img/aurora.svg" type="image/svg+xml" fetchpriority="high" />
+    <!-- ═══════════════════════════════════════════
+         PRELOAD CRITICAL RESOURCES
+    ═══════════════════════════════════════════ -->
+    <link rel="preload" as="image"  href="/img/aurora.svg"  type="image/svg+xml" fetchpriority="high" />
+    <link rel="preload" as="image"  href="/pic/me.webp"     type="image/webp" />
 
-    <!-- Fonts — non-blocking with font-display=swap -->
+    <!-- ═══════════════════════════════════════════
+         FONTS — non-blocking
+    ═══════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet"
       />
     </noscript>
 
-    <!-- Page fade-in: prevent flash of unstyled content -->
+    <!-- ═══════════════════════════════════════════
+         PREVENT FLASH OF UNSTYLED CONTENT
+    ═══════════════════════════════════════════ -->
     <style>
-      html { opacity: 0; transition: opacity 400ms ease; }
+      html { opacity: 0; transition: opacity 350ms ease; }
     </style>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.style.opacity = '1'
       })
+    </script>
+
+    <!-- ═══════════════════════════════════════════
+         STRUCTURED DATA — JSON-LD
+    ═══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sagar Roka Chhetri",
+      "url": "https://sagarrc.com.np",
+      "image": "https://sagarrc.com.np/pic/me.webp",
+      "jobTitle": "Full Stack Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "CodeRunners Technologies"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lalitpur",
+        "addressCountry": "NP"
+      },
+      "sameAs": [
+        "https://github.com/sc8134",
+        "https://www.linkedin.com/in/sagar-rc",
+        "https://x.com/Sagarch05339168"
+      ],
+      "knowsAbout": ["React", "TypeScript", "Python", "Node.js", "Full Stack Development"]
+    }
     </script>
   </head>
   <body>

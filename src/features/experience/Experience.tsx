@@ -84,11 +84,12 @@ export function Experience() {
             >
               {/* Header row */}
               <div
+                className="experience-header"
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
                   justifyContent: 'space-between',
-                  gap: '1rem',
+                  gap: '0.75rem',
                   flexWrap: 'wrap',
                   marginBottom: '0.6rem',
                 }}

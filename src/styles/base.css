@@ -1151,30 +1151,83 @@ a { color: inherit; }
    RESPONSIVE
    ═══════════════════════════════════════════════════════ */
 
+/* ── 768px — tablets ─────────────────────────── */
 @media (max-width: 768px) {
-  .site-header { flex-wrap: wrap; }
-  .nav-list { order: 3; width: 100%; justify-content: center; }
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .cmd-bar-inner { padding: 0.65rem 1rem; gap: 0.5rem; }
+  .site-header       { flex-wrap: wrap; }
+  .nav-list          { order: 3; width: 100%; justify-content: center; }
+  .about-grid        { grid-template-columns: 1fr; gap: 2rem; }
+  .cmd-bar-inner     { padding: 0.65rem 1rem; gap: 0.5rem; }
+
+  /* Skills bento — 1 col */
+  .skills-bento      { grid-template-columns: 1fr !important; }
+
+  /* Experience — date badge wraps under role on small cards */
+  .experience-header { flex-wrap: wrap; }
 }
 
-@media (max-width: 540px) {
-  .projects-grid { grid-template-columns: 1fr; }
+/* ── 640px ───────────────────────────────────── */
+@media (max-width: 640px) {
+  .projects-grid     { grid-template-columns: 1fr; }
+  .rec-grid          { grid-template-columns: 1fr !important; }
+  .recognitions-grid { grid-template-columns: 1fr !important; }
+
+  /* Contact grid */
+  .contact-grid      { grid-template-columns: 1fr !important; }
+  .contact-name-email-row { grid-template-columns: 1fr !important; }
+
+  /* Hero buttons — stack on very small */
+  .hero-actions      { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: min(280px, 90vw); justify-content: center; }
+
+  /* Closing footer watermark — smaller */
+  .closing-watermark-text { font-size: 8rem; }
+
+  /* cmd brand */
   .cmd-brand-namaste { font-size: 0.8rem; }
-  .cmd-brand-sep { font-size: 0.8rem; }
+  .cmd-brand-sep     { font-size: 0.8rem; }
   .cmd-brand-tagline { font-size: 0.8rem; }
 }
 
+/* ── 480px — phones ──────────────────────────── */
 @media (max-width: 480px) {
-  .about-stats { grid-template-columns: repeat(3, 1fr); }
+  .about-stats       { grid-template-columns: repeat(3, 1fr); }
   .experience-header { flex-direction: column; }
   .cmd-brand-namaste { font-size: 0.75rem; }
-  .cmd-brand-sep { font-size: 0.75rem; }
+  .cmd-brand-sep     { font-size: 0.75rem; }
   .cmd-brand-tagline { font-size: 0.75rem; }
-  .cmd-bar-inner { padding: 0.6rem 0.75rem; gap: 0.4rem; }
-  .hero-section { padding-top: 0.5rem; }
-  .hero-badge { font-size: 0.72rem; padding: 0.28rem 0.75rem; margin-bottom: 1.25rem; }
-  .site-shell { width: 100%; }
+  .cmd-bar-inner     { padding: 0.6rem 0.75rem; gap: 0.4rem; }
+  .hero-section      { padding-top: 0.5rem; }
+  .hero-badge        { font-size: 0.72rem; padding: 0.28rem 0.75rem; margin-bottom: 1.25rem; }
+  .site-shell        { width: 100%; }
+
+  /* Closing footer */
+  .closing-footer    { padding: 4rem 0 2rem; }
+  .closing-watermark-text { font-size: 5rem; }
+  .closing-name      { font-size: 2rem; }
+
+  /* Section headings */
+  .heading-lg        { font-size: clamp(1.5rem, 7vw, 2.2rem); }
+
+  /* Blog list grid */
+  .blog-list-grid    { grid-template-columns: 1fr !important; }
+
+  /* Project icon grid */
+  .app-icon-grid     { grid-template-columns: repeat(4, 1fr) !important; }
+  .proj-icon-grid    { grid-template-columns: repeat(4, 1fr) !important; }
+
+  /* About philosophy cards */
+  .philosophy-grid   { grid-template-columns: 1fr !important; }
+}
+
+/* ── 375px — iPhone SE ───────────────────────── */
+@media (max-width: 375px) {
+  .cmd-brand-sep,
+  .cmd-brand-tagline { display: none; }
+  .cmd-brand-namaste { font-size: 0.88rem; }
+  .hero-headline     { font-size: 1.7rem; }
+  .heading-lg        { font-size: 1.45rem; }
+  .hero-actions      { gap: 0.5rem; }
+  .hero-actions .btn { font-size: 0.82rem; padding: 0.6rem 1.1rem; }
 }
 
 /* ═══════════════════════════════════════════════════════

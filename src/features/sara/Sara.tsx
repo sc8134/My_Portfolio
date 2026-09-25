@@ -615,6 +615,7 @@ export function Sara() {
       <div
         style={{
           maxWidth: '720px',
+          width: '100%',
           margin: '0 auto',
           background: '#0a1a2f',
           border: '1px solid var(--color-border)',
@@ -731,7 +732,7 @@ export function Sara() {
       </div>
 
       {/* Quick-ask chips */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', maxWidth: '720px', margin: '1rem auto 0' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', maxWidth: '720px', width: '100%', margin: '1rem auto 0' }}>
         <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.75rem', color: 'var(--color-muted)', alignSelf: 'center' }}>quick ask:</span>
         {quickAsk.map((topic) => (
           <button

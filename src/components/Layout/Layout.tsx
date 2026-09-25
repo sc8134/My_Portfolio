@@ -2,7 +2,6 @@ import { useEffect, useState, useCallback } from 'react'
 import type { ReactNode } from 'react'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
-import { KathmanduHorizon } from '../KathmanduHorizon/KathmanduHorizon'
 
 interface LayoutProps {
   children: ReactNode
@@ -96,8 +95,7 @@ export function Layout({ children, isBlogPage = false, onBlogClick, onHomeClick 
 
   return (
     <>
-      {/* ── Kathmandu Horizon — day/night background ──────── */}
-      <KathmanduHorizon />      {/* ── Command bar header — full viewport width ──────── */}
+      {/* ── Command bar header — full viewport width ──────── */}
       <header
         className={`cmd-bar${scrolled ? ' cmd-bar--scrolled' : ''}`}
         role="banner"

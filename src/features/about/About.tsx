@@ -22,43 +22,22 @@ export function About() {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
           <div style={{ position: 'relative', width: '100%', maxWidth: '280px', marginTop: '1rem' }}>
 
-            {/* Outer ambient glow — diffuse, royal depth */}
+            {/* Gradient border ring — coral top-left, navy bottom-right */}
             <div style={{
               position: 'absolute',
-              inset: '-18px',
-              borderRadius: '36px',
-              background: 'radial-gradient(ellipse at 40% 30%, rgba(232,83,42,0.18) 0%, rgba(30,45,77,0.22) 55%, transparent 80%)',
-              zIndex: 0,
-              filter: 'blur(14px)',
-              pointerEvents: 'none',
-            }} />
-
-            {/* Outer frame ring — rich gold gradient */}
-            <div style={{
-              position: 'absolute',
-              inset: '-5px',
-              borderRadius: '26px',
-              background: 'linear-gradient(135deg, #c9a84c 0%, #f0d080 28%, #a0722a 52%, #f0d080 74%, #c9a84c 100%)',
-              zIndex: 1,
-            }} />
-
-            {/* Inner matte inset — creates double-border depth */}
-            <div style={{
-              position: 'absolute',
-              inset: '-1px',
+              inset: '-3px',
               borderRadius: '22px',
-              background: 'var(--color-bg)',
-              zIndex: 2,
+              background: 'linear-gradient(145deg, var(--color-neon) 0%, var(--color-navy) 55%, var(--color-neon) 100%)',
+              zIndex: 0,
             }} />
 
-            {/* Thin gold inner line */}
+            {/* White/cream inset so the gradient ring is visible */}
             <div style={{
               position: 'absolute',
-              inset: '3px',
-              borderRadius: '19px',
-              border: '1px solid rgba(201,168,76,0.35)',
-              zIndex: 3,
-              pointerEvents: 'none',
+              inset: '1px',
+              borderRadius: '20px',
+              background: 'var(--color-bg)',
+              zIndex: 0,
             }} />
 
             {/* Photo card */}
@@ -66,10 +45,10 @@ export function About() {
               position: 'relative',
               width: '100%',
               aspectRatio: '4/5',
-              borderRadius: '18px',
+              borderRadius: '20px',
               overflow: 'hidden',
-              zIndex: 4,
-              boxShadow: '0 24px 64px rgba(30,45,77,0.28), 0 6px 20px rgba(201,168,76,0.12), inset 0 1px 0 rgba(255,255,255,0.06)',
+              zIndex: 1,
+              boxShadow: '0 20px 56px rgba(232,83,42,0.2), 0 6px 20px rgba(30,45,77,0.14)',
             }}>
               <img
                 src="/pic/me.webp"
@@ -96,17 +75,17 @@ export function About() {
                 pointerEvents: 'none',
               }} />
 
-              {/* Top gold shimmer line */}
+              {/* Top coral line */}
               <div style={{
-                position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
-                background: 'linear-gradient(90deg, transparent, rgba(240,208,128,0.9) 30%, rgba(240,208,128,0.9) 70%, transparent)',
+                position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
+                background: 'linear-gradient(90deg, transparent, var(--color-neon) 30%, var(--color-neon) 70%, transparent)',
               }} />
 
               {/* Logo — top left */}
               <div style={{ position: 'absolute', top: '0.8rem', left: '0.8rem' }}>
                 <div style={{
                   width: '28px', height: '28px', borderRadius: '7px', overflow: 'hidden',
-                  border: '1.5px solid rgba(240,208,128,0.6)',
+                  border: '1.5px solid rgba(232,83,42,0.7)',
                   boxShadow: '0 2px 8px rgba(0,0,0,0.5)',
                 }}>
                   <img src="/logo/logo.webp" alt="SR" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -128,12 +107,12 @@ export function About() {
 
               {/* Bottom caption */}
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem 0.9rem 0.85rem' }}>
-                <div style={{ width: '28px', height: '2px', background: 'linear-gradient(90deg, #f0d080, var(--color-neon))', borderRadius: 1, marginBottom: '0.4rem' }} />
+                <div style={{ width: '28px', height: '2px', background: 'var(--color-neon)', borderRadius: 1, marginBottom: '0.4rem' }} />
                 <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.2, textShadow: '0 1px 6px rgba(0,0,0,0.7)' }}>
                   Sagar Roka Chhetri
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginTop: '0.28rem' }}>
-                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(240,208,128,0.9)' }}>
+                  <span style={{ fontFamily: 'var(--font-ui)', fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-neon)' }}>
                     2022 – 2026
                   </span>
                   <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(255,255,255,0.35)', display: 'inline-block' }} />
@@ -144,48 +123,36 @@ export function About() {
               </div>
             </div>
 
-            {/* Royal corner ornaments — gold, all four corners */}
-            {/* Top-left */}
-            <div style={{ position: 'absolute', top: '-2px', left: '-2px', zIndex: 5, pointerEvents: 'none' }}>
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-                <path d="M2 20 L2 4 Q2 2 4 2 L20 2" stroke="#f0d080" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
-                <circle cx="2" cy="2" r="2" fill="#c9a84c"/>
-              </svg>
+            {/* Corner accents — coral top, navy bottom */}
+            <div style={{ position: 'absolute', top: '2px', left: '2px', zIndex: 2, pointerEvents: 'none' }}>
+              <div style={{ position: 'absolute', top: '8px', left: 0, width: '18px', height: '2px', background: 'var(--color-neon)', borderRadius: 1 }} />
+              <div style={{ position: 'absolute', top: 0, left: '8px', width: '2px', height: '18px', background: 'var(--color-neon)', borderRadius: 1 }} />
             </div>
-            {/* Top-right */}
-            <div style={{ position: 'absolute', top: '-2px', right: '-2px', zIndex: 5, pointerEvents: 'none' }}>
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-                <path d="M20 20 L20 4 Q20 2 18 2 L2 2" stroke="#f0d080" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
-                <circle cx="20" cy="2" r="2" fill="#c9a84c"/>
-              </svg>
+            <div style={{ position: 'absolute', top: '2px', right: '2px', zIndex: 2, pointerEvents: 'none' }}>
+              <div style={{ position: 'absolute', top: '8px', right: 0, width: '18px', height: '2px', background: 'var(--color-neon)', borderRadius: 1 }} />
+              <div style={{ position: 'absolute', top: 0, right: '8px', width: '2px', height: '18px', background: 'var(--color-neon)', borderRadius: 1 }} />
             </div>
-            {/* Bottom-left */}
-            <div style={{ position: 'absolute', bottom: '-2px', left: '-2px', zIndex: 5, pointerEvents: 'none' }}>
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-                <path d="M2 2 L2 18 Q2 20 4 20 L20 20" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
-                <circle cx="2" cy="20" r="2" fill="#a0722a"/>
-              </svg>
+            <div style={{ position: 'absolute', bottom: '2px', left: '2px', zIndex: 2, pointerEvents: 'none' }}>
+              <div style={{ position: 'absolute', bottom: '8px', left: 0, width: '18px', height: '2px', background: 'var(--color-navy)', borderRadius: 1 }} />
+              <div style={{ position: 'absolute', bottom: 0, left: '8px', width: '2px', height: '18px', background: 'var(--color-navy)', borderRadius: 1 }} />
             </div>
-            {/* Bottom-right */}
-            <div style={{ position: 'absolute', bottom: '-2px', right: '-2px', zIndex: 5, pointerEvents: 'none' }}>
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-                <path d="M20 2 L20 18 Q20 20 18 20 L2 20" stroke="#c9a84c" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
-                <circle cx="20" cy="20" r="2" fill="#a0722a"/>
-              </svg>
+            <div style={{ position: 'absolute', bottom: '2px', right: '2px', zIndex: 2, pointerEvents: 'none' }}>
+              <div style={{ position: 'absolute', bottom: '8px', right: 0, width: '18px', height: '2px', background: 'var(--color-navy)', borderRadius: 1 }} />
+              <div style={{ position: 'absolute', bottom: 0, right: '8px', width: '2px', height: '18px', background: 'var(--color-navy)', borderRadius: 1 }} />
             </div>
 
             {/* Years badge */}
             <div style={{
               position: 'absolute', bottom: '-1.1rem', right: '-1.1rem',
               background: 'var(--color-bg-alt)',
-              border: '1.5px solid #c9a84c',
+              border: '2px solid var(--color-neon)',
               borderRadius: 'var(--radius-md)',
               padding: '0.55rem 0.9rem',
               textAlign: 'center',
-              boxShadow: '0 4px 20px rgba(201,168,76,0.22), 0 2px 8px rgba(30,45,77,0.18)',
-              zIndex: 6,
+              boxShadow: '0 4px 16px rgba(232,83,42,0.18), var(--shadow-card)',
+              zIndex: 3,
             }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', fontWeight: 700, color: '#c9a84c', lineHeight: 1 }}>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-neon)', lineHeight: 1 }}>
                 {about.yearsBuilding}
               </div>
               <div style={{ fontSize: '0.65rem', color: 'var(--color-muted)', marginTop: '0.2rem', fontWeight: 600, letterSpacing: '0.04em' }}>

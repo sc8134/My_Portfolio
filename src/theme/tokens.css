@@ -41,8 +41,8 @@
   --color-green-border: rgba(34, 197, 94, 0.40);
 
   /* ── Typography ──────────────────────────────────────── */
-  /* Display / headings: Cormorant Garamond (high-contrast serif, elegant italic accents) */
-  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  /* Display / headings: Playfair Display (high-contrast serif, elegant italic accents) */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   /* Body / paragraphs: Inter (clean, readable sans-serif) */
   --font-body:    'Inter', 'Segoe UI', system-ui, sans-serif;
   /* UI / buttons / nav / badges / labels: Poppins (bold, geometric) */

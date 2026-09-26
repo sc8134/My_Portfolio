@@ -16,7 +16,7 @@ export const about: AboutData = {
 
   // One-liner shown in the hero
   heroBio:
-    'I build web apps that actually work: clean frontends, solid backends, and real users. No templates, no shortcuts. Just code I wrote myself and problems I genuinely wanted to solve.',
+    'I design, build and ship full-stack applications that real users rely on — from idea to production. React, TypeScript, Python, Node.js. Every line of code is mine.',
 
   // About section paragraphs — written as Sagar, in his own words
   bio: [
@@ -30,35 +30,35 @@ export const about: AboutData = {
   philosophyCards: [
     {
       icon: '⚡',
-      title: 'I write my own code',
-      desc: 'Every line in my projects is mine. I learn by building, not by copying.',
+      title: 'Designed, built, deployed — by me',
+      desc: 'Every project is architected, coded and shipped by me end to end. No boilerplate, no co-pilot commits. I own the full stack.',
     },
     {
       icon: '🎯',
-      title: 'Real problems only',
-      desc: "I don't start projects to fill a portfolio. I start them because something is broken and I want to fix it.",
+      title: 'Real problems, real products',
+      desc: 'I ship solutions to problems I genuinely cared about — a Nepali calendar with no good alternative, a job portal that got me hired, a media tool I still use daily.',
     },
     {
       icon: '🔍',
-      title: 'I read the docs',
-      desc: 'Stack Overflow helps, but I go to the source. Understanding why something works matters more than getting it to work.',
+      title: 'I go to the source',
+      desc: 'I read the RFC, the docs, the spec. Understanding why something works matters more than knowing that it does.',
     },
     {
-      icon: '�',
-      title: 'Ship, then improve',
-      desc: 'Waiting for perfect is how projects die in draft. I push to production early and iterate from real feedback.',
+      icon: '🚀',
+      title: 'Ship early, iterate on real feedback',
+      desc: 'I push to production as soon as it works. Every improvement after that is driven by real usage, not speculation.',
     },
   ],
 
   stats: [
-    { value: '8',   label: 'Projects Built'  },
-    { value: '2+',  label: 'Years Coding'    },
-    { value: '3',   label: 'Open Source'     },
+    { value: '8',    label: 'Projects Built'       },
+    { value: '2+',   label: 'Years of Experience'  },
+    { value: '1',    label: 'Production Role'       },
   ],
 
   resumeUrl: '/resume/Sagar_Roka_Chhetri_Resume_ATS.pdf',
   openToWork: true,
-  openToWorkText: 'Currently open to interesting problems',
+  openToWorkText: 'Open to full-time roles & internships',
 
   facts: [
     '📍 Nepal',

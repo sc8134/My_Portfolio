@@ -92,6 +92,16 @@ export function Hero() {
         {about.heroBio ?? about.bio[0]}
       </p>
 
+      {/* Stats row */}
+      <div className="hero-stats animate-fade-up delay-3" aria-label="Quick stats">
+        {about.stats.map((stat, i) => (
+          <div key={i} className="hero-stat">
+            <span className="hero-stat-value">{stat.value}</span>
+            <span className="hero-stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+
       {/* CTAs */}
       <div className="hero-actions animate-fade-up delay-4">
         <a className="btn btn-neon" href="#projects">

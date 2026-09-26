@@ -167,6 +167,18 @@ export function Experience() {
                 {exp.description}
               </p>
 
+              {/* Achievement bullets */}
+              {exp.bullets && exp.bullets.length > 0 && (
+                <ul style={{ listStyle: 'none', margin: '0.75rem 0 0', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                  {exp.bullets.map((b, i) => (
+                    <li key={i} style={{ display: 'flex', gap: '0.6rem', fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-muted)', lineHeight: 1.55 }}>
+                      <span style={{ color: 'var(--color-neon)', fontWeight: 700, flexShrink: 0, marginTop: '0.1rem' }}>—</span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
               {/* Tech chips — Inter */}
               {exp.tech && exp.tech.length > 0 && (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.9rem' }}>

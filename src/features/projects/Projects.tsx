@@ -405,8 +405,8 @@ export function Projects() {
         <p className="section-label">Portfolio</p>
         <h2 className="heading-lg">Featured <em>Projects</em></h2>
         <p style={{ fontFamily: 'var(--font-body)', marginTop: '0.6rem', fontSize: '0.925rem', color: 'var(--color-muted)' }}>
-          Things I built because a problem was annoying enough to do something about.
-          Every line of code is mine. Tap any project to explore it.
+          These are systems I designed, built, and shipped myself.
+          Each one started as a real problem worth solving.
         </p>
       </div>
 

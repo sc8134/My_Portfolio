@@ -169,6 +169,26 @@ export function About() {
               <p key={i} style={{ fontSize: '0.975rem', lineHeight: 1.8, color: 'var(--color-muted)' }}>{para}</p>
             ))}
           </div>
+
+          {/* Currently exploring */}
+          {about.currently && (
+            <div style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '0.65rem',
+              padding: '0.85rem 1rem',
+              background: 'var(--color-neon-dim)',
+              border: '1px solid var(--color-neon-border)',
+              borderLeft: '3px solid var(--color-neon)',
+              borderRadius: 'var(--radius-md)',
+            }}>
+              <span style={{ fontSize: '0.9rem', flexShrink: 0, marginTop: '0.05rem' }}>🔭</span>
+              <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: '0.875rem', lineHeight: 1.6, color: 'var(--color-text)' }}>
+                <strong style={{ fontFamily: 'var(--font-ui)', fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-neon)', display: 'block', marginBottom: '0.2rem' }}>Currently exploring</strong>
+                {about.currently}
+              </p>
+            </div>
+          )}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginTop: '0.5rem' }}>
             {about.stats.map((stat) => (
               <div key={stat.label} className="stat-card" style={{ textAlign: 'center' }}>

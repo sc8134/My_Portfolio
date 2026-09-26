@@ -187,38 +187,50 @@ export function Skills() {
               {/* Card header */}
               <div style={{
                 display: 'flex',
-                alignItems: 'center',
-                gap: '0.6rem',
+                flexDirection: 'column',
+                gap: '0.35rem',
                 padding: '1rem 1rem 0.75rem',
                 borderBottom: '1px solid var(--color-border)',
                 background: accent.dim,
               }}>
-                <span style={{ color: accent.color, display: 'flex', alignItems: 'center' }}>
-                  {skillIconMap[cat.id] ?? cat.icon}
-                </span>
-                <span style={{
-                  fontFamily: 'var(--font-ui)',
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <span style={{ color: accent.color, display: 'flex', alignItems: 'center' }}>
+                    {skillIconMap[cat.id] ?? cat.icon}
+                  </span>
+                  <span style={{
+                    fontFamily: 'var(--font-ui)',
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    color: accent.color,
+                  }}>
+                    {cat.label}
+                  </span>
+                  <span style={{
+                    marginLeft: 'auto',
+                    fontFamily: 'var(--font-ui)',
+                    fontSize: '0.65rem',
+                    fontWeight: 600,
+                    color: 'var(--color-subtle)',
+                    background: 'var(--color-bg)',
+                    border: '1px solid var(--color-border)',
+                    borderRadius: 'var(--radius-pill)',
+                    padding: '0.1rem 0.5rem',
+                  }}>
+                    {cat.skills.length}
+                  </span>
+                </div>
+                {/* Production context line */}
+                <p style={{
+                  fontFamily: 'var(--font-body)',
                   fontSize: '0.72rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase',
-                  color: accent.color,
+                  lineHeight: 1.5,
+                  color: 'var(--color-muted)',
+                  margin: 0,
                 }}>
-                  {cat.label}
-                </span>
-                <span style={{
-                  marginLeft: 'auto',
-                  fontFamily: 'var(--font-ui)',
-                  fontSize: '0.65rem',
-                  fontWeight: 600,
-                  color: 'var(--color-subtle)',
-                  background: 'var(--color-bg)',
-                  border: '1px solid var(--color-border)',
-                  borderRadius: 'var(--radius-pill)',
-                  padding: '0.1rem 0.5rem',
-                }}>
-                  {cat.skills.length}
-                </span>
+                  {cat.context}
+                </p>
               </div>
 
               {/* Skill rows */}

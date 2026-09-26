@@ -11,5 +11,6 @@ export interface SkillCategory {
   id: string
   label: string
   icon: string
+  context: string   // one-line production context shown under the category header
   skills: Skill[]
 }

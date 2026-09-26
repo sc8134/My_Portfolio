@@ -5,6 +5,7 @@ export const skillCategories: SkillCategory[] = [
     id: 'frontend',
     label: 'Frontend',
     icon: '🖥',
+    context: 'Used across multiple production applications with real users.',
     skills: [
       { id: 'react',      name: 'React',        level: 'high', proof: 'Production at CodeRunners; Signal, Namo Patro, Nova DVR' },
       { id: 'nextjs',     name: 'Next.js',      level: 'high', proof: 'Used in portfolio builds and SSR experiments' },
@@ -20,6 +21,7 @@ export const skillCategories: SkillCategory[] = [
     id: 'backend',
     label: 'Backend',
     icon: '⚙',
+    context: 'Designed and implemented REST APIs and business logic for live systems.',
     skills: [
       { id: 'nodejs',    name: 'Node.js',   level: 'high', proof: 'Signal REST API; CodeRunners backend' },
       { id: 'express',   name: 'Express',   level: 'high', proof: 'API layer for Signal Job Portal and CodeRunners' },
@@ -34,6 +36,7 @@ export const skillCategories: SkillCategory[] = [
     id: 'database',
     label: 'Database',
     icon: '🗄',
+    context: 'PostgreSQL and MongoDB in production; Redis and others for specific use cases.',
     skills: [
       { id: 'postgresql', name: 'PostgreSQL', level: 'high', proof: 'Signal Job Portal; Namo Patro data layer' },
       { id: 'mongodb',    name: 'MongoDB',    level: 'high', proof: 'Primary DB at CodeRunners (MERN stack)' },
@@ -49,15 +52,16 @@ export const skillCategories: SkillCategory[] = [
     id: 'tools',
     label: 'Tools & DevOps',
     icon: '🔧',
+    context: 'Handled deployment, CI/CD, and server admin on live production systems.',
     skills: [
-      { id: 'docker',        name: 'Docker',          level: 'mid',  proof: 'Containerized Flask and Node apps locally and in CI' },
-      { id: 'kubernetes',    name: 'Kubernetes',       level: 'low',  proof: 'Studied orchestration concepts; not yet in production' },
-      { id: 'aws',           name: 'AWS',              level: 'mid',  proof: 'S3 for storage; EC2 and Lambda experiments' },
-      { id: 'cicd',          name: 'CI/CD',            level: 'mid',  proof: 'GitHub Actions pipelines on open-source repos' },
-      { id: 'git',           name: 'Git',              level: 'high', proof: 'Daily driver across every project for 2+ years' },
-      { id: 'githubactions', name: 'GitHub Actions',   level: 'mid',  proof: 'Automated test and deploy on Namo Patro' },
-      { id: 'nginx',         name: 'Nginx',            level: 'mid',  proof: 'Reverse proxy for CodeRunners production server' },
-      { id: 'linux',         name: 'Linux',            level: 'high', proof: 'Primary dev environment; server admin at CodeRunners' },
+      { id: 'docker',        name: 'Docker',        level: 'mid',  proof: 'Containerized Flask and Node apps locally and in CI' },
+      { id: 'kubernetes',    name: 'Kubernetes',    level: 'low',  proof: 'Studied orchestration concepts; not yet in production' },
+      { id: 'aws',           name: 'AWS',           level: 'mid',  proof: 'S3 for storage; EC2 and Lambda experiments' },
+      { id: 'cicd',          name: 'CI/CD',         level: 'mid',  proof: 'GitHub Actions pipelines on open-source repos' },
+      { id: 'git',           name: 'Git',           level: 'high', proof: 'Daily driver across every project for 2+ years' },
+      { id: 'githubactions', name: 'GitHub Actions',level: 'mid',  proof: 'Automated test and deploy on Namo Patro' },
+      { id: 'nginx',         name: 'Nginx',         level: 'mid',  proof: 'Reverse proxy for CodeRunners production server' },
+      { id: 'linux',         name: 'Linux',         level: 'high', proof: 'Primary dev environment; server admin at CodeRunners' },
     ],
   },
 ]

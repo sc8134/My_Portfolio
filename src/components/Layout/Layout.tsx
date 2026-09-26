@@ -2,7 +2,6 @@ import { useEffect, useState, useCallback } from 'react'
 import type { ReactNode } from 'react'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
-import { about } from '../../data/about'
 
 interface LayoutProps {
   children: ReactNode
@@ -167,16 +166,6 @@ export function Layout({ children, isBlogPage = false, onBlogClick, onHomeClick 
                       Blog
                     </button>
                   </li>
-                  <li>
-                    <a
-                      className="cmd-nav-resume"
-                      href={about.resumeUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Resume ↗
-                    </a>
-                  </li>
                 </>
               )}
             </ul>
@@ -248,17 +237,6 @@ export function Layout({ children, isBlogPage = false, onBlogClick, onHomeClick 
                     >
                       Blog
                     </button>
-                  </li>
-                  <li>
-                    <a
-                      className="mobile-nav-link"
-                      href={about.resumeUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={handleNavClick}
-                    >
-                      Resume ↗
-                    </a>
                   </li>
                 </>
               )}

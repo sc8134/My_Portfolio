@@ -10,6 +10,5 @@ export interface Experience {
   date: string
   location?: string
   description: string
-  bullets?: string[]   /* optional achievement bullets shown below description */
   tech?: string[]
 }

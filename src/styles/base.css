@@ -176,29 +176,6 @@ a { color: inherit; }
   font-weight: 600;
 }
 
-/* Resume pill button in the nav */
-.cmd-nav-resume {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-ui);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  background: var(--color-neon);
-  border-radius: var(--radius-pill);
-  padding: 0.35rem 0.9rem;
-  text-decoration: none;
-  transition: background 150ms, transform 140ms, box-shadow 150ms;
-  white-space: nowrap;
-  box-shadow: 0 2px 10px rgba(232,83,42,0.28);
-}
-.cmd-nav-resume:hover {
-  background: #d4421e;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(232,83,42,0.38);
-}
-
 /* Glowing dot for active link */
 .cmd-nav-dot {
   width: 5px;
@@ -387,58 +364,6 @@ a { color: inherit; }
   word-break: break-word;
   overflow-wrap: break-word;
   padding: 0 0.5rem;
-}
-
-/* Hero stats row */
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  margin-top: 1.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: var(--color-surface);
-  overflow: hidden;
-  width: fit-content;
-}
-
-.hero-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.75rem 1.75rem;
-  position: relative;
-}
-
-.hero-stat + .hero-stat::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 20%;
-  height: 60%;
-  width: 1px;
-  background: var(--color-border);
-}
-
-.hero-stat-value {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-  font-weight: 700;
-  color: var(--color-neon);
-  line-height: 1;
-}
-
-.hero-stat-label {
-  font-family: var(--font-ui);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-top: 0.3rem;
-  white-space: nowrap;
 }
 
 /* CTA buttons row */

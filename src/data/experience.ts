@@ -9,13 +9,8 @@ export const experiences: Experience[] = [
     date: 'Aug 2026 – Sep 2026',
     location: 'Remote',
     description:
-      'One-month virtual internship in Full Stack Development. Completed the program, received a Letter of Recommendation and Certificate of Completion.',
-    bullets: [
-      'Completed structured full-stack curriculum covering React, Node.js and REST API design',
-      'Received Letter of Recommendation for strong analytical skills and fast adaptation',
-      'Delivered all assigned projects within deadlines in a fully remote environment',
-    ],
-    tech: ['React', 'Node.js', 'JavaScript', 'REST APIs'],
+      'Virtual internship in Full Stack Development. Completed the one-month program, received a Letter of Recommendation and Certificate of Completion. Demonstrated strong analytical skills and quick adaptation to emerging technologies across the program.',
+    tech: ['Full Stack', 'React', 'Node.js', 'JavaScript'],
   },
   {
     id: 'coderunners',
@@ -25,14 +20,8 @@ export const experiences: Experience[] = [
     date: 'Jul 2025 – Present',
     location: 'Remote',
     description:
-      "Joined to own the frontend of a live MERN platform with real users. Built core product features from scratch and handled the full production deployment myself.",
-    bullets: [
-      'Built the React admin panel, SMTP email notification system, and event management flows from scratch',
-      'Deployed the full stack — frontend, backend, live domain, and MySQL database — on cPanel independently',
-      'Sole frontend engineer on a production platform actively used by real customers',
-      'Equity-based role: joined for ownership, not a paycheck',
-    ],
-    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'JavaScript', 'MySQL'],
+      "The friction: a growing platform with real users, no dedicated frontend person, and a UI that wasn't keeping up with the product. I came in and built most of the React frontend from scratch: the admin panel, SMTP email notifications, event management flows. Then handled the full deployment myself: frontend, backend, live domain, SQL database on cPanel. It's equity-based. I didn't join for a paycheck. I joined because I believed in what we were building and wanted to own the outcome.",
+    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'JavaScript'],
   },
   {
     id: 'personal-projects',
@@ -41,13 +30,7 @@ export const experiences: Experience[] = [
     company: 'Self-directed Projects',
     date: '2023 – 2025',
     description:
-      "Two years of full ownership across every layer — UI, API, database, deployment — with no team and no one to ask. The projects from this period got me hired.",
-    bullets: [
-      'Shipped 8 projects end-to-end: design, development, deployment, and maintenance — solo',
-      'Signal Job Portal landed me the role at CodeRunners Technologies',
-      'Namo Patro, Nova DVR, and Signal are live on GitHub with public source code',
-      '3 open-source projects under GPL-3.0 and MIT licences',
-    ],
+      "The friction: no job, no structure, no one setting priorities. I had to decide what to build, how to build it, and when to ship. Two years of covering every layer myself: UI, API, database, deployment, with no one to ask and no one to blame. The projects I'm most proud of came from this period: Namo Patro, Nova DVR, Signal Job Portal. All written by me. All live on GitHub. Signal got me the job at CodeRunners.",
     tech: ['React', 'TypeScript', 'Flask', 'Node.js', 'PostgreSQL', 'Python'],
   },
   {
@@ -58,7 +41,7 @@ export const experiences: Experience[] = [
     university: 'Pokhara University',
     date: '2022 – 2026',
     description:
-      "Final year, awaiting graduation. Coursework covered algorithms, networking, data structures, and distributed systems. Built production projects in parallel every semester — the degree gave me vocabulary, the projects gave me judgment.",
+      "Final year, awaiting graduation. The degree gave me the theory: algorithms, networking, data structures, distributed systems. But I never treated it as the only place I was learning. Every semester I was also building real projects outside class. The assignments taught me the vocabulary. The projects taught me the judgment.",
   },
   {
     id: 'plus2',
@@ -67,6 +50,6 @@ export const experiences: Experience[] = [
     company: 'Milestone International College',
     date: '2019 – 2021',
     description:
-      "Graduated with a 3.78 GPA — top 10% in Nepal. Physics taught me to sit with a problem before reaching for a solution. That habit carried into every line of code I've written since.",
+      "Finished with a 3.78 GPA, top 10% in Nepal. Physics didn't teach me how to code. It taught me how to sit with a problem before reaching for a solution. That habit carried over. I still spend more time thinking about a problem than I do writing code for it.",
   },
 ]

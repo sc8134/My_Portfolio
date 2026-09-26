@@ -22,6 +22,5 @@ export interface AboutData {
   resumeUrl: string
   openToWork: boolean
   openToWorkText?: string   // displayed in the hero badge and contact section
-  currently?: string        // "Currently exploring" note shown in About
   facts: string[]
 }

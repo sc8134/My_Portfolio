@@ -16,13 +16,13 @@ export const about: AboutData = {
 
   // One-liner shown in the hero
   heroBio:
-    'I build web applications that solve real problems and reach real users. Every project is designed, built, and deployed by me.',
+    'I design, build and ship full-stack applications that real users rely on — from idea to production. React, TypeScript, Python, Node.js. Every line of code is mine.',
 
   // About section paragraphs — written as Sagar, in his own words
   bio: [
-    "I got into coding without a mentor or a structured path — just a browser open to Stack Overflow. I started with Python to automate repetitive tasks. That first script that worked? That feeling never got old.",
-    "Every project on my GitHub was designed, built, and deployed by me. No AI-generated boilerplate, no copy-pasted scaffolding. I build because something is broken and I want to fix it.",
-    "Final year of Computer Engineering at Cosmos College under Pokhara University. Currently working as a Full Stack Developer at CodeRunners Technologies on a live MERN platform. I pick tools based on what the project needs, not what is trending.",
+    "I got into coding the way most people from Nepal do: without a mentor, without a structured path, just me and a browser open to Stack Overflow. I started with Python because I wanted to automate repetitive stuff. That first script that actually worked? That feeling never got old.",
+    "Every project on my GitHub was designed, built, and deployed by me. No AI-generated boilerplate, no copy-pasted scaffolding. Namo Patro exists because I was frustrated that no proper Nepali calendar app existed online. Signal Job Portal exists because I wanted to build a full-stack system end to end. These are real problems I cared about.",
+    "Right now I'm in my final year of Computer Engineering at Cosmos College under Pokhara University, working part-time as a Full Stack Developer at CodeRunners Technologies on a live MERN platform. My stack is React, TypeScript, Python, Flask, Node.js and PostgreSQL, but I pick tools based on what the project needs, not what's trending.",
   ],
 
   yearsBuilding: '2+',
@@ -51,15 +51,14 @@ export const about: AboutData = {
   ],
 
   stats: [
-    { value: '8',    label: 'Production Projects' },
-    { value: '2+',   label: 'Years of Experience' },
-    { value: '100%', label: 'End-to-End Ownership' },
+    { value: '8',    label: 'Projects Built'       },
+    { value: '2+',   label: 'Years of Experience'  },
+    { value: '1',    label: 'Production Role'       },
   ],
 
   resumeUrl: '/resume/Sagar_Roka_Chhetri_Resume_ATS.pdf',
   openToWork: true,
   openToWorkText: 'Open to full-time roles & internships',
-  currently: 'Exploring distributed systems, LLM tooling, and systems design patterns.',
 
   facts: [
     '📍 Nepal',

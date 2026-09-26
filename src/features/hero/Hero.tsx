@@ -1,5 +1,6 @@
 import { about } from '../../data/about'
 import { socials } from '../../data/socials'
+import { useTypewriter } from '../../hooks/useTypewriter'
 
 const heroSocials = ['github', 'linkedin', 'twitter']
 
@@ -24,6 +25,14 @@ function XIcon() {
     </svg>
   )
 }
+function EnvelopeIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  )
+}
 function DownloadIcon() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -42,6 +51,14 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function Hero() {
   const heroSocialLinks = socials.filter((s) => heroSocials.includes(s.id))
+  const roles = about.roles ?? [about.role]
+
+  // Full typewriter: types out each role, deletes it, moves to next
+  const typedRole = useTypewriter(roles, {
+    typeSpeed:   75,
+    deleteSpeed: 40,
+    pauseMs:     2000,
+  })
 
   return (
     <section id="hero" className="hero-section section">
@@ -52,26 +69,27 @@ export function Hero() {
           <a href="#contact" style={{ textDecoration: 'none' }}>
             <span className="hero-badge">
               <span className="hero-badge-dot" aria-hidden="true" />
-              {about.openToWorkText}
+              {about.openToWorkText ?? 'Next Adventure Awaits'}
             </span>
           </a>
         </div>
       )}
 
-      {/* Name */}
+      {/* Hi I'm + name */}
       <h1 className="hero-headline animate-fade-up delay-1">
         <span className="hero-greeting">Hi, I&apos;m </span>
         <span className="hero-name-accent">{about.name}</span>
       </h1>
 
-      {/* Static role — precise, no typewriter distraction */}
-      <p className="hero-role animate-fade-up delay-2">
-        {about.role}
+      {/* Typewriter role */}
+      <p className="hero-role animate-fade-up delay-2" aria-live="polite">
+        {typedRole}
+        <span className="typewriter-cursor" aria-hidden="true">|</span>
       </p>
 
-      {/* Bio — two sentences max */}
+      {/* Bio */}
       <p className="hero-bio animate-fade-up delay-3">
-        {about.heroBio}
+        {about.heroBio ?? about.bio[0]}
       </p>
 
       {/* Stats row */}
@@ -84,13 +102,17 @@ export function Hero() {
         ))}
       </div>
 
-      {/* CTAs — two actions only */}
+      {/* CTAs */}
       <div className="hero-actions animate-fade-up delay-4">
         <a className="btn btn-neon" href="#projects">
-          View Selected Work
+          View Projects
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
+        </a>
+        <a className="btn btn-ghost" href="#contact">
+          <EnvelopeIcon />
+          Contact Me
         </a>
         <a className="btn btn-resume" href={about.resumeUrl} target="_blank" rel="noreferrer">
           <DownloadIcon />

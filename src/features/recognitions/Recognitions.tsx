@@ -22,6 +22,22 @@ function LORIcon() {
 
 const recognitions = [
   {
+    id: 'bolts-army-cert',
+    kind: 'Certificate of Achievement',
+    icon: <CertIcon />,
+    issuer: 'Janakpur Bolts Army',
+    issuerNote: 'In partnership with CodeRunners Technologies',
+    role: 'Full Stack Developer',
+    date: 'Sep 2025 – Sep 2026',
+    issued: 'Sep 25, 2026',
+    credentialId: 'JBA/FSC/2026',
+    description:
+      'Awarded for successfully designing, building, and deploying the official Janakpur Bolts Army web platform to production level. Recognized for leading the UI/UX design, core frontend and backend development, and the complete cPanel deployment at boltsarmy.com.',
+    highlights: ['Full Stack Development', 'Production Deployment', 'boltsarmy.com'],
+    pdfUrl: '/certificate/Sagar_RC_Bolts_Army_Certificate.pdf',
+    govBacked: false,
+  },
+  {
     id: 'codealpha-cert',
     kind: 'Certificate of Completion',
     icon: <CertIcon />,
